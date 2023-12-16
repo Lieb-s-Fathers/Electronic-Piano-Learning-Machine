@@ -49,5 +49,30 @@ module score_display(clk, score_in, tub_sel, tub_ctrl);
             default: tub_ctrl = 8'b1001_1110;//"E"
         endcase
     end
-
 endmodule   
+
+
+// set_property PACKAGE_PIN B4 [get_ports {tub_control[7]}]
+// set_property PACKAGE_PIN A4 [get_ports {tub_control[6]}]
+// set_property PACKAGE_PIN A3 [get_ports {tub_control[5]}]
+// set_property PACKAGE_PIN B1 [get_ports {tub_control[4]}]
+// set_property PACKAGE_PIN A1 [get_ports {tub_control[3]}]
+// set_property PACKAGE_PIN B3 [get_ports {tub_control[2]}]
+// set_property PACKAGE_PIN B2 [get_ports {tub_control[1]}]
+// set_property PACKAGE_PIN D5 [get_ports {tub_control[0]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[7]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[6]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[5]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[4]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[3]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[2]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[1]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_control[0]}]
+// set_property PACKAGE_PIN G2 [get_ports {tub_select[3]}]
+// set_property PACKAGE_PIN C2 [get_ports {tub_select[2]}]
+// set_property PACKAGE_PIN C1 [get_ports {tub_select[1]}]
+// set_property PACKAGE_PIN H1 [get_ports {tub_select[0]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_select[3]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_select[2]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_select[1]}]
+// set_property IOSTANDARD LVCMOS33 [get_ports {tub_select[0]}]
