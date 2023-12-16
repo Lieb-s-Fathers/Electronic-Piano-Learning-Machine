@@ -8,8 +8,7 @@ module Buzzer_test(
     output reg audio
 );
 
-Buzzer buzzer1(clk, x, speaker);
-led led1({6'b000000,x}, led_out);
+Buzzer buzzer1(clk, 4'b0110, speaker);
 
 initial begin
     audio = 0;

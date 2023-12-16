@@ -8,7 +8,7 @@ module freestyle(
     output reg audio
 );
 
-wire [3:0] notes;
+wire [3:0] note;
 
 encoder_8_3 encoder(big_dip_switches_in, note);
 Buzzer buzzer1(clk, note, speaker);
