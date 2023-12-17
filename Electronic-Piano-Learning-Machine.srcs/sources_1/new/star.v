@@ -1,12 +1,17 @@
 `include "D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/2d-array.vh"
 
 module star(
-    output wire [391:0] music_pack
+    output wire [391:0] music_pack,
+    output wire [15:0] music_number,
+    output wire [15:0] music_length
 );
 
 wire [7:0] music[0:48];
 
 `PACK_ARRAY(8, 49, music, music_pack)
+
+assign music_number = 16'b0000_0000_0000_0001;
+assign music_length = 48;
 
 assign music[1] = 8'b10000000;
 assign music[2] = 8'b10000000;

@@ -29,7 +29,7 @@ always @(posedge clk) begin
     if (counter < notes[note] || note == 1'b0) begin
         counter <= counter + 1'b1;
     end else begin
-        pwm = ~pwm;
+        pwm <= ~pwm;
         counter <= 0;
     end
 end

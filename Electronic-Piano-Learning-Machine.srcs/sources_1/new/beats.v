@@ -14,7 +14,7 @@ always @(posedge clk) begin
     if (counter < 30000000) begin
         counter <= counter + 1'b1;
     end else begin
-        pwm = ~pwm;
+        pwm <= ~pwm;
         counter <= 0;
     end
 end
