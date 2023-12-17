@@ -46,10 +46,14 @@ module number_display(clk, number_in, tub_sel, tub_ctrl);
             4'b0111: tub_ctrl = 8'b1110_0000;//"7"
             4'b1000: tub_ctrl = 8'b1111_1110;//"8"
             4'b1001: tub_ctrl = 8'b1110_0110;//"9"
+
+            4'b1111: tub_ctrl = 8'b1000_1110; //"F"
+            4'b1110: tub_ctrl = 8'b0000_1010; //"r"
+            4'b1101: tub_ctrl = 8'b1001_1110; //"E"
             default: tub_ctrl = 8'b1001_1110;//"E"
         endcase
     end
-endmodule   
+endmodule
 
 
 // set_property PACKAGE_PIN B4 [get_ports {tub_control[7]}]
