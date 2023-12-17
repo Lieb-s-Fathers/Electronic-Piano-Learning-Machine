@@ -1,5 +1,6 @@
 module beats(
     input wire clk,
+    input wire [3:0] music_speed,
     output wire beat
 );
 
@@ -12,7 +13,7 @@ end
 
 always @(posedge clk) begin
     if (counter < 30000000) begin
-        counter <= counter + 1'b1;
+        counter <= counter + music_speed;
     end else begin
         pwm <= ~pwm;
         counter <= 0;
