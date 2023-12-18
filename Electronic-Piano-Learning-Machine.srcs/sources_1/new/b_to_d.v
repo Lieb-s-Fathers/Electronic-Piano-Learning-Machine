@@ -1,5 +1,5 @@
 module b_to_d(
-    input [7:0] in, 
+    input [7:0] in,
     output reg [11:0] out
     );
 

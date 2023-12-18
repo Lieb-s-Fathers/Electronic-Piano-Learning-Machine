@@ -12,17 +12,20 @@ module music_studyer(
     output wire speaker,
     output [7:0] led_out,
     output reg music_over,
-    output reg [7:0] counter
+    output wire [11:0] score
 );
 
 wire [7:0] music[0:48];
 reg [7:0] note_code;
 wire [3:0] note_play;
+reg [7:0] counter;
+reg [7:0] counter_time;
 
 `UNPACK_ARRAY(8, 49, music, music_pack)
 
 initial begin
     counter = 0;
+    counter_time = 0;
     note_code = 8'b00000000;
     music_over = 1'b0;
 end
@@ -30,12 +33,14 @@ end
 always @(posedge beat) begin
     if (rst == 1'b1) begin
         counter <= 0;
+        counter_time <= 0;
         music_over <= 1'b0;
         note_code <= 8'b00000000;
     end
 
     if (en == 1'b1) begin
         if (counter < music_length+1) begin
+            counter_time <= counter_time + 1'b1;
             if (big_dip_switches == note_code) begin
                 counter <= counter + 1'b1;
                 note_code <= music[counter];
@@ -47,6 +52,7 @@ always @(posedge beat) begin
     end
 end
 
+score_cal score1(beat, counter, counter_time, score);
 encoder_8_3 encoder(big_dip_switches, note_play);
 Buzzer buzzer1(clk, note_play, 2'b01, speaker);
 led led1(note_code, led_out);

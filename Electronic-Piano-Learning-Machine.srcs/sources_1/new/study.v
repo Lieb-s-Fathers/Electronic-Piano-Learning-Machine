@@ -24,7 +24,7 @@ wire [3:0] music_speed;
 reg [3:0] music_speed_play;
 wire music_over;
 
-wire [7:0] counter;
+wire [11:0] score;
 
 wire [15:0] max_music_number;
 
@@ -81,9 +81,9 @@ end
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 
 music_select music1(music_number, music_pack, music_number_out, music_length, music_speed);
-music_studyer studyer(clk, big_dip_switches, music_length, music_pack, music_speed_play, studyer_en, studyer_rst, speaker, led_out, music_over, counter);
+music_studyer studyer(clk, big_dip_switches, music_length, music_pack, music_speed_play, studyer_en, studyer_rst, speaker, led_out, music_over, score);
 
 number_display display1(clk, music_number_out, tub_select1, tub_control1);
-number_display display2(clk, counter, tub_select2, tub_control2);
+number_display display2(clk, score, tub_select2, tub_control2);
 
 endmodule

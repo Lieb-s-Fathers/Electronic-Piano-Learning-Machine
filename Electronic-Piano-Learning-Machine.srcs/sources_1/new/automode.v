@@ -73,7 +73,7 @@ always @(posedge clk_game) begin
     end
 
     if (up_button == 1'b1 && down_button == 1'b0) begin
-        if (music_speed_play < 10) begin
+        if (music_speed_play < 9) begin
             music_speed_play <= music_speed_play + 1'b1;
         end
     end
