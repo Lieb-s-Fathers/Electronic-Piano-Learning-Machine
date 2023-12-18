@@ -1,4 +1,4 @@
-`include "D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/2d-array.vh"
+`include "C:\Users\26788\VivadoProjects\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\2d-array.vh"
 
 module music_studyer(
     input clk,
@@ -20,6 +20,7 @@ reg [7:0] note_code;
 wire [3:0] note_play;
 reg [7:0] counter;
 reg [7:0] counter_time;
+wire [3:0] note_setted;
 
 `UNPACK_ARRAY(8, 49, music, music_pack)
 
@@ -52,10 +53,15 @@ always @(posedge beat) begin
     end
 end
 
+wire [31:0] setting;
+assign setting = 32'b0001_0010_0011_0100_0101_0110_0111_0000;
+ 
+
 score_cal score1(beat, counter, counter_time, score);
 encoder_8_3 encoder(big_dip_switches, note_play);
-Buzzer buzzer1(clk, note_play, 2'b01, speaker);
+Buzzer buzzer1(clk, note_setted, 2'b01, speaker);
 led led1(note_code, led_out);
 beats beat1(clk, music_speed_play, beat);
+note_setter note_setter1(clk, note_play, setting, note_setted);
 
 endmodule
