@@ -1,9 +1,8 @@
-`timescale 1ns / 1ps
-
-module automode(
+module study(
     input wire clk,
     input wire clk_game,
-    input [4:0] five_dir_buttons,
+    input wire [7:0] big_dip_switches,
+    input wire [4:0] five_dir_buttons,
 
     output wire speaker,
     output [7:0] led_out,
@@ -15,8 +14,8 @@ module automode(
     output [7:0] tub_control2
 );
 
-reg player_en;
-reg player_rst;
+reg studyer_en;
+reg studyer_rst;
 wire [391:0] music_pack;
 reg [15:0] music_number;
 wire [15:0] music_number_out;
@@ -25,12 +24,7 @@ wire [3:0] music_speed;
 reg [3:0] music_speed_play;
 wire music_over;
 
-wire up_button;
-wire down_button;
-wire left_button;
-wire right_button;
-wire center_button;
-
+wire [7:0] counter;
 
 wire [15:0] max_music_number;
 
@@ -43,13 +37,13 @@ end
 
 always @(posedge clk_game) begin
     if (center_button == 1'b1) begin
-        player_rst <= 1'b0;
-        player_en <= 1'b1;
+        studyer_rst <= 1'b0;
+        studyer_en <= 1'b1;
     end
 
     if (left_button == 1'b1 && right_button == 1'b0) begin
-        player_en <= 1'b0;
-        player_rst <= 1'b1;
+        studyer_en <= 1'b0;
+        studyer_rst <= 1'b1;
         if (music_number > 1) begin
             music_number <= music_number - 1'b1;
             music_speed_play <= music_speed;
@@ -57,8 +51,8 @@ always @(posedge clk_game) begin
     end
 
     if (left_button == 1'b0 && right_button == 1'b1) begin
-        player_en <= 1'b0;
-        player_rst <= 1'b1;
+        studyer_en <= 1'b0;
+        studyer_rst <= 1'b1;
 
         if (music_number < max_music_number) begin
             music_number <= music_number + 1'b1;
@@ -79,17 +73,17 @@ always @(posedge clk_game) begin
     end
 
     if (music_over == 1'b1) begin
-        player_en <= 1'b0;
-        player_rst <= 1'b1;
+        studyer_en <= 1'b0;
+        studyer_rst <= 1'b1;
     end
 end
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 
 music_select music1(music_number, music_pack, music_number_out, music_length, music_speed);
-music_player player(clk, music_length, music_pack, music_speed_play, player_en, player_rst, speaker, led_out, music_over);
+music_studyer studyer(clk, big_dip_switches, music_length, music_pack, music_speed_play, studyer_en, studyer_rst, speaker, led_out, music_over, counter);
 
 number_display display1(clk, music_number_out, tub_select1, tub_control1);
-number_display display2(clk, music_speed_play, tub_select2, tub_control2);
+number_display display2(clk, counter, tub_select2, tub_control2);
 
 endmodule
