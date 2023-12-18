@@ -26,6 +26,12 @@ wire music_over;
 
 wire [11:0] score;
 
+wire up_button;
+wire down_button;
+wire left_button;
+wire right_button;
+wire center_button;
+
 wire [15:0] max_music_number;
 
 assign max_music_number = 2;
