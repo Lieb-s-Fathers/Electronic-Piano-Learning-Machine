@@ -11,7 +11,7 @@ initial begin
 end
 
 always @(posedge clk) begin
-    if (counter < 3333333) begin
+    if (counter < 6666666) begin
         counter <= counter + 1'b1;
     end else begin
         pwm <= ~pwm;
