@@ -1,51 +1,64 @@
-`timescale  1ns/1ns 
-module  vga_colorbar (     
-input   wire            sys_clk     ,   //è¾“å…¥å·¥ä½œæ—¶é’Ÿ,é¢‘ç‡50MHz     
-input   wire            sys_rst_n   ,   //è¾“å…¥å¤ä½ä¿¡å·,ä½ç”µå¹³æœ‰æ•ˆ
- 
-output  wire            hsync       ,  //è¾“å‡ºè¡ŒåŒæ­¥ä¿¡å· 
-output  wire            vsync       ,  //è¾“å‡ºåœºåŒæ­¥ä¿¡å· 
-output  wire    [15:0]  rgb            //è¾“å‡ºåƒç´ ä¿¡æ¯
- );
- //**********// //** Parameter and Internal Signal ***// //**********// //wire define
- wire            vga_clk ;   //VGAå·¥ä½œæ—¶é’Ÿ,é¢‘ç‡25MHz
- wire            locked  ;   //PLL lockedä¿¡å·
- wire            rst_n   ;   //VGAæ¨¡å—å¤ä½ä¿¡å·
- wire    [9:0]   pix_x   ;   //VGAæœ‰æ•ˆæ˜¾ç¤ºåŒºåŸŸXè½´åæ ‡
- wire    [9:0]   pix_y   ;   //VGAæœ‰æ•ˆæ˜¾ç¤ºåŒºåŸŸYè½´åæ ‡
- wire    [15:0]  pix_data;   //VGAåƒç´ ç‚¹è‰²å½©ä¿¡æ¯
+module vga_colorbar (
+    input   wire            sys_clk     ,   //ÊäÈë¹¤×÷Ê±ÖÓ,ÆµÂÊ100MHz
+    input   wire            sys_rst_n   ,   //ÊäÈë¸´Î»ĞÅºÅ,µÍµçÆ½ÓĞĞ§
 
- //rst_n:VGAæ¨¡å—å¤ä½ä¿¡å· 
+    output  wire            hsync       ,  //Êä³öĞĞÍ¬²½ĞÅºÅ
+    output  wire            vsync       ,  //Êä³ö³¡Í¬²½ĞÅºÅ
+    output  wire    [11:0]  rgb            //Êä³öÏñËØĞÅÏ¢
+);
+
+
+
+ //**********//
+ //** Parameter and Internal Signal ***//
+ //**********//
+
+ //wire define
+ wire            vga_clk ;   //VGA¹¤×÷Ê±ÖÓ,ÆµÂÊ25MHz
+ wire            locked  ;   //PLL lockedĞÅºÅ
+ wire            rst_n   ;   //VGAÄ£¿é¸´Î»ĞÅºÅ
+ wire    [9:0]   pix_x   ;   //VGAÓĞĞ§ÏÔÊ¾ÇøÓòXÖá×ø±ê
+ wire    [9:0]   pix_y   ;   //VGAÓĞĞ§ÏÔÊ¾ÇøÓòYÖá×ø±ê
+ wire    [11:0]  pix_data;   //VGAÏñËØµãÉ«²ÊĞÅÏ¢
+
+ //rst_n:VGAÄ£¿é¸´Î»ĞÅºÅ
 assign  rst_n = (sys_rst_n & locked);
- //**********// //**** Instantiation ***// //************//
- //------------- clk_gen_inst ------------- 
-clk_gen clk_gen_inst 
-(
-     .areset     (~sys_rst_n ),  //è¾“å…¥å¤ä½ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ,1bit
-     .inclk0     (sys_clk    ),  //è¾“å…¥50MHzæ™¶æŒ¯æ—¶é’Ÿ,1bit
 
-     .c0         (vga_clk    ),  //è¾“å‡ºVGAå·¥ä½œæ—¶é’Ÿ,é¢‘ç‡25Mhz,1bit
-     .locked     (locked     )   //è¾“å‡ºpll lockedä¿¡å·,1bit
+
+ //**********//
+ //**** Instantiation ***//
+ //************//
+
+ //------------- clk_gen_inst -------------
+clk_gen clk_gen_inst
+(
+    .areset     (~sys_rst_n ),  //ÊäÈë¸´Î»ĞÅºÅ,¸ßµçÆ½ÓĞĞ§,1bit
+    .inclk0     (sys_clk    ),  //ÊäÈë100MHz¾§ÕñÊ±ÖÓ,1bit
+
+    .c0         (vga_clk    ),  //Êä³öVGA¹¤×÷Ê±ÖÓ,ÆµÂÊ25Mhz,1bit
+    .locked     (locked     )   //Êä³öpll lockedĞÅºÅ,1bit
  );
- //------------- vga_ctrl_inst ------------- 
+
+ //------------- vga_ctrl_inst -------------
 vga_ctrl  vga_ctrl_inst
- (     
-     .vga_clk    (vga_clk    ),  //è¾“å…¥å·¥ä½œæ—¶é’Ÿ,é¢‘ç‡25MHz,1bit     
-     .sys_rst_n  (rst_n      ),  //è¾“å…¥å¤ä½ä¿¡å·,ä½ç”µå¹³æœ‰æ•ˆ,1bit
-     .pix_data   (pix_data   ),  //è¾“å…¥åƒç´ ç‚¹è‰²å½©ä¿¡æ¯,16bit
-     .pix_x      (pix_x      ),  //è¾“å‡ºVGAæœ‰æ•ˆæ˜¾ç¤ºåŒºåŸŸåƒç´ ç‚¹Xè½´åæ ‡,10bit
-     .pix_y      (pix_y      ),  //è¾“å‡ºVGAæœ‰æ•ˆæ˜¾ç¤ºåŒºåŸŸåƒç´ ç‚¹Yè½´åæ ‡,10bit
-     .hsync      (hsync      ),  //è¾“å‡ºè¡ŒåŒæ­¥ä¿¡å·,1bit
-     .vsync      (vsync      ),  //è¾“å‡ºåœºåŒæ­¥ä¿¡å·,1bit 
-     .rgb        (rgb        )   //è¾“å‡ºåƒç´ ç‚¹è‰²å½©ä¿¡æ¯,16bit
+ (
+    .vga_clk    (vga_clk    ),  //ÊäÈë¹¤×÷Ê±ÖÓ,ÆµÂÊ25MHz,1bit
+    .sys_rst_n  (rst_n      ),  //ÊäÈë¸´Î»ĞÅºÅ,µÍµçÆ½ÓĞĞ§,1bit
+    .pix_data   (pix_data   ),  //ÊäÈëÏñËØµãÉ«²ÊĞÅÏ¢,16bit
+    .pix_x      (pix_x      ),  //Êä³öVGAÓĞĞ§ÏÔÊ¾ÇøÓòÏñËØµãXÖá×ø±ê,10bit
+    .pix_y      (pix_y      ),  //Êä³öVGAÓĞĞ§ÏÔÊ¾ÇøÓòÏñËØµãYÖá×ø±ê,10bit
+    .hsync      (hsync      ),  //Êä³öĞĞÍ¬²½ĞÅºÅ,1bit
+    .vsync      (vsync      ),  //Êä³ö³¡Í¬²½ĞÅºÅ,1bit
+    .rgb        (rgb        )   //Êä³öÏñËØµãÉ«²ÊĞÅÏ¢,16bit
  );
- //------------- vga_pic_inst ------------- 
-vga_pic vga_pic_inst 
-(     .vga_clk    (vga_clk    ),  //è¾“å…¥å·¥ä½œæ—¶é’Ÿ,é¢‘ç‡25MHz,1bit
-      .sys_rst_n  (rst_n      ),  //è¾“å…¥å¤ä½ä¿¡å·,ä½ç”µå¹³æœ‰æ•ˆ,1bit
-      .pix_x      (pix_x      ),  //è¾“å…¥VGAæœ‰æ•ˆæ˜¾ç¤ºåŒºåŸŸåƒç´ ç‚¹Xè½´åæ ‡,10bit
-      .pix_y      (pix_y      ),  //è¾“å…¥VGAæœ‰æ•ˆæ˜¾ç¤ºåŒºåŸŸåƒç´ ç‚¹Yè½´åæ ‡,10bit
-      .pix_data   (pix_data   )   //è¾“å‡ºåƒç´ ç‚¹è‰²å½©ä¿¡æ¯,16bit
+
+ //------------- vga_pic_inst -------------
+vga_pic vga_pic_inst
+(     .vga_clk    (vga_clk    ),  //ÊäÈë¹¤×÷Ê±ÖÓ,ÆµÂÊ25MHz,1bit
+      .sys_rst_n  (rst_n      ),  //ÊäÈë¸´Î»ĞÅºÅ,µÍµçÆ½ÓĞĞ§,1bit
+      .pix_x      (pix_x      ),  //ÊäÈëVGAÓĞĞ§ÏÔÊ¾ÇøÓòÏñËØµãXÖá×ø±ê,10bit
+      .pix_y      (pix_y      ),  //ÊäÈëVGAÓĞĞ§ÏÔÊ¾ÇøÓòÏñËØµãYÖá×ø±ê,10bit
+      .pix_data   (pix_data   )   //Êä³öÏñËØµãÉ«²ÊĞÅÏ¢,16bit
  );
 
  endmodule
