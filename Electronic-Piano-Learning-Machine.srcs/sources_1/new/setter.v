@@ -25,6 +25,7 @@ wire right_button;
 wire center_button;
 reg [3:0] note_setted;
 
+
 wire [3:0] note_user;
 
 
@@ -32,15 +33,19 @@ initial begin
     setting = 32'b0000_0001_0010_0011_0100_0101_0110_0111;
     note = 4'b0001;
     rst = 1'b0;
-    en = 1'b1;
 end
 
 always @(posedge clk_game) begin
+
+    if(setting[27-:4] == setting[23-:4] || setting[27-:4] == setting[19-:4] || setting[27-:4] == setting[15-:4] || setting[27-:4] == setting[11-:4] || setting[27-:4] == setting[7-:4] || setting[27-:4] == setting[3-:4] || setting[23-:4] == setting[19-:4] || setting[23-:4] == setting[15-:4] || setting[23-:4] == setting[11-:4] || setting[23-:4] == setting[7-:4] || setting[23-:4] == setting[3-:4] || setting[19-:4] == setting[15-:4] || setting[19-:4] == setting[11-:4] || setting[19-:4] == setting[7-:4] || setting[19-:4] == setting[3-:4] || setting[15-:4] == setting[11-:4] || setting[15-:4] == setting[7-:4] || setting[15-:4] == setting[3-:4] || setting[11-:4] == setting[7-:4] || setting[11-:4] == setting[3-:4] || setting[7-:4] == setting[3-:4]) begin
+        rst <= 1'b1;
+    end
+
     if(rst == 1'b1)begin
         setting <= 32'b0000_0001_0010_0011_0100_0101_0110_0111;
         note <= 4'b0001;
     end
-    if(en == 1'b1) begin
+    else begin
         if (left_button == 1'b1 && right_button == 1'b0 && note > 4'b0000) begin
             note <= note - 4'b0001;
         end
@@ -72,11 +77,6 @@ always @(posedge clk_game) begin
         7: note_setted <= setting[3-:4];
     endcase
 end
-
-
-//always @(posedge rst) begin
-    
-//end
 
 
 
