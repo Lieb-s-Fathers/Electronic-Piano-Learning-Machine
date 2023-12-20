@@ -1,4 +1,4 @@
-`include "C:\Users\26788\VivadoProjects\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\2d-array.vh"
+`include "2d-array.vh"
 
 module music_studyer(
     input clk,
