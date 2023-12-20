@@ -1,31 +1,31 @@
 `timescale  1ns/1ns
  module  vga_pic (     
-input   wire            vga_clk     ,   //杈撳叆宸ヤ綔鏃堕挓,棰戠巼25MHz
-input   wire            sys_rst_n   ,   //杈撳叆澶嶄綅淇″彿,浣庣數骞虫湁鏁?
-input   wire    [9:0]   pix_x       ,   //杈撳叆VGA鏈夋晥鏄剧ず鍖哄煙鍍忕礌鐐筙杞村潗鏍?     
-input   wire    [9:0]   pix_y       ,   //杈撳叆VGA鏈夋晥鏄剧ず鍖哄煙鍍忕礌鐐筜杞村潗鏍?
-output  reg     [15:0]  pix_data        //杈撳嚭鍍忕礌鐐硅壊褰╀俊鎭?
+input   wire            vga_clk     ,   //输入工作时钟,频率25MHz
+input   wire            sys_rst_n   ,   //输入复位信号,低电平有效
+input   wire    [9:0]   pix_x       ,   //输入VGA有效显示区域像素点X轴坐标     
+input   wire    [9:0]   pix_y       ,   //输入VGA有效显示区域像素点Y轴坐标
+output  reg     [11:0]  pix_data        //输出像素点色彩信息
  );
-//** Parameter and Internal Signal ***// 
-parameter   H_VALID =   10'd640 ,   //琛屾湁鏁堟暟鎹?
-            V_VALID =   10'd480 ;   //鍦烘湁鏁堟暟鎹?
-parameter   RED     =   16'hF800,   //绾㈣壊            
-            ORANGE  =   16'hFC00,   //姗欒壊
-            YELLOW  =   16'hFFE0,   //榛勮壊
-            GREEN   =   16'h07E0,   //缁胯壊 
-            CYAN    =   16'h07FF,   //闈掕壊 
-            BLUE    =   16'h001F,   //钃濊壊 
-            PURPPLE =   16'hF81F,   //绱壊  
-            BLACK   =   16'h0000,   //榛戣壊 
-            WHITE   =   16'hFFFF,   //鐧借壊 
-            GRAY    =   16'hD69A;   //鐏拌壊
+//** Parameter and Internal Signal ***//
+parameter   H_VALID =   10'd640 ,   //行有效数据
+            V_VALID =   10'd480 ;   //场有效数据
+parameter   RED     =   12'hf00,   //红色
+            ORANGE  =   12'hfd0,   //橙色
+            YELLOW  =   12'hff0,   //黄色
+            GREEN   =   12'h0f0,   //绿色
+            CYAN    =   12'h0ff,   //青色
+            BLUE    =   12'h00f,   //蓝色
+            PURPPLE =   12'hf0f,   //紫色
+            BLACK   =   12'h000,   //黑色
+            WHITE   =   12'hfff,   //白色
+            GRAY    =   12'hddd;   //灰色
  //**********// //***** Main Code ****// //************//
- //pix_data:杈撳嚭鍍忕礌鐐硅壊褰╀俊鎭?,鏍规嵁褰撳墠鍍忕 礌鐐瑰潗鏍囨寚瀹氬綋鍓嶅儚绱犵偣棰滆壊鏁版嵁 
+ //pix_data:输出像素点色彩信息,根据当前像素点坐标指定当前像素点颜色数据 
 always@(posedge vga_clk or negedge sys_rst_n)     
 if(sys_rst_n == 1'b0)         
-    pix_data    <= 16'd0;     
-else if((pix_x >= 0) && (pix_x < (H_VALID/10)*1))         
-    pix_data    <=  RED;     
+pix_data    <= 16'd0;     
+else    if((pix_x >= 0) && (pix_x < (H_VALID/10)*1))         
+pix_data    <=  RED;     
 else    if((pix_x >= (H_VALID/10)*1) && (pix_x < (H_VALID/10)*2))         
     pix_data    <=  ORANGE;     
 else    if((pix_x >= (H_VALID/10)*2) && (pix_x < (H_VALID/10)*3))         
@@ -38,11 +38,11 @@ else    if((pix_x >= (H_VALID/10)*5) && (pix_x < (H_VALID/10)*6))
     pix_data    <=  BLUE;     
 else    if((pix_x >= (H_VALID/10)*6) && (pix_x < (H_VALID/10)*7))         
     pix_data    <=  PURPPLE;    
- else    if((pix_x >= (H_VALID/10)*7) && (pix_x < (H_VALID/10)*8))         
+ else   if((pix_x >= (H_VALID/10)*7) && (pix_x < (H_VALID/10)*8))         
     pix_data    <=  BLACK;     
 else    if((pix_x >= (H_VALID/10)*8) && (pix_x < (H_VALID/10)*9))        
     pix_data    <=  WHITE;    
- else    if((pix_x >= (H_VALID/10)*9) && (pix_x < H_VALID))        
+ else   if((pix_x >= (H_VALID/10)*9) && (pix_x < H_VALID))        
     pix_data    <=  GRAY;     
 else         
     pix_data    <=  BLACK;
