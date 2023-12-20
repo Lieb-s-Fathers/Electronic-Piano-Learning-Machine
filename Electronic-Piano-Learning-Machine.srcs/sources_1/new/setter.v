@@ -25,37 +25,46 @@ wire right_button;
 wire center_button;
 reg [3:0] note_setted;
 
-
+wire is_error;
+reg check_en;
 wire [3:0] note_user;
+
+reg [2:0] note_counter;
+
+reg [4:0] setting_display [7:0];
 
 
 initial begin
     setting = 32'b0000_0001_0010_0011_0100_0101_0110_0111;
     note = 4'b0001;
     rst = 1'b0;
+    check_en = 1'b0;
 end
 
 always @(posedge clk_game) begin
-
-    if(setting[27-:4] == setting[23-:4] || setting[27-:4] == setting[19-:4] || setting[27-:4] == setting[15-:4] || setting[27-:4] == setting[11-:4] || setting[27-:4] == setting[7-:4] || setting[27-:4] == setting[3-:4] || setting[23-:4] == setting[19-:4] || setting[23-:4] == setting[15-:4] || setting[23-:4] == setting[11-:4] || setting[23-:4] == setting[7-:4] || setting[23-:4] == setting[3-:4] || setting[19-:4] == setting[15-:4] || setting[19-:4] == setting[11-:4] || setting[19-:4] == setting[7-:4] || setting[19-:4] == setting[3-:4] || setting[15-:4] == setting[11-:4] || setting[15-:4] == setting[7-:4] || setting[15-:4] == setting[3-:4] || setting[11-:4] == setting[7-:4] || setting[11-:4] == setting[3-:4] || setting[7-:4] == setting[3-:4]) begin
+    if (is_error == 1'b1) begin
         rst <= 1'b1;
+        check_en <= 1'b0;
     end
 
-    if(rst == 1'b1)begin
+    if(rst == 1'b1) begin
         setting <= 32'b0000_0001_0010_0011_0100_0101_0110_0111;
         note <= 4'b0001;
+        rst<=0;
     end
     else begin
         if (left_button == 1'b1 && right_button == 1'b0 && note > 4'b0000) begin
             note <= note - 4'b0001;
         end
 
-        if (left_button == 1'b0 && right_button == 1'b1 && note < 4'b1000) begin
+        if (left_button == 1'b0 && right_button == 1'b1 && note < 4'b0111) begin
             note <= note + 4'b0001;
         end
+
     end
 
     if (center_button == 1'b1) begin
+        setting_display[note] <= note_user;
         case(note_user)
             1: setting[27-:4] <= note;
             2: setting[23-:4] <= note;
@@ -63,19 +72,28 @@ always @(posedge clk_game) begin
             4: setting[15-:4] <= note;
             5: setting[11-:4] <= note;
             6: setting[7-:4] <= note;
-            7: setting[3-:4] <= note;
+            7: setting[3-:4] <= note;    
         endcase
+        if (note < 4'b0111) begin
+            note <= note + 4'b0001;
+        end
+        else begin
+            check_en <= 1'b1;
+        end
     end
-    
-    case(note_user)
-        1: note_setted <= setting[27-:4];
-        2: note_setted <= setting[23-:4];
-        3: note_setted <= setting[19-:4];
-        4: note_setted <= setting[15-:4];
-        5: note_setted <= setting[11-:4];
-        6: note_setted <= setting[7-:4];
-        7: note_setted <= setting[3-:4];
-    endcase
+
+    // note_setted 显示在数码管2上，当前打开开关表示哪个音符
+//    case(note_user)
+//        1: note_setted <= setting[27-:4];
+//        2: note_setted <= setting[23-:4];
+//        3: note_setted <= setting[19-:4];
+//        4: note_setted <= setting[15-:4];
+//        5: note_setted <= setting[11-:4];
+//        6: note_setted <= setting[7-:4];
+//        7: note_setted <= setting[3-:4];
+//    endcase
+    note_setted <= setting_display[note];
+
 end
 
 
@@ -85,7 +103,7 @@ number_display number_display1(clk, {12'b0000_0000_0000, note}, tub_select1, tub
 number_display number_display2(clk, {12'b0000_0000_0000, note_setted}, tub_select2, tub_control2);
 encoder_8_3 encoder(big_dip_switches, note_user);
 led led1(big_dip_switches, led_out);
-
+setter_check setter_check1(clk_game, check_en, setting, is_error);
 
 endmodule
 
