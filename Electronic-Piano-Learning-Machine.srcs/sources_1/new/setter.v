@@ -49,8 +49,16 @@ always @(posedge clk_game) begin
 
     if(rst == 1'b1) begin
         setting <= 32'b0000_0001_0010_0011_0100_0101_0110_0111;
+        setting_display[0] = 4'd0;
+        setting_display[1] = 4'd1;
+        setting_display[2] = 4'd2;
+        setting_display[3] = 4'd3;
+        setting_display[4] = 4'd4;
+        setting_display[5] = 4'd5;
+        setting_display[6] = 4'd6;
+        setting_display[7] = 4'd7;
         note <= 4'b0001;
-        rst<=0;
+        rst <= 0;
     end
     else begin
         if (left_button == 1'b1 && right_button == 1'b0 && note > 4'b0000) begin
@@ -63,7 +71,7 @@ always @(posedge clk_game) begin
 
     end
 
-    if (center_button == 1'b1) begin
+    if (center_button == 1'b1 && note_user != 1'b0) begin
         setting_display[note] <= note_user;
         case(note_user)
             1: setting[27-:4] <= note;
@@ -72,8 +80,9 @@ always @(posedge clk_game) begin
             4: setting[15-:4] <= note;
             5: setting[11-:4] <= note;
             6: setting[7-:4] <= note;
-            7: setting[3-:4] <= note;    
+            7: setting[3-:4] <= note;
         endcase
+
         if (note < 4'b0111) begin
             note <= note + 4'b0001;
         end
@@ -92,6 +101,7 @@ always @(posedge clk_game) begin
 //        6: note_setted <= setting[7-:4];
 //        7: note_setted <= setting[3-:4];
 //    endcase
+
     note_setted <= setting_display[note];
 
 end
@@ -100,7 +110,7 @@ end
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 number_display number_display1(clk, {12'b0000_0000_0000, note}, tub_select1, tub_control1);
-number_display number_display2(clk, {12'b0000_0000_0000, note_setted}, tub_select2, tub_control2);
+number_display number_display2(clk, {12'b0000_0000, check_en, note_setted}, tub_select2, tub_control2);
 encoder_8_3 encoder(big_dip_switches, note_user);
 led led1(big_dip_switches, led_out);
 setter_check setter_check1(clk_game, check_en, setting, is_error);

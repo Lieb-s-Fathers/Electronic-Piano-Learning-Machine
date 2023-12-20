@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Dec 20 16:03:45 2023
-| Host         : Desktop-Tyke running 64-bit major release  (build 9200)
+| Date         : Wed Dec 20 19:40:38 2023
+| Host         : LAPTOP-13911TMM running 64-bit major release  (build 9200)
 | Command      : report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx
 | Design       : main
 | Device       : xc7a35tcsg324-1
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 390
+             Violations found: 413
 +-----------+------------------+--------------------------------+------------+
 | Rule      | Severity         | Description                    | Violations |
 +-----------+------------------+--------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 371        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 394        |
 | TIMING-20 | Warning          | Non-clocked latch              | 18         |
 | LATCH-1   | Advisory         | Existing latches in the design | 1          |
 +-----------+------------------+--------------------------------+------------+
@@ -1646,245 +1646,360 @@ Related violations: <none>
 
 TIMING-17#323 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/note_setted_reg[3]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#324 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[0]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#325 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[10]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#326 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[11]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#327 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[12]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#328 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[13]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#329 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[14]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#330 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[15]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#331 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[16]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#332 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[17]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#333 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[1]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#334 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[2]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#335 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[3]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#336 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[4]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#337 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[5]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#338 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[6]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#339 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[7]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#340 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[8]/C is not reached by a timing clock
+The clock pin model3_1/number_display1/regN_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#341 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/number_display1/regN_reg[9]/C is not reached by a timing clock
+The clock pin model3_1/rst_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#342 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/rst_reg/C is not reached by a timing clock
+The clock pin model3_1/setter_check1/is_error_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#343 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setter_check1/is_error_reg/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[0][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#344 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[0]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[0][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#345 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[10]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[0][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#346 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[11]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[1][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#347 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[12]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[1][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#348 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[13]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[1][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#349 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[14]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[2][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#350 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[15]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[2][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#351 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[16]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[2][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#352 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[17]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[3][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#353 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[18]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[3][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#354 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[19]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[3][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#355 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[1]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[4][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#356 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[20]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[4][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#357 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[21]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[4][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#358 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[22]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[5][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#359 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[23]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[5][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#360 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[24]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[5][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#361 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[25]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[6][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#362 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[26]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[6][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#363 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[27]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[6][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#364 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[2]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[7][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#365 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[3]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[7][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#366 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[4]/C is not reached by a timing clock
+The clock pin model3_1/setting_display_reg[7][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#367 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[5]/C is not reached by a timing clock
+The clock pin model3_1/setting_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#368 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[6]/C is not reached by a timing clock
+The clock pin model3_1/setting_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#369 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[7]/C is not reached by a timing clock
+The clock pin model3_1/setting_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#370 Critical Warning
 Non-clocked sequential cell  
-The clock pin model3_1/setting_reg[8]/C is not reached by a timing clock
+The clock pin model3_1/setting_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#371 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#372 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#373 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#374 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#375 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#376 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#377 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#378 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#379 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#380 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#381 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#382 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#383 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#384 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#385 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#386 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#387 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#388 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#389 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#390 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#391 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#392 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#393 Critical Warning
+Non-clocked sequential cell  
+The clock pin model3_1/setting_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#394 Critical Warning
 Non-clocked sequential cell  
 The clock pin model3_1/setting_reg[9]/C is not reached by a timing clock
 Related violations: <none>

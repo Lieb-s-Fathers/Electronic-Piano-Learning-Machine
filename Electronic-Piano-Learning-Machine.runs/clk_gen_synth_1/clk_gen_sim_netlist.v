@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Dec 20 18:05:47 2023
+// Date        : Wed Dec 20 18:05:46 2023
 // Host        : LAPTOP-13911TMM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ clk_gen_sim_netlist.v
 // Design      : clk_gen
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@
 `timescale 1 ps / 1 ps
 
 (* NotValidForBitStream *)
-module clk_gen
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (c0,
     reset,
     locked,
@@ -29,14 +29,14 @@ module clk_gen
   wire locked;
   wire reset;
 
-  clk_gen_clk_wiz inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_gen_clk_wiz inst
        (.c0(c0),
         .inclk0(inclk0),
         .locked(locked),
         .reset(reset));
 endmodule
 
-module clk_gen_clk_wiz
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_gen_clk_wiz
    (c0,
     reset,
     locked,

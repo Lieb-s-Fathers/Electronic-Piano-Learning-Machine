@@ -1,4 +1,4 @@
-module vga_colorbar (
+module vga_display (
     input   wire            clk     ,   //输入工作时钟,频率100MHz
     input   wire            sys_rst_n   ,   //输入复位信号,低电平有效
 

@@ -16,7 +16,8 @@
         "OPTIMIZE_CLOCKING_STRUCTURE_EN": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "ENABLE_USER_CLOCK0": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "ENABLE_USER_CLOCK1": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "ENABLE_USER_CLOCK2": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "ENABL.
+        E_USER_CLOCK2": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "ENABLE_USER_CLOCK3": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Enable_PLL0": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Enable_PLL1": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],

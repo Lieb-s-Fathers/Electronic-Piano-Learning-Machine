@@ -6,10 +6,6 @@ module setter_check(
     output reg is_error
 );
 
-initial begin
-    is_error = 1'b0;
-end
-
 always @(posedge clk_game) begin
     if (en == 1'b1) begin
         if(setting[27-:4] == setting[23-:4] || setting[27-:4] == setting[19-:4] || setting[27-:4] == setting[15-:4] || setting[27-:4] == setting[11-:4]
@@ -21,7 +17,7 @@ always @(posedge clk_game) begin
             is_error <= 1'b1;
         end
     end
-    
+
     if (en == 1'b0) begin
         is_error <= 1'b0;
     end
