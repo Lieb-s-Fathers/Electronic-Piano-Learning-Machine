@@ -1,5 +1,5 @@
 module vga_colorbar (
-    input   wire            sys_clk     ,   //输入工作时钟,频率100MHz
+    input   wire            clk     ,   //输入工作时钟,频率100MHz
     input   wire            sys_rst_n   ,   //输入复位信号,低电平有效
 
     output  wire            hsync       ,  //输出行同步信号
@@ -32,8 +32,8 @@ assign  rst_n = (sys_rst_n & locked);
  //------------- clk_gen_inst -------------
 clk_gen clk_gen_inst
 (
-    .areset     (~sys_rst_n ),  //输入复位信号,高电平有效,1bit
-    .inclk0     (sys_clk    ),  //输入100MHz晶振时钟,1bit
+    .reset     (~sys_rst_n ),  //输入复位信号,高电平有效,1bit
+    .inclk0     (clk    ),  //输入100MHz晶振时钟,1bit
 
     .c0         (vga_clk    ),  //输出VGA工作时钟,频率25Mhz,1bit
     .locked     (locked     )   //输出pll locked信号,1bit
