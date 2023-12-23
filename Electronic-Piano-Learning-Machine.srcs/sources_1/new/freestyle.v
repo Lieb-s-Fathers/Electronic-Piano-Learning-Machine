@@ -1,8 +1,12 @@
 module freestyle(
     input wire clk,
     input wire clk_game,
+
+    input wire en,
+    input wire rst,
     input [7:0] big_dip_switches,
     input [4:0] five_dir_buttons,
+
     output wire speaker,
     output [7:0] led_out,
     output [3:0] tub_select1,
@@ -23,20 +27,22 @@ wire center_button;
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 
-initial begin
-    key = 2'b01;
-end
-
 always @(posedge clk_game) begin
-    if (left_button == 1'b1 && right_button == 1'b0) begin
-        if (key > 2'b00) begin
-            key <= key - 1'b1;
-        end
-    end
+    if (rst == 1'b1) {
+        key = 2'b01;
+    }
 
-    if (left_button == 1'b0 && right_button == 1'b1) begin
-        if (key < 2'b11) begin
-            key <= key + 1'b1;
+    if (en == 1'b1) begin
+        if (left_button == 1'b1 && right_button == 1'b0) begin
+            if (key > 2'b00) begin
+                key <= key - 1'b1;
+            end
+        end
+
+        if (left_button == 1'b0 && right_button == 1'b1) begin
+            if (key < 2'b11) begin
+                key <= key + 1'b1;
+            end
         end
     end
 end
