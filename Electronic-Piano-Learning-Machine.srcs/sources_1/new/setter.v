@@ -1,6 +1,10 @@
 module setter(
     input wire clk,
     input wire clk_game,
+
+    input wire en,
+    input wire rst,
+
     input wire [7:0] big_dip_switches,
     input wire [4:0] five_dir_buttons,
 
@@ -14,8 +18,9 @@ module setter(
     output [7:0] tub_control2,
     output reg [31:0] setting
 );
+
 //todo: block out model 3 when using this mode
-reg rst;
+reg checker_rst;
 reg en;
 reg [3:0] note;
 wire up_button;
@@ -33,21 +38,13 @@ reg [2:0] note_counter;
 
 reg [4:0] setting_display [7:0];
 
-
-initial begin
-    setting = 32'b0000_0001_0010_0011_0100_0101_0110_0111;
-    note = 4'b0001;
-    rst = 1'b0;
-    check_en = 1'b0;
-end
-
 always @(posedge clk_game) begin
     if (is_error == 1'b1) begin
-        rst <= 1'b1;
+        checker_rst <= 1'b1;
         check_en <= 1'b0;
     end
 
-    if(rst == 1'b1) begin
+    if(checker_rst == 1'b1) begin
         setting <= 32'b0000_0001_0010_0011_0100_0101_0110_0111;
         setting_display[0] = 4'd0;
         setting_display[1] = 4'd1;
@@ -58,7 +55,8 @@ always @(posedge clk_game) begin
         setting_display[6] = 4'd6;
         setting_display[7] = 4'd7;
         note <= 4'b0001;
-        rst <= 0;
+        checker_rst <= 0;
+        check_en = 1'b0;
     end
     else begin
         if (left_button == 1'b1 && right_button == 1'b0 && note > 4'b0000) begin
@@ -114,6 +112,7 @@ number_display number_display2(clk, {12'b0000_0000, check_en, note_setted}, tub_
 encoder_8_3 encoder(big_dip_switches, note_user);
 led led1(big_dip_switches, led_out);
 setter_check setter_check1(clk_game, check_en, setting, is_error);
+Buzzer buzzer1(clk, note, 2'b01, speaker);
 
 endmodule
 

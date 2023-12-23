@@ -3,6 +3,10 @@
 module automode(
     input wire clk,
     input wire clk_game,
+
+    input wire en,
+    input wire rst,
+
     input [4:0] five_dir_buttons,
 
     output wire speaker,
@@ -36,51 +40,53 @@ wire [15:0] max_music_number;
 
 assign max_music_number = 2;
 
-initial begin
-    music_number = 1;
-    music_speed_play = 1;
-end
-
 always @(posedge clk_game) begin
-    if (center_button == 1'b1) begin
-        player_rst <= 1'b0;
-        player_en <= 1'b1;
+    if (rst == 1'b1) begin
+        music_number = 1;
+        music_speed_play = 1;
     end
 
-    if (left_button == 1'b1 && right_button == 1'b0) begin
-        player_en <= 1'b0;
-        player_rst <= 1'b1;
-        if (music_number > 1) begin
-            music_number <= music_number - 1'b1;
-            music_speed_play <= music_speed;
+    if (en == 1'b1) begin
+        if (center_button == 1'b1) begin
+            player_rst <= 1'b0;
+            player_en <= 1'b1;
         end
-    end
 
-    if (left_button == 1'b0 && right_button == 1'b1) begin
-        player_en <= 1'b0;
-        player_rst <= 1'b1;
-
-        if (music_number < max_music_number) begin
-            music_number <= music_number + 1'b1;
-            music_speed_play <= music_speed;
+        if (left_button == 1'b1 && right_button == 1'b0) begin
+            player_en <= 1'b0;
+            player_rst <= 1'b1;
+            if (music_number > 1) begin
+                music_number <= music_number - 1'b1;
+                music_speed_play <= music_speed;
+            end
         end
-    end
 
-    if (up_button == 1'b0 && down_button == 1'b1) begin
-        if (music_speed_play > 1) begin
-            music_speed_play <= music_speed_play - 1'b1;
+        if (left_button == 1'b0 && right_button == 1'b1) begin
+            player_en <= 1'b0;
+            player_rst <= 1'b1;
+
+            if (music_number < max_music_number) begin
+                music_number <= music_number + 1'b1;
+                music_speed_play <= music_speed;
+            end
         end
-    end
 
-    if (up_button == 1'b1 && down_button == 1'b0) begin
-        if (music_speed_play < 9) begin
-            music_speed_play <= music_speed_play + 1'b1;
+        if (up_button == 1'b0 && down_button == 1'b1) begin
+            if (music_speed_play > 1) begin
+                music_speed_play <= music_speed_play - 1'b1;
+            end
         end
-    end
 
-    if (music_over == 1'b1) begin
-        player_en <= 1'b0;
-        player_rst <= 1'b1;
+        if (up_button == 1'b1 && down_button == 1'b0) begin
+            if (music_speed_play < 9) begin
+                music_speed_play <= music_speed_play + 1'b1;
+            end
+        end
+
+        if (music_over == 1'b1) begin
+            player_en <= 1'b0;
+            player_rst <= 1'b1;
+        end
     end
 end
 
