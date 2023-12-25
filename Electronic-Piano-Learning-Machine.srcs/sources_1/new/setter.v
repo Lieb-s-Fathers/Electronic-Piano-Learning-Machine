@@ -18,6 +18,7 @@ module setter(
     output [7:0] tub_control2,
     output reg [31:0] setting
 );
+
 //todo: block out model 3 when using this mode
 reg checker_rst;
 reg en;

@@ -1,7 +1,7 @@
 module main(
     input wire clk,
-    input [7:0] big_dip_switches,
     input [7:0] small_dip_switches,
+    input [7:0] big_dip_switches,
     input [4:0] five_dir_buttons,
 
     output reg speaker,
@@ -52,16 +52,12 @@ wire [7:0] tub_control14;
 wire [3:0] tub_select24;
 wire [7:0] tub_control24;
 
-wire [31:0] setting;
-
 initial begin
     audio = 0;
 end
 
-freestyle model1(clk, clk_game, big_dip_switches, five_dir_buttons, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21);
-automode model2(clk, clk_game, five_dir_buttons, speaker2, led_out2, tub_select12, tub_control12, tub_select22, tub_control22);
-study model3(clk, clk_game, big_dip_switches, five_dir_buttons, setting, speaker3, led_out3, tub_select13, tub_control13, tub_select23, tub_control23);
-setter model3_1(clk, clk_game, big_dip_switches, five_dir_buttons, speaker4, led_out4, tub_select14, tub_control14, tub_select24, tub_control24, setting);
+freestyle model1(clk, clk_game, en1, rst1, big_dip_switches, five_dir_buttons, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21);
+automode model2(clk, clk_game, en2, rst2, five_dir_buttons, speaker2, led_out2, tub_select12, tub_control12, tub_select22, tub_control22);
 
 always @(small_dip_switches[7-:3]) begin
     case (small_dip_switches[7-:3])
@@ -104,6 +100,7 @@ always @(small_dip_switches[7-:3]) begin
 end
 
 clk_game clk2(clk, clk_game);
+mode_selector mode_sel(clk, clk_game, big_dip_switches, five_dir_buttons, en1, en2, en3, rst1, rst2, rst3, prog);
 
 endmodule
 
