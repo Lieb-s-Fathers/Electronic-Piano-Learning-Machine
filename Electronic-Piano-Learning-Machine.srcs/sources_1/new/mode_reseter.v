@@ -1,16 +1,19 @@
 module mode_reseter(
     input wire clk,
-    input [2:0] last_mode_number,
+    input wire clk_game,
     input [2:0] mode_number,
-    output wire en1,
-    output wire en2,
-    output wire en3,
-    output wire rst1,
-    output wire rst2,
-    output wire rst3,
-)
+    output reg en1,
+    output reg en2,
+    output reg en3,
+    output reg rst1,
+    output reg rst2,
+    output reg rst3
+);
 
-always @(posedge clk) begin
+reg [2:0] last_mode_number;
+
+
+always @(posedge clk_game) begin
     if (mode_number != last_mode_number) begin
         rst1 <= 1'b1;
         rst2 <= 1'b1;
@@ -22,7 +25,7 @@ always @(posedge clk) begin
         rst3 <= 1'b0;
     end
 
-    case(mode_number) begin
+    case(mode_number)
         3'b100: begin
             en1 <= 1'b1;
             en2 <= 1'b0;
@@ -43,7 +46,9 @@ always @(posedge clk) begin
             en2 <= 1'b0;
             en3 <= 1'b0;
         end
-    end
+    endcase
 
     last_mode_number <= mode_number;
-end;
+end
+
+endmodule

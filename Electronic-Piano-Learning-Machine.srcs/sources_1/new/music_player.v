@@ -45,7 +45,7 @@ end
 
 
 encoder_8_3 encoder(note_code, note);
-Buzzer buzzer1(clk, note, 2'b01, speaker);
+Buzzer buzzer1(clk, 1'b1, note, 2'b01, speaker);
 led led1(note_code, led_out);
 beats beat1(clk, music_speed_play, beat);
 

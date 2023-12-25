@@ -1,7 +1,7 @@
 module score_cal(
     input wire beat,
     input wire [7:0] counter,
-    input wire [7:0] counter_time,
+    input wire [8:0] counter_time,
     output wire [11:0] score_out
 );
 

@@ -5,9 +5,10 @@ module study(
     input wire en,
     input wire rst,
 
-    input wire [7:0] small_dip_switches,
     input wire [7:0] big_dip_switches,
     input wire [4:0] five_dir_buttons,
+
+    input [31:0] setting,
 
     output wire speaker,
     output [7:0] led_out,

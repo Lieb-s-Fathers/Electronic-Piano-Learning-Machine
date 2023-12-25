@@ -58,6 +58,7 @@ end
 
 freestyle model1(clk, clk_game, en1, rst1, big_dip_switches, five_dir_buttons, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21);
 automode model2(clk, clk_game, en2, rst2, five_dir_buttons, speaker2, led_out2, tub_select12, tub_control12, tub_select22, tub_control22);
+study_selecter model3(clk, clk_game, en3, rst3, small_dip_switches, big_dip_switches, five_dir_buttons, speaker3, led_out3, tub_select13, tub_control13, tub_select23, tub_control23);
 
 always @(small_dip_switches[7-:3]) begin
     case (small_dip_switches[7-:3])
@@ -100,7 +101,7 @@ always @(small_dip_switches[7-:3]) begin
 end
 
 clk_game clk2(clk, clk_game);
-mode_selector mode_sel(clk, clk_game, big_dip_switches, five_dir_buttons, en1, en2, en3, rst1, rst2, rst3, prog);
+mode_reseter mode_sel(clk, clk_game, small_dip_switches[7-:3], en1, en2, en3, rst1, rst2, rst3);
 
 endmodule
 

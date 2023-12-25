@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module automode(
     input wire clk,
     input wire clk_game,

@@ -28,9 +28,9 @@ wire center_button;
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 
 always @(posedge clk_game) begin
-    if (rst == 1'b1) {
-        key = 2'b01;
-    }
+    if (rst == 1'b1) begin
+        key <= 2'b01;
+    end
 
     if (en == 1'b1) begin
         if (left_button == 1'b1 && right_button == 1'b0) begin
@@ -48,7 +48,7 @@ always @(posedge clk_game) begin
 end
 
 encoder_8_3 encoder(big_dip_switches, note);
-Buzzer buzzer1(clk, note, key, speaker);
+Buzzer buzzer1(clk, 1'b1, note, key, speaker);
 led led1(big_dip_switches, led_out);
 
 number_display display1(clk, 16'b1111111011011101, tub_select1, tub_control1);

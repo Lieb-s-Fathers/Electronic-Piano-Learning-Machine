@@ -20,7 +20,7 @@ wire [7:0] music[0:48];
 reg [7:0] note_code;
 wire [3:0] note_play;
 reg [7:0] counter;
-reg [7:0] counter_time;
+reg [8:0] counter_time;
 wire [3:0] note_setted;
 wire [3:0] note_code_b;
 wire [3:0] note_code_setted_b;
@@ -28,13 +28,6 @@ wire [7:0] note_code_setted;
 
 
 `UNPACK_ARRAY(8, 49, music, music_pack)
-
-initial begin
-    counter = 0;
-    counter_time = 0;
-    note_code = 8'b00000000;
-    music_over = 1'b0;
-end
 
 always @(posedge beat) begin
     if (rst == 1'b1) begin
@@ -59,12 +52,12 @@ always @(posedge beat) begin
     end
 end
 
- 
+
 
 score_cal score1(beat, counter, counter_time, score);
 encoder_8_3 encoder1(big_dip_switches, note_play);
 encoder_8_3 encoder2(note_code, note_code_b);
-Buzzer buzzer1(clk, note_setted, 2'b01, speaker);
+Buzzer buzzer1(clk, 1'b1, note_setted, 2'b01, speaker);
 led led1(note_code_setted, led_out);
 beats beat1(clk, music_speed_play, beat);
 note_setter note_setter1(clk, note_play, setting, note_setted);

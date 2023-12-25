@@ -2,6 +2,7 @@
 
 module Buzzer(
     input wire clk,
+    input wire en,
     input wire[3:0] note, // Note (Input 1 outputs a signal for 'do,' 2 for 're,' 3 for 'mi,' 4, and so on)
     input [1:0] key,
     output wire speaker   // Buzzer output signal
@@ -35,11 +36,13 @@ always @(posedge clk) begin
             counter <= 0;
         end
     end else begin
-        if (counter < notes[note] || note == 1'b0) begin
-            counter <= counter + 1'b1 * 2 ** (key - 1);
-        end else begin
-            pwm <= ~pwm;
-            counter <= 0;
+        if (en == 1'b1) begin
+            if (counter < notes[note] || note == 1'b0) begin
+                counter <= counter + 1'b1 * 2 ** (key - 1);
+            end else begin
+                pwm <= ~pwm;
+                counter <= 0;
+            end
         end
     end
 end
