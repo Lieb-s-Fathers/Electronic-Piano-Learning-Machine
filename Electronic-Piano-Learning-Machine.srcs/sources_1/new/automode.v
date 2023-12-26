@@ -41,8 +41,8 @@ assign max_music_number = 2;
 
 always @(posedge clk_game) begin
     if (rst == 1'b1) begin
-        music_number = 1;
-        music_speed_play = 1;
+        music_number <= 1;
+        music_speed_play <= 1;
     end
 
     if (en == 1'b1) begin

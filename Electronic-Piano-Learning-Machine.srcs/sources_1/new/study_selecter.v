@@ -60,21 +60,21 @@ always @(posedge clk_game) begin
     end
 
     if (en == 1'b1) begin
-        if (small_dip_switches[4] == 1'b0) begin
+        if (small_dip_switches[0] == 1'b0) begin
             en1 <= 1'b1;
             en2 <= 1'b0;
         end
 
-        if (small_dip_switches[4] == 1'b1) begin
+        if (small_dip_switches[0] == 1'b1) begin
             en1 <= 1'b0;
             en2 <= 1'b1;
         end
     end
 end
 
-always @(small_dip_switches[4]) begin
+always @(small_dip_switches[0]) begin
     if (en == 1'b1) begin
-        case (small_dip_switches[4])
+        case (small_dip_switches[0])
             1'b0: begin
                 speaker = speaker1;
                 led_out = led_out1;

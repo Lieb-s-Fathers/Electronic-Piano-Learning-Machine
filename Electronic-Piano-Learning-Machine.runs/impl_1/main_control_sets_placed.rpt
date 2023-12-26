@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Dec 27 00:40:18 2023
+| Date         : Wed Dec 27 01:06:49 2023
 | Host         : Desktop-Tyke running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    26 |
-|    Minimum number of control sets                        |    26 |
+| Total control sets                                       |    40 |
+|    Minimum number of control sets                        |    40 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    80 |
+| Unused register locations in slices containing registers |   109 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    26 |
+| Total control sets |    40 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     9 |
-| >= 6 to < 8        |     2 |
-| >= 8 to < 10       |     2 |
+| >= 4 to < 6        |    10 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     4 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     0 |
-| >= 16              |    11 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    19 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,47 +58,61 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             207 |           96 |
-| No           | No                    | Yes                    |              16 |            7 |
-| No           | Yes                   | No                     |             169 |           44 |
-| Yes          | No                    | No                     |              36 |           18 |
-| Yes          | No                    | Yes                    |              10 |            5 |
-| Yes          | Yes                   | No                     |              58 |           20 |
+| No           | No                    | No                     |             534 |          254 |
+| No           | No                    | Yes                    |              16 |            9 |
+| No           | Yes                   | No                     |             283 |           74 |
+| Yes          | No                    | No                     |              38 |           17 |
+| Yes          | No                    | Yes                    |              10 |            4 |
+| Yes          | Yes                   | No                     |             162 |           59 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------------+-------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
-|              Clock Signal              |                  Enable Signal                  |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------------------------------+-------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
-|  model2/player/beat1/CLK               |                                                 |                                                |                1 |              1 |         1.00 |
-|  model3/studyer/studyer/beat1/beat     |                                                 |                                                |                2 |              4 |         2.00 |
-|  clk_game_BUFG                         | model3/setter1/setting[3]_i_1_n_0               |                                                |                2 |              4 |         2.00 |
-|  clk_game_BUFG                         | model3/setter1/setting[11]_i_1_n_0              |                                                |                2 |              4 |         2.00 |
-|  clk_game_BUFG                         | model3/setter1/setting[23]_i_1_n_0              |                                                |                2 |              4 |         2.00 |
-|  clk_game_BUFG                         | model3/setter1/setting[7]_i_1_n_0               |                                                |                1 |              4 |         4.00 |
-|  clk_game_BUFG                         | model3/setter1/p_0_in_1[19]                     |                                                |                2 |              4 |         2.00 |
-|  clk_game_BUFG                         | model3/setter1/p_0_in_1[15]                     |                                                |                3 |              4 |         1.33 |
-|  clk_game_BUFG                         | model3/setter1/p_0_in_1[27]                     |                                                |                4 |              4 |         1.00 |
-|  model3/studyer/studyer/beat1/beat     | model3/studyer/studyer/note_code[7]_i_2__0_n_0  | model3/studyer/studyer/note_code[7]_i_1__0_n_0 |                3 |              5 |         1.67 |
-|  model2/player/beat1/CLK               | model2/player_en_reg_n_0                        | model2/player/note_code[7]_i_1_n_0             |                3 |              6 |         2.00 |
-|  model3/studyer/studyer/beat1/beat     | model3/studyer/studyer/counter_time[8]_i_2_n_0  | model3/studyer/studyer/counter_time[8]_i_1_n_0 |                2 |              7 |         3.50 |
-|  model3/studyer/studyer/beat1/beat     | model3/studyer/studyer/counter[7]_i_2__0_n_0    | model3/studyer/studyer/counter[7]_i_1__0_n_0   |                4 |              8 |         2.00 |
-|  model2/player/beat1/CLK               | model2/player/counter[7]_i_1_n_0                |                                                |                2 |              8 |         4.00 |
-|  vga_display_inst/clk_gen_inst/inst/c0 | vga_display_inst/vga_ctrl_inst/cnt_v[9]_i_1_n_0 | vga_display_inst/vga_ctrl_inst/sys_rst         |                5 |             10 |         2.00 |
-|  vga_display_inst/clk_gen_inst/inst/c0 |                                                 | vga_display_inst/vga_ctrl_inst/sys_rst         |                7 |             16 |         2.29 |
-|  clk_IBUF_BUFG                         |                                                 | clk2/clear                                     |                6 |             23 |         3.83 |
-|  clk_IBUF_BUFG                         |                                                 | model3/studyer/studyer/beat1/clear             |                7 |             25 |         3.57 |
-|  clk_IBUF_BUFG                         |                                                 | model2/player/beat1/clear                      |                7 |             25 |         3.57 |
-|  clk_IBUF_BUFG                         |                                                 | model3/setter1/setting_reg[21]_0               |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG                         |                                                 | model1/buzzer1/p_0_in_0                        |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG                         |                                                 | model2/player/buzzer1/counter[0]_i_1__0_n_0    |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG                         | model3/setter1/buzzer_en                        | model3/setter1/buzzer1/pwm                     |                8 |             32 |         4.00 |
-|  en3_BUFG                              |                                                 |                                                |               18 |             34 |         1.89 |
-|  clk_IBUF_BUFG                         |                                                 |                                                |               26 |             79 |         3.04 |
-|  clk_game_BUFG                         |                                                 |                                                |               49 |             89 |         1.82 |
-+----------------------------------------+-------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
++-----------------------------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                 |                      Enable Signal                      |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|  model2/player/beat1/CLK                      |                                                         |                                                         |                1 |              1 |         1.00 |
+|  model3_user2/studyer/studyer/beat1/pwm_reg_0 |                                                         |                                                         |                3 |              4 |         1.33 |
+|  clk_game_BUFG                                | model3_user2/setter1/note[3]_i_1__0_n_0                 |                                                         |                2 |              4 |         2.00 |
+|  model3_user3/studyer/studyer/beat1/pwm_reg_0 |                                                         |                                                         |                3 |              4 |         1.33 |
+|  clk_game_BUFG                                | model3_user3/setter1/note[3]_i_1__1_n_0                 |                                                         |                2 |              4 |         2.00 |
+|  model3_user1/studyer/studyer/beat1/pwm_reg_0 |                                                         |                                                         |                3 |              4 |         1.33 |
+|  clk_game_BUFG                                | model2/music_speed_play[3]_i_1_n_0                      |                                                         |                3 |              4 |         1.33 |
+|  clk_game_BUFG                                | model3_user1/setter1/note[3]_i_1_n_0                    |                                                         |                2 |              4 |         2.00 |
+|  model3_user2/studyer/studyer/beat1/pwm_reg_0 | model3_user2/studyer/studyer/note_code[7]_i_2__1_n_0    | model3_user2/studyer/studyer/note_code[7]_i_1__1_n_0    |                4 |              5 |         1.25 |
+|  model3_user1/studyer/studyer/beat1/pwm_reg_0 | model3_user1/studyer/studyer/note_code[7]_i_2__0_n_0    | model3_user1/studyer/studyer/note_code[7]_i_1__0_n_0    |                3 |              5 |         1.67 |
+|  model3_user3/studyer/studyer/beat1/pwm_reg_0 | model3_user3/studyer/studyer/note_code[7]_i_2__2_n_0    | model3_user3/studyer/studyer/note_code[7]_i_1__2_n_0    |                4 |              5 |         1.25 |
+|  model2/player/beat1/CLK                      | model2/player_en_reg_n_0                                | model2/player/note_code[7]_i_1_n_0                      |                4 |              6 |         1.50 |
+|  model3_user2/studyer/studyer/beat1/pwm_reg_0 | model3_user2/studyer/studyer/counter_time[8]_i_2__0_n_0 | model3_user2/studyer/studyer/counter_time[8]_i_1__1_n_0 |                3 |              7 |         2.33 |
+|  model3_user1/studyer/studyer/beat1/pwm_reg_0 | model3_user1/studyer/studyer/counter_time[8]_i_2_n_0    | model3_user1/studyer/studyer/counter_time[8]_i_1__0_n_0 |                2 |              7 |         3.50 |
+|  model3_user3/studyer/studyer/beat1/pwm_reg_0 | model3_user3/studyer/studyer/counter_time[8]_i_2__1_n_0 | model3_user3/studyer/studyer/counter_time[8]_i_1_n_0    |                3 |              7 |         2.33 |
+|  model3_user2/studyer/studyer/beat1/pwm_reg_0 | model3_user2/studyer/studyer/counter[7]_i_2__1_n_0      | model3_user2/studyer/studyer/counter[7]_i_1__1_n_0      |                4 |              8 |         2.00 |
+|  model3_user1/studyer/studyer/beat1/pwm_reg_0 | model3_user1/studyer/studyer/counter[7]_i_2__0_n_0      | model3_user1/studyer/studyer/counter[7]_i_1__0_n_0      |                4 |              8 |         2.00 |
+|  model3_user3/studyer/studyer/beat1/pwm_reg_0 | model3_user3/studyer/studyer/counter[7]_i_2__2_n_0      | model3_user3/studyer/studyer/counter[7]_i_1__2_n_0      |                4 |              8 |         2.00 |
+|  model2/player/beat1/CLK                      | model2/player/counter[7]_i_1_n_0                        |                                                         |                3 |              8 |         2.67 |
+|  vga_display_inst/clk_gen_inst/inst/c0        | vga_display_inst/vga_ctrl_inst/cnt_v[9]_i_1_n_0         | vga_display_inst/vga_ctrl_inst/sys_rst                  |                4 |             10 |         2.50 |
+|  clk_game_BUFG                                | model2/music_number[15]_i_1_n_0                         |                                                         |                5 |             14 |         2.80 |
+|  vga_display_inst/clk_gen_inst/inst/c0        |                                                         | vga_display_inst/vga_ctrl_inst/sys_rst                  |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                                |                                                         | clk2/clear                                              |                6 |             23 |         3.83 |
+|  clk_IBUF_BUFG                                |                                                         | model3_user1/studyer/studyer/beat1/counter_reg[21]_0    |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                                |                                                         | model3_user2/studyer/studyer/beat1/counter_reg[21]_0    |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                                |                                                         | model3_user3/studyer/studyer/beat1/counter_reg[21]_0    |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                                |                                                         | model2/player/beat1/clear                               |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                                |                                                         | model3_user1/setter1/counter2_inferred__1/i__carry__2   |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                |                                                         | model3_user2/setter1/counter2_inferred__1/i__carry__2   |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                |                                                         | model3_user3/setter1/counter2_inferred__1/i__carry__2   |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                |                                                         | model1/buzzer1/p_0_in_0                                 |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                |                                                         | model2/player/buzzer1/counter[0]_i_1__0_n_0             |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                | model3_user1/setter1/buzzer_en                          | model3_user1/setter1/buzzer1/clear                      |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                | model3_user2/setter1/buzzer_en                          | model3_user2/setter1/buzzer1/clear                      |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                | model3_user3/setter1/buzzer_en                          | model3_user3/setter1/buzzer1/clear                      |                8 |             32 |         4.00 |
+|  en4_BUFG                                     |                                                         |                                                         |               18 |             34 |         1.89 |
+|  en5_BUFG                                     |                                                         |                                                         |               19 |             34 |         1.79 |
+|  en3_BUFG                                     |                                                         |                                                         |               20 |             34 |         1.70 |
+|  clk_IBUF_BUFG                                |                                                         |                                                         |               52 |            157 |         3.02 |
+|  clk_game_BUFG                                |                                                         |                                                         |              135 |            262 |         1.94 |
++-----------------------------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
 
 
