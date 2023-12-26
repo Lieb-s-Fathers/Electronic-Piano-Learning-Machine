@@ -38,6 +38,13 @@ clk_gen clk_gen_inst(
     .locked     (locked     )   //输出pll locked信号,1bit
 );
 
+//clk_core clk_gen_inst(
+//      .clk_in1(clk),      //输入100MHz晶振时钟,1bit
+//      .clk_out3(vga_clk),  //输出VGA工作时钟,频率25Mhz,1bit
+//      .reset(~sys_rst_n),  //输入复位信号,高电平有效,1bit
+//      .locked(locked)   //输出pll locked信号,1bit
+//);
+
  //------------- vga_ctrl_inst -------------
 vga_ctrl  vga_ctrl_inst(
     .vga_clk        (vga_clk        ),  //输入工作时钟,频率25MHz,1bit

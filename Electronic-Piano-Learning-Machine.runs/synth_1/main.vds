@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Dec 27 01:33:34 2023
-# Process ID: 30848
+# Start of session at: Wed Dec 27 05:43:41 2023
+# Process ID: 55192
 # Current directory: D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/main.vds
@@ -20,17 +20,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34392
+INFO: [Synth 8-7075] Helper process launched with PID 54712
 INFO: [Synth 8-11241] undeclared symbol 'beat', assumed default net type 'wire' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_player.v:47]
 INFO: [Synth 8-11241] undeclared symbol 'beat', assumed default net type 'wire' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_studyer.v:57]
 INFO: [Synth 8-11241] undeclared symbol 'seg_out', assumed default net type 'wire' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/number_display.v:6]
 INFO: [Synth 8-11241] undeclared symbol 'buzzer_en', assumed default net type 'wire' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/setter.v:125]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1261.109 ; gain = 410.547
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1262.969 ; gain = 410.711
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:1]
 INFO: [Synth 8-6157] synthesizing module 'freestyle' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/freestyle.v:1]
@@ -47,18 +45,26 @@ INFO: [Synth 8-6155] done synthesizing module 'number_display' (0#1) [D:/Electro
 INFO: [Synth 8-6155] done synthesizing module 'freestyle' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/freestyle.v:1]
 INFO: [Synth 8-6157] synthesizing module 'automode' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/automode.v:1]
 INFO: [Synth 8-6157] synthesizing module 'music_select' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bt_music' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:3]
+INFO: [Synth 8-6157] synthesizing module 'decoder_3_8' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/decoder_3_8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_3_8' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/decoder_3_8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bt_music' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:3]
 INFO: [Synth 8-6157] synthesizing module 'star' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/star.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'star' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/star.v:3]
 INFO: [Synth 8-6157] synthesizing module 'tiger' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'tiger' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v:3]
-WARNING: [Synth 8-567] referenced signal 'music_pack1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
-WARNING: [Synth 8-567] referenced signal 'music_number1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
-WARNING: [Synth 8-567] referenced signal 'music_length1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
-WARNING: [Synth 8-567] referenced signal 'music_speed1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
-WARNING: [Synth 8-567] referenced signal 'music_pack2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
-WARNING: [Synth 8-567] referenced signal 'music_number2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
-WARNING: [Synth 8-567] referenced signal 'music_length2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
-WARNING: [Synth 8-567] referenced signal 'music_speed2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:23]
+WARNING: [Synth 8-567] referenced signal 'music_pack0' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_number0' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_length0' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_speed0' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_pack1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_number1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_length1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_speed1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_pack2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_number2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_length2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
+WARNING: [Synth 8-567] referenced signal 'music_speed2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:30]
 INFO: [Synth 8-6155] done synthesizing module 'music_select' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v:1]
 INFO: [Synth 8-6157] synthesizing module 'music_player' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_player.v:3]
 INFO: [Synth 8-6157] synthesizing module 'beats' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/beats.v:1]
@@ -67,6 +73,11 @@ INFO: [Synth 8-6155] done synthesizing module 'music_player' (0#1) [D:/Electroni
 INFO: [Synth 8-6155] done synthesizing module 'automode' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/automode.v:1]
 INFO: [Synth 8-6157] synthesizing module 'study_selecter' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:1]
 INFO: [Synth 8-6157] synthesizing module 'study' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:1]
+WARNING: [Synth 8-689] width (392) of port connection 'bt_data32' does not match port width (32) of module 'music_select' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:99]
+WARNING: [Synth 8-689] width (16) of port connection 'music_pack_out' does not match port width (392) of module 'music_select' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:99]
+WARNING: [Synth 8-689] width (4) of port connection 'music_length_out' does not match port width (16) of module 'music_select' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:99]
+WARNING: [Synth 8-7071] port 'music_speed_out' of module 'music_select' is unconnected for instance 'music1' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:99]
+WARNING: [Synth 8-7023] instance 'music1' of module 'music_select' has 6 connections declared, but only 5 given [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:99]
 INFO: [Synth 8-6157] synthesizing module 'music_studyer' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_studyer.v:3]
 INFO: [Synth 8-6157] synthesizing module 'score_cal' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/score_cal.v:1]
 INFO: [Synth 8-6157] synthesizing module 'b_to_d' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/b_to_d.v:1]
@@ -74,8 +85,6 @@ INFO: [Synth 8-6155] done synthesizing module 'b_to_d' (0#1) [D:/Electronic-Pian
 INFO: [Synth 8-6155] done synthesizing module 'score_cal' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/score_cal.v:1]
 INFO: [Synth 8-6157] synthesizing module 'note_setter' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/note_setter.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'note_setter' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/note_setter.v:1]
-INFO: [Synth 8-6157] synthesizing module 'decoder_3_8' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/decoder_3_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'decoder_3_8' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/decoder_3_8.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'music_studyer' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_studyer.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'study' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:1]
 INFO: [Synth 8-6157] synthesizing module 'setter' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/setter.v:1]
@@ -100,55 +109,150 @@ WARNING: [Synth 8-567] referenced signal 'tub_select22' should be on the sensiti
 WARNING: [Synth 8-567] referenced signal 'tub_control22' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:75]
 WARNING: [Synth 8-567] referenced signal 'display_data2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:75]
 INFO: [Synth 8-6155] done synthesizing module 'study_selecter' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:1]
-WARNING: [Synth 8-567] referenced signal 'speaker1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'led_out1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select11' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control11' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select21' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control21' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'display_data1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'speaker2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'led_out2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select12' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control12' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select22' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control22' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'display_data2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'speaker3' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'led_out3' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select13' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control13' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select23' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control23' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'display_data3' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'speaker4' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'led_out4' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select14' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control14' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select24' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control24' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'display_data4' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'speaker5' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'led_out5' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select15' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control15' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_select25' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'tub_control25' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
-WARNING: [Synth 8-567] referenced signal 'display_data5' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:83]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:95]
+WARNING: [Synth 8-567] referenced signal 'speaker1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'led_out1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select11' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control11' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select21' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control21' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'display_data1' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'speaker2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'led_out2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select12' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control12' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select22' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control22' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'display_data2' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'speaker3' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'led_out3' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select13' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control13' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select23' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control23' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'display_data3' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'speaker4' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'led_out4' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select14' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control14' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select24' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control24' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'display_data4' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'speaker5' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'led_out5' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select15' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control15' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_select25' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'tub_control25' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
+WARNING: [Synth 8-567] referenced signal 'display_data5' should be on the sensitivity list [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:94]
 INFO: [Synth 8-6157] synthesizing module 'clk_game' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/clk_game.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'clk_game' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/clk_game.v:1]
 INFO: [Synth 8-6157] synthesizing module 'mode_reseter' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/mode_reseter.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'mode_reseter' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/mode_reseter.v:1]
 INFO: [Synth 8-6157] synthesizing module 'vga_display' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_colorbar.v:1]
-INFO: [Synth 8-6157] synthesizing module 'clk_gen' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-30848-Desktop-Tyke/realtime/clk_gen_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_gen' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-30848-Desktop-Tyke/realtime/clk_gen_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_gen' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-55192-Desktop-Tyke/realtime/clk_gen_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_gen' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-55192-Desktop-Tyke/realtime/clk_gen_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'vga_ctrl' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_ctrl.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'vga_ctrl' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_ctrl.v:1]
 INFO: [Synth 8-6157] synthesizing module 'vga_pic' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_pic.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'vga_pic' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_pic.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'vga_display' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_colorbar.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bt_uart' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/bt_uart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71768]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71768]
+INFO: [Synth 8-6157] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:91121]
+INFO: [Synth 8-6155] done synthesizing module 'OBUF' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:91121]
+INFO: [Synth 8-6157] synthesizing module 'clk_gen_1' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_gen.v:33]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_div.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_div.v:30]
+INFO: [Synth 8-6157] synthesizing module 'clk_core' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-55192-Desktop-Tyke/realtime/clk_core_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_core' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-55192-Desktop-Tyke/realtime/clk_core_stub.v:6]
+WARNING: [Synth 8-7071] port 'clk_out3' of module 'clk_core' is unconnected for instance 'clk_core_i0' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_gen.v:80]
+WARNING: [Synth 8-7023] instance 'clk_core_i0' of module 'clk_core' has 6 connections declared, but only 5 given [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_gen.v:80]
+INFO: [Synth 8-6157] synthesizing module 'BUFHCE' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1776]
+	Parameter INIT_OUT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BUFHCE' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1776]
+INFO: [Synth 8-6155] done synthesizing module 'clk_gen_1' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_gen.v:33]
+INFO: [Synth 8-6157] synthesizing module 'rst_gen' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/rst_gen.v:26]
+INFO: [Synth 8-6157] synthesizing module 'reset_bridge' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/reset_bridge.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'reset_bridge' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/reset_bridge.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'rst_gen' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/rst_gen.v:26]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_rx.v:6]
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'meta_harden' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/meta_harden.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'meta_harden' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/meta_harden.v:27]
+INFO: [Synth 8-6157] synthesizing module 'uart_baud_gen' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_baud_gen.v:35]
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_baud_gen' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_baud_gen.v:35]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx_ctl' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_rx_ctl.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx_ctl' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_rx_ctl.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_rx.v:6]
+INFO: [Synth 8-6157] synthesizing module 'cmd_parse' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/cmd_parse.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/cmd_parse.v:228]
+INFO: [Synth 8-6155] done synthesizing module 'cmd_parse' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/cmd_parse.v:6]
+INFO: [Synth 8-6157] synthesizing module 'resp_gen' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/resp_gen.v:41]
+INFO: [Synth 8-6157] synthesizing module 'to_bcd' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/to_bcd.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'to_bcd' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/to_bcd.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'resp_gen' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/resp_gen.v:41]
+INFO: [Synth 8-6157] synthesizing module 'char_fifo' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-55192-Desktop-Tyke/realtime/char_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'char_fifo' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/.Xil/Vivado-55192-Desktop-Tyke/realtime/char_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_tx.v:35]
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx_ctl' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_tx_ctl.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx_ctl' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_tx_ctl.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_tx.v:35]
+INFO: [Synth 8-6157] synthesizing module 'lb_ctl' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/lb_ctl.v:32]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/debouncer.v:26]
+	Parameter FILTER bound to: 200000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/debouncer.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'lb_ctl' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/lb_ctl.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'bt_uart' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/bt_uart.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:1]
 WARNING: [Synth 8-3848] Net notes[0] in module/entity Buzzer does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/Buzzer.v:11]
+WARNING: [Synth 8-3848] Net music[0] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[9] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[10] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[11] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[12] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[13] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[14] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[15] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[16] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[17] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[18] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[19] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[20] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[21] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[22] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[23] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[24] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[25] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[26] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[27] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[28] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[29] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[30] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[31] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[32] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[33] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[34] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[35] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[36] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[37] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[38] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[39] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[40] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[41] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[42] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[43] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[44] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[45] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[46] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[47] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
+WARNING: [Synth 8-3848] Net music[48] in module/entity bt_music does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v:11]
 WARNING: [Synth 8-3848] Net music[0] in module/entity star does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/star.v:10]
 WARNING: [Synth 8-3848] Net music[0] in module/entity tiger does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v:10]
 WARNING: [Synth 8-3848] Net music[35] in module/entity tiger does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v:10]
@@ -161,6 +265,7 @@ WARNING: [Synth 8-3848] Net music[45] in module/entity tiger does not have drive
 WARNING: [Synth 8-3848] Net music[46] in module/entity tiger does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v:10]
 WARNING: [Synth 8-3848] Net music[47] in module/entity tiger does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v:10]
 WARNING: [Synth 8-3848] Net music[48] in module/entity tiger does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v:10]
+WARNING: [Synth 8-3848] Net music_pack in module/entity study does not have driver. [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v:27]
 WARNING: [Synth 8-6014] Unused sequential element rst2_reg was removed.  [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:48]
 WARNING: [Synth 8-6014] Unused sequential element rst2_reg was removed.  [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/mode_reseter.v:22]
 WARNING: [Synth 8-6014] Unused sequential element rst3_reg was removed.  [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/mode_reseter.v:23]
@@ -269,56 +374,76 @@ WARNING: [Synth 8-7129] Port music_pack[7] in module tiger is either unconnected
 WARNING: [Synth 8-7129] Port music_pack[6] in module tiger is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1366.496 ; gain = 515.934
+Finished RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 1379.754 ; gain = 527.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1366.496 ; gain = 515.934
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 1379.754 ; gain = 527.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1366.496 ; gain = 515.934
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 1379.754 ; gain = 527.496
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1366.496 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1384.387 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/char_fifo/char_fifo/char_info_in_context.xdc] for cell 'nolabel_line152/char_fifo_i0'
+Finished Parsing XDC File [d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/char_fifo/char_fifo/char_info_in_context.xdc] for cell 'nolabel_line152/char_fifo_i0'
 Parsing XDC File [d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen/clk_gen_in_context.xdc] for cell 'vga_display_inst/clk_gen_inst'
 Finished Parsing XDC File [d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen/clk_gen_in_context.xdc] for cell 'vga_display_inst/clk_gen_inst'
+Parsing XDC File [d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core/clk_core_in_context.xdc] for cell 'nolabel_line152/clk_gen_i0/clk_core_i0'
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core/clk_core_in_context.xdc:1]
+Finished Parsing XDC File [d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core/clk_core_in_context.xdc] for cell 'nolabel_line152/clk_gen_i0/clk_core_i0'
 Parsing XDC File [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/constrs_1/new/test.xdc]
 Finished Parsing XDC File [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/constrs_1/new/test.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/constrs_1/new/test.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1470.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1487.379 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1470.047 ; gain = 0.000
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1487.379 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Constraint Validation : Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen/clk_gen_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen/clk_gen_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core/clk_core_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core/clk_core_in_context.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for nolabel_line152/char_fifo_i0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for vga_display_inst/clk_gen_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for nolabel_line152/clk_gen_i0/clk_core_i0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/utils_1/imports/synth_1/Buzzer.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1487.379 ; gain = 635.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1487.379 ; gain = 635.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx_ctl'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'cmd_parse'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx_ctl'
 WARNING: [Synth 8-327] inferring latch for variable 'speaker_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:79]
 WARNING: [Synth 8-327] inferring latch for variable 'led_out_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:80]
 WARNING: [Synth 8-327] inferring latch for variable 'tub_sel1_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:81]
@@ -326,9 +451,52 @@ WARNING: [Synth 8-327] inferring latch for variable 'tub_ctrl1_reg' [D:/Electron
 WARNING: [Synth 8-327] inferring latch for variable 'tub_sel2_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:83]
 WARNING: [Synth 8-327] inferring latch for variable 'tub_ctrl2_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:84]
 WARNING: [Synth 8-327] inferring latch for variable 'display_data_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v:85]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                  iSTATE |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx_ctl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                CMD_WAIT |                               01 |                              001
+                 GET_ARG |                               10 |                              010
+               SEND_RESP |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'cmd_parse'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                 iSTATE2 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+                 iSTATE0 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx_ctl'
+WARNING: [Synth 8-327] inferring latch for variable 'speaker_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:97]
+WARNING: [Synth 8-327] inferring latch for variable 'led_out_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:98]
+WARNING: [Synth 8-327] inferring latch for variable 'tub_sel1_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:99]
+WARNING: [Synth 8-327] inferring latch for variable 'tub_ctrl1_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:100]
+WARNING: [Synth 8-327] inferring latch for variable 'tub_sel2_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:101]
+WARNING: [Synth 8-327] inferring latch for variable 'tub_ctrl2_reg' [D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v:102]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -336,45 +504,65 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 8     
 	   3 Input   18 Bit       Adders := 4     
-	   2 Input   16 Bit       Adders := 4     
-	   2 Input   10 Bit       Adders := 4     
+	   2 Input   16 Bit       Adders := 5     
+	   2 Input   14 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 15    
 	   2 Input    9 Bit       Adders := 3     
-	   2 Input    8 Bit       Adders := 4     
-	   2 Input    4 Bit       Adders := 14    
+	   2 Input    8 Bit       Adders := 12    
+	   2 Input    7 Bit       Adders := 9     
+	   2 Input    4 Bit       Adders := 26    
+	   2 Input    3 Bit       Adders := 3     
 	   2 Input    2 Bit       Adders := 6     
 +---Registers : 
-	               32 Bit    Registers := 3     
-	               16 Bit    Registers := 4     
+	               32 Bit    Registers := 4     
+	               28 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               16 Bit    Registers := 7     
 	               12 Bit    Registers := 1     
-	               10 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
 	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 11    
+	                8 Bit    Registers := 13    
+	                7 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 34    
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 49    
+	                4 Bit    Registers := 37    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 77    
 +---Muxes : 
+	   4 Input  392 Bit        Muxes := 4     
 	   2 Input  392 Bit        Muxes := 4     
-	   3 Input  392 Bit        Muxes := 4     
 	   8 Input   32 Bit        Muxes := 8     
 	   2 Input   32 Bit        Muxes := 20    
+	   2 Input   19 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 8     
 	   2 Input   16 Bit        Muxes := 28    
-	   3 Input   16 Bit        Muxes := 8     
 	   2 Input   12 Bit        Muxes := 1     
 	  11 Input   12 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 3     
 	   2 Input    9 Bit        Muxes := 6     
-	   2 Input    8 Bit        Muxes := 35    
-	   8 Input    8 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 79    
+	   8 Input    8 Bit        Muxes := 39    
+	   7 Input    8 Bit        Muxes := 1     
+	  14 Input    8 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 3     
-	   4 Input    4 Bit        Muxes := 32    
-	   2 Input    4 Bit        Muxes := 127   
-	   3 Input    4 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 36    
+	   2 Input    4 Bit        Muxes := 132   
+	   5 Input    4 Bit        Muxes := 1     
 	   9 Input    3 Bit        Muxes := 11    
 	   2 Input    3 Bit        Muxes := 12    
-	   2 Input    2 Bit        Muxes := 11    
-	   2 Input    1 Bit        Muxes := 186   
-	   6 Input    1 Bit        Muxes := 5     
+	   4 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 17    
+	   4 Input    2 Bit        Muxes := 5     
+	   5 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 211   
+	   7 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 12    
+	   3 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -392,11 +580,33 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3917] design main has port audio driven by constant 0
+WARNING: [Synth 8-3332] Sequential element (model3_user1/display_data_reg[6]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user1/display_data_reg[5]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user1/display_data_reg[4]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user1/display_data_reg[3]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user1/display_data_reg[2]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user1/display_data_reg[1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user1/display_data_reg[0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user2/display_data_reg[6]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user2/display_data_reg[5]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user2/display_data_reg[4]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user2/display_data_reg[3]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user2/display_data_reg[2]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user2/display_data_reg[1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user2/display_data_reg[0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user3/display_data_reg[6]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user3/display_data_reg[5]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user3/display_data_reg[4]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user3/display_data_reg[3]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user3/display_data_reg[2]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user3/display_data_reg[1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (model3_user3/display_data_reg[0]) is unused and will be removed from module main.
 WARNING: [Synth 8-3332] Sequential element (model3_user3/tub_ctrl1_reg[0]) is unused and will be removed from module main.
 WARNING: [Synth 8-3332] Sequential element (model3_user2/tub_ctrl1_reg[0]) is unused and will be removed from module main.
 WARNING: [Synth 8-3332] Sequential element (model3_user1/tub_ctrl1_reg[0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (tub_ctrl1_reg[0]) is unused and will be removed from module main.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -418,14 +628,15 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:01 ; elapsed = 00:00:21 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Timing Optimization : Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -434,7 +645,7 @@ INFO: [Synth 8-7052] The timing for the instance model3_user1/studyer/studyer/sc
 INFO: [Synth 8-7052] The timing for the instance model3_user1/studyer/studyer/score1/score_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance model3_user3/studyer/studyer/score1/score_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Technology Mapping : Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -452,37 +663,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished IO Insertion : Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -492,53 +703,66 @@ Report BlackBoxes:
 +------+--------------+----------+
 |      |BlackBox name |Instances |
 +------+--------------+----------+
-|1     |clk_gen       |         1|
+|1     |char_fifo     |         1|
+|2     |clk_core      |         1|
+|3     |clk_gen       |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |clk_gen  |     1|
-|2     |BUFG     |     4|
-|3     |CARRY4   |   335|
-|4     |LUT1     |   101|
-|5     |LUT2     |   250|
-|6     |LUT3     |   508|
-|7     |LUT4     |   248|
-|8     |LUT5     |   528|
-|9     |LUT6     |   646|
-|10    |MUXF7    |    27|
-|11    |RAMB18E1 |     2|
-|12    |FDCE     |    26|
-|13    |FDRE     |   914|
-|14    |LD       |   102|
-|15    |IBUF     |    20|
-|16    |OBUF     |    48|
-+------+---------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |char_fifo |     1|
+|2     |clk_core  |     1|
+|3     |clk_gen   |     1|
+|4     |BUFG      |     1|
+|5     |BUFHCE    |     1|
+|6     |CARRY4    |   344|
+|7     |LUT1      |   128|
+|8     |LUT2      |   255|
+|9     |LUT3      |   506|
+|10    |LUT4      |   219|
+|11    |LUT5      |   564|
+|12    |LUT6      |   718|
+|13    |MUXF7     |    28|
+|14    |MUXF8     |     1|
+|15    |RAMB18E1  |     2|
+|16    |FDCE      |    26|
+|17    |FDPE      |     4|
+|18    |FDRE      |  1064|
+|19    |FDSE      |    21|
+|20    |LD        |   108|
+|21    |IBUF      |    24|
+|22    |OBUF      |    54|
++------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1487.379 ; gain = 635.121
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1470.047 ; gain = 515.934
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1470.047 ; gain = 619.484
+Synthesis finished with 0 errors, 1 critical warnings and 1039 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:24 . Memory (MB): peak = 1487.379 ; gain = 527.496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 1487.379 ; gain = 635.121
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1473.102 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 466 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1487.379 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 483 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. nolabel_line152/IBUF_lb_sel_i0 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. nolabel_line152/IBUF_rst_i0 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1476.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1487.379 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 102 instances were transformed.
-  LD => LDCE: 102 instances
+  A total of 108 instances were transformed.
+  LD => LDCE: 108 instances
 
-Synth Design complete | Checksum: 973de89e
+Synth Design complete | Checksum: 3b2fa37d
 INFO: [Common 17-83] Releasing license: Synthesis
-87 Infos, 190 Warnings, 0 Critical Warnings and 0 Errors encountered.
+136 Infos, 275 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1476.789 ; gain = 1010.613
+synth_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.379 ; gain = 1018.879
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 27 01:34:06 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 27 05:44:15 2023...

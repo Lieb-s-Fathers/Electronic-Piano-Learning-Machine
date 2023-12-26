@@ -80,3 +80,19 @@ set_property PACKAGE_PIN C7 [get_ports {rgb[3]}]
 set_property PACKAGE_PIN E6 [get_ports {rgb[2]}]
 set_property PACKAGE_PIN E5 [get_ports {rgb[1]}]
 set_property PACKAGE_PIN E7 [get_ports {rgb[0]}]
+
+
+##USB-RS232 Interface
+##Bank = 16, Pin name = ,					Sch name = UART_TXD_IN
+set_property PACKAGE_PIN L3 [get_ports rxd_pin]
+set_property IOSTANDARD LVCMOS33 [get_ports rxd_pin]
+#Bank = 16, Pin name = ,					Sch name = UART_RXD_OUT
+set_property PACKAGE_PIN N2 [get_ports txd_pin]
+set_property IOSTANDARD LVCMOS33 [get_ports txd_pin]
+
+# BT
+set_property -dict {PACKAGE_PIN D18 IOSTANDARD LVCMOS33} [get_ports bt_pw_on        ]
+set_property -dict {PACKAGE_PIN C16 IOSTANDARD LVCMOS33} [get_ports bt_master_slave ]
+set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports bt_sw_hw        ]
+set_property -dict {PACKAGE_PIN M2  IOSTANDARD LVCMOS33} [get_ports bt_rst_n        ]
+set_property -dict {PACKAGE_PIN E18 IOSTANDARD LVCMOS33} [get_ports bt_sw           ]

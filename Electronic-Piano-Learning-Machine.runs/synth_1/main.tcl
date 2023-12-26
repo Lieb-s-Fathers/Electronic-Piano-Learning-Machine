@@ -81,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.cache/wt [current_project]
 set_property parent.project_path D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.cache/ip [current_project]
@@ -95,17 +95,28 @@ read_verilog -library xil_defaultlib {
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/automode.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/b_to_d.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/beats.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt_music.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/bt_uart.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/button_control.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_div.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/clk_game.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/clk_gen.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/cmd_parse.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/debouncer.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/decoder_3_8.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/freestyle.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/lb_ctl.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/led.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/meta_harden.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/mode_reseter.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_player.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_select.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/music_studyer.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/note_setter.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/number_display.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/reset_bridge.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/resp_gen.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/rst_gen.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/score_cal.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/setter.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/setter_check.v
@@ -113,15 +124,31 @@ read_verilog -library xil_defaultlib {
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/study_selecter.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/tiger.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/to_bcd.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_baud_gen.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_rx.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_rx_ctl.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_tx.v
+  D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/bt/uart_tx_ctl.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_colorbar.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_ctrl.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/vga_pic.v
   D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/new/main.v
 }
+read_ip -quiet D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/ip/char_fifo/char_fifo.xci
+set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/char_fifo/char_fifo.xdc]
+set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/char_fifo/char_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/char_fifo/char_fifo_ooc.xdc]
+
 read_ip -quiet D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/ip/clk_gen_1/clk_gen.xci
 set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen.xdc]
 set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_gen_1/clk_gen_ooc.xdc]
+
+read_ip -quiet D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/ip/clk_core/clk_core.xci
+set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core.xdc]
+set_property used_in_implementation false [get_files -all d:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.gen/sources_1/ip/clk_core/clk_core_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -135,6 +162,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/constrs_1/new/test.xdc
 set_property used_in_implementation false [get_files D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/constrs_1/new/test.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/utils_1/imports/synth_1/Buzzer.dcp

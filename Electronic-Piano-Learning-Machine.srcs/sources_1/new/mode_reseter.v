@@ -33,6 +33,13 @@ always @(posedge clk_game) begin
     end
 
     case(mode_number)
+        5'b00000: begin
+            en1 <= 1'b0;
+            en2 <= 1'b0;
+            en3 <= 1'b0;
+            en4 <= 1'b0;
+            en5 <= 1'b0;
+        end
         5'b10000: begin
             en1 <= 1'b1;
             en2 <= 1'b0;

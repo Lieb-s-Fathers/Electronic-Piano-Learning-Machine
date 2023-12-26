@@ -135,11 +135,13 @@ OPTRACE "set parameters" START { }
   set_property parent.project_path D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.xpr [current_project]
   set_property ip_output_repo D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.runs/synth_1/main.dcp
+  read_ip -quiet D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/ip/char_fifo/char_fifo.xci
   read_ip -quiet D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/ip/clk_gen_1/clk_gen.xci
+  read_ip -quiet D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/sources_1/ip/clk_core/clk_core.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc D:/Electronic-Piano-Learning-Machine/Electronic-Piano-Learning-Machine.srcs/constrs_1/new/test.xdc
 OPTRACE "read constraints: implementation" END { }
@@ -306,7 +308,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi main.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
