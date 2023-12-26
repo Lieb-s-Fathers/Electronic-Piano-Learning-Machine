@@ -51,17 +51,17 @@ always @(posedge clk_game) begin
 
     if(checker_rst == 1'b1 || rst == 1'b1) begin
         setting <= 32'b0000_0001_0010_0011_0100_0101_0110_0111;
-        setting_display[0] = 4'd0;
-        setting_display[1] = 4'd1;
-        setting_display[2] = 4'd2;
-        setting_display[3] = 4'd3;
-        setting_display[4] = 4'd4;
-        setting_display[5] = 4'd5;
-        setting_display[6] = 4'd6;
-        setting_display[7] = 4'd7;
+        setting_display[0] <= 4'd0;
+        setting_display[1] <= 4'd1;
+        setting_display[2] <= 4'd2;
+        setting_display[3] <= 4'd3;
+        setting_display[4] <= 4'd4;
+        setting_display[5] <= 4'd5;
+        setting_display[6] <= 4'd6;
+        setting_display[7] <= 4'd7;
         note <= 4'b0001;
         checker_rst <= 0;
-        check_en = 1'b0;
+        check_en <= 1'b0;
     end
     else begin
         if (left_button == 1'b1 && right_button == 1'b0 && note > 4'b0000) begin
@@ -126,7 +126,7 @@ assign buzzer_en = ~check_en;
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 number_display number_display1(clk, {12'b0000_0000_0000, note}, tub_select1, tub_control1);
-number_display number_display2(clk, {12'b0000_0000, check_en, note_setted}, tub_select2, tub_control2);
+number_display number_display2(clk, {12'b0000_000, check_en, note_setted}, tub_select2, tub_control2);
 encoder_8_3 encoder(big_dip_switches, note_user);
 decoder_3_8 decoder(note, note_code);
 led led1(big_dip_switches, led_out);

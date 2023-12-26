@@ -22,11 +22,6 @@ reg [7:0] counter;
 
 `UNPACK_ARRAY(8, 49, music, music_pack)
 
-initial begin
-    counter = 0;
-    music_over = 1'b0;
-end
-
 always @(posedge beat) begin
     if (rst == 1'b1) begin
         counter <= 0;

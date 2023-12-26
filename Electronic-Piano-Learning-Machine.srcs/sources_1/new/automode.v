@@ -52,8 +52,6 @@ always @(posedge clk_game) begin
         end
 
         if (left_button == 1'b1 && right_button == 1'b0) begin
-            player_en <= 1'b0;
-            player_rst <= 1'b1;
             if (music_number > 1) begin
                 music_number <= music_number - 1'b1;
                 music_speed_play <= music_speed;
@@ -61,9 +59,6 @@ always @(posedge clk_game) begin
         end
 
         if (left_button == 1'b0 && right_button == 1'b1) begin
-            player_en <= 1'b0;
-            player_rst <= 1'b1;
-
             if (music_number < max_music_number) begin
                 music_number <= music_number + 1'b1;
                 music_speed_play <= music_speed;

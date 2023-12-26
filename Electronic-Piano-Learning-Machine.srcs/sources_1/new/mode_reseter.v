@@ -14,8 +14,7 @@ module mode_reseter(
     output reg rst5
 );
 
-reg [2:0] last_mode_number;
-
+reg [4:0] last_mode_number;
 
 always @(posedge clk_game) begin
     if (mode_number != last_mode_number) begin
