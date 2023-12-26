@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Mon Dec 25 18:21:54 2023
+| Date         : Wed Dec 27 00:40:31 2023
 | Host         : Desktop-Tyke running 64-bit major release  (build 9200)
 | Command      : report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx
 | Design       : main
@@ -23,14 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 465
-+-----------+------------------+--------------------------------+------------+
-| Rule      | Severity         | Description                    | Violations |
-+-----------+------------------+--------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 437        |
-| TIMING-20 | Warning          | Non-clocked latch              | 27         |
-| LATCH-1   | Advisory         | Existing latches in the design | 1          |
-+-----------+------------------+--------------------------------+------------+
+             Violations found: 474
++-----------+------------------+-------------------------------------------+------------+
+| Rule      | Severity         | Description                               | Violations |
++-----------+------------------+-------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell               | 437        |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert              | 1          |
+| TIMING-20 | Warning          | Non-clocked latch                         | 34         |
+| LATCH-1   | Advisory         | Existing latches in the design            | 1          |
++-----------+------------------+-------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -2219,144 +2221,204 @@ Non-clocked sequential cell
 The clock pin model3/studyer/studyer_rst_reg/C is not reached by a timing clock
 Related violations: <none>
 
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock vga_display_inst/clk_gen_inst/inst/inclk0 is created on an inappropriate internal pin vga_display_inst/clk_gen_inst/inst/inclk0. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell vga_display_inst/vga_ctrl_inst/cnt_h[9]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_display_inst/vga_ctrl_inst/cnt_v_reg[1]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[2]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[3]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[4]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[5]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[6]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[7]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[8]/CLR,
+vga_display_inst/vga_ctrl_inst/cnt_v_reg[9]/CLR,
+vga_display_inst/vga_pic_inst/pix_data_reg[11]/CLR,
+vga_display_inst/vga_pic_inst/pix_data_reg[1]/CLR,
+vga_display_inst/vga_pic_inst/pix_data_reg[3]/CLR,
+vga_display_inst/vga_pic_inst/pix_data_reg[5]/CLR,
+vga_display_inst/vga_pic_inst/pix_data_reg[7]/CLR,
+vga_display_inst/vga_pic_inst/pix_data_reg[9]/CLR
+ (the first 15 of 26 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[0] cannot be properly analyzed as its control pin model3/led_out_reg[0]/G is not reached by a timing clock
+The latch model3/display_data_reg[0] cannot be properly analyzed as its control pin model3/display_data_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[1] cannot be properly analyzed as its control pin model3/led_out_reg[1]/G is not reached by a timing clock
+The latch model3/display_data_reg[1] cannot be properly analyzed as its control pin model3/display_data_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[2] cannot be properly analyzed as its control pin model3/led_out_reg[2]/G is not reached by a timing clock
+The latch model3/display_data_reg[2] cannot be properly analyzed as its control pin model3/display_data_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[3] cannot be properly analyzed as its control pin model3/led_out_reg[3]/G is not reached by a timing clock
+The latch model3/display_data_reg[3] cannot be properly analyzed as its control pin model3/display_data_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[4] cannot be properly analyzed as its control pin model3/led_out_reg[4]/G is not reached by a timing clock
+The latch model3/display_data_reg[4] cannot be properly analyzed as its control pin model3/display_data_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[5] cannot be properly analyzed as its control pin model3/led_out_reg[5]/G is not reached by a timing clock
+The latch model3/display_data_reg[5] cannot be properly analyzed as its control pin model3/display_data_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[6] cannot be properly analyzed as its control pin model3/led_out_reg[6]/G is not reached by a timing clock
+The latch model3/display_data_reg[6] cannot be properly analyzed as its control pin model3/display_data_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch model3/led_out_reg[7] cannot be properly analyzed as its control pin model3/led_out_reg[7]/G is not reached by a timing clock
+The latch model3/led_out_reg[0] cannot be properly analyzed as its control pin model3/led_out_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch model3/speaker_reg cannot be properly analyzed as its control pin model3/speaker_reg/G is not reached by a timing clock
+The latch model3/led_out_reg[1] cannot be properly analyzed as its control pin model3/led_out_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl1_reg[1] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[1]/G is not reached by a timing clock
+The latch model3/led_out_reg[2] cannot be properly analyzed as its control pin model3/led_out_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl1_reg[2] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[2]/G is not reached by a timing clock
+The latch model3/led_out_reg[3] cannot be properly analyzed as its control pin model3/led_out_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl1_reg[3] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[3]/G is not reached by a timing clock
+The latch model3/led_out_reg[4] cannot be properly analyzed as its control pin model3/led_out_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl1_reg[4] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[4]/G is not reached by a timing clock
+The latch model3/led_out_reg[5] cannot be properly analyzed as its control pin model3/led_out_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl1_reg[5] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[5]/G is not reached by a timing clock
+The latch model3/led_out_reg[6] cannot be properly analyzed as its control pin model3/led_out_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl1_reg[6] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[6]/G is not reached by a timing clock
+The latch model3/led_out_reg[7] cannot be properly analyzed as its control pin model3/led_out_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl1_reg[7] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[7]/G is not reached by a timing clock
+The latch model3/speaker_reg cannot be properly analyzed as its control pin model3/speaker_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl2_reg[1] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[1]/G is not reached by a timing clock
+The latch model3/tub_ctrl1_reg[1] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#18 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl2_reg[2] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[2]/G is not reached by a timing clock
+The latch model3/tub_ctrl1_reg[2] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#19 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl2_reg[3] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[3]/G is not reached by a timing clock
+The latch model3/tub_ctrl1_reg[3] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#20 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl2_reg[4] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[4]/G is not reached by a timing clock
+The latch model3/tub_ctrl1_reg[4] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#21 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl2_reg[5] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[5]/G is not reached by a timing clock
+The latch model3/tub_ctrl1_reg[5] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#22 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl2_reg[6] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[6]/G is not reached by a timing clock
+The latch model3/tub_ctrl1_reg[6] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#23 Warning
 Non-clocked latch  
-The latch model3/tub_ctrl2_reg[7] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[7]/G is not reached by a timing clock
+The latch model3/tub_ctrl1_reg[7] cannot be properly analyzed as its control pin model3/tub_ctrl1_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#24 Warning
 Non-clocked latch  
-The latch model3/tub_sel1_reg[0] cannot be properly analyzed as its control pin model3/tub_sel1_reg[0]/G is not reached by a timing clock
+The latch model3/tub_ctrl2_reg[1] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#25 Warning
 Non-clocked latch  
-The latch model3/tub_sel1_reg[1] cannot be properly analyzed as its control pin model3/tub_sel1_reg[1]/G is not reached by a timing clock
+The latch model3/tub_ctrl2_reg[2] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#26 Warning
 Non-clocked latch  
-The latch model3/tub_sel1_reg[2] cannot be properly analyzed as its control pin model3/tub_sel1_reg[2]/G is not reached by a timing clock
+The latch model3/tub_ctrl2_reg[3] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#27 Warning
+Non-clocked latch  
+The latch model3/tub_ctrl2_reg[4] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch model3/tub_ctrl2_reg[5] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch model3/tub_ctrl2_reg[6] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch model3/tub_ctrl2_reg[7] cannot be properly analyzed as its control pin model3/tub_ctrl2_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch model3/tub_sel1_reg[0] cannot be properly analyzed as its control pin model3/tub_sel1_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch model3/tub_sel1_reg[1] cannot be properly analyzed as its control pin model3/tub_sel1_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch model3/tub_sel1_reg[2] cannot be properly analyzed as its control pin model3/tub_sel1_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
 Non-clocked latch  
 The latch model3/tub_sel1_reg[3] cannot be properly analyzed as its control pin model3/tub_sel1_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 27 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 34 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

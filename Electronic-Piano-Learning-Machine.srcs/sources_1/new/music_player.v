@@ -7,10 +7,12 @@ module music_player(
     input [3:0] music_speed_play,
     input en,
     input rst,
-    
+
     output wire speaker,
     output [7:0] led_out,
-    output reg music_over
+    output reg music_over,
+
+    output [6:0] display_data
 );
 
 wire [7:0] music[0:48];
@@ -48,5 +50,7 @@ encoder_8_3 encoder(note_code, note);
 Buzzer buzzer1(clk, 1'b1, note, 2'b01, speaker);
 led led1(note_code, led_out);
 beats beat1(clk, music_speed_play, beat);
+
+assign display_data = note_code[7:1];
 
 endmodule

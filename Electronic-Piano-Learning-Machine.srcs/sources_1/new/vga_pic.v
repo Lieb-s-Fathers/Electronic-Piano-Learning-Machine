@@ -3,6 +3,7 @@ module  vga_pic (
     input   wire            sys_rst_n   ,   //输入复位信号,低电平有效
     input   wire    [9:0]   pix_x       ,   //输入VGA有效显示区域像素点X轴坐标
     input   wire    [9:0]   pix_y       ,   //输入VGA有效显示区域像素点Y轴坐标
+    input   wire    [6:0]   display_data,
     output  reg     [11:0]  pix_data        //输出像素点色彩信息
 );
 
@@ -23,29 +24,30 @@ parameter   RED     =   12'hf00,   //红色
 
  //**********// //***** Main Code ****// //************//
  //pix_data:输出像素点色彩信息,根据当前像素点坐标指定当前像素点颜色数据
-always@(posedge vga_clk or negedge sys_rst_n)
-    if(sys_rst_n == 1'b0)
+always @(posedge vga_clk or negedge sys_rst_n)
+    if (sys_rst_n == 1'b0)
         pix_data <= 16'd0;
-    else if((pix_x >= 0) && (pix_x < (H_VALID/10)*1))
+    else if ((pix_x >= 0) && (pix_x < (H_VALID/10)*1) && (display_data[6] == 1'b1))
         pix_data <=  RED;
-    else if((pix_x >= (H_VALID/10)*1) && (pix_x < (H_VALID/10)*2))
+    else if ((pix_x >= (H_VALID/10)*1) && (pix_x < (H_VALID/10)*2) && (display_data[5] == 1'b1))
         pix_data <=  ORANGE;
-    else if((pix_x >= (H_VALID/10)*2) && (pix_x < (H_VALID/10)*3))
+    else if ((pix_x >= (H_VALID/10)*2) && (pix_x < (H_VALID/10)*3) && (display_data[4] == 1'b1))
         pix_data <=  YELLOW;
-    else if((pix_x >= (H_VALID/10)*3) && (pix_x < (H_VALID/10)*4))
+    else if ((pix_x >= (H_VALID/10)*3) && (pix_x < (H_VALID/10)*4) && (display_data[3] == 1'b1))
         pix_data <=  GREEN;
-    else if((pix_x >= (H_VALID/10)*4) && (pix_x < (H_VALID/10)*5))
+    else if ((pix_x >= (H_VALID/10)*4) && (pix_x < (H_VALID/10)*5) && (display_data[2] == 1'b1))
         pix_data <=  CYAN;
-    else if((pix_x >= (H_VALID/10)*5) && (pix_x < (H_VALID/10)*6))
+    else if ((pix_x >= (H_VALID/10)*5) && (pix_x < (H_VALID/10)*6) && (display_data[1] == 1'b1))
         pix_data <=  BLUE;
-    else if((pix_x >= (H_VALID/10)*6) && (pix_x < (H_VALID/10)*7))
+    else if ((pix_x >= (H_VALID/10)*6) && (pix_x < (H_VALID/10)*7) && (display_data[0] == 1'b1))
         pix_data <=  PURPPLE;
-    else if((pix_x >= (H_VALID/10)*7) && (pix_x < (H_VALID/10)*8))
-        pix_data <=  BLACK;
-    else if((pix_x >= (H_VALID/10)*8) && (pix_x < (H_VALID/10)*9))
-        pix_data <=  WHITE;
-    else if((pix_x >= (H_VALID/10)*9) && (pix_x < H_VALID))
+    else if ((pix_x >= (H_VALID/10)*7) && (pix_x < (H_VALID/10)*8))
+        pix_data <=  GRAY;
+    else if ((pix_x >= (H_VALID/10)*8) && (pix_x < (H_VALID/10)*9))
+        pix_data <=  GRAY;
+    else if ((pix_x >= (H_VALID/10)*9) && (pix_x < H_VALID))
         pix_data <=  GRAY;
     else
-        pix_data <=  BLACK;
- endmodule
+        pix_data <= WHITE;
+//        pix_data <=  BLACK;
+endmodule

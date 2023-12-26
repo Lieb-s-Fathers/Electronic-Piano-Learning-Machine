@@ -15,7 +15,9 @@ module study_selecter(
     output reg [3:0] tub_sel1,
     output reg [7:0] tub_ctrl1,
     output reg [3:0] tub_sel2,
-    output reg [7:0] tub_ctrl2
+    output reg [7:0] tub_ctrl2,
+
+    output reg [6:0] display_data
 );
 
 wire [7:0] led_out1;
@@ -32,6 +34,9 @@ wire [7:0] tub_control12;
 wire [3:0] tub_select22;
 wire [7:0] tub_control22;
 
+wire [6:0] display_data1;
+wire [6:0] display_data2;
+
 wire [31:0] setting;
 
 reg en1;
@@ -39,8 +44,8 @@ reg en2;
 reg rst1;
 reg rst2;
 
-study studyer(clk, clk_game, en1, rst1, big_dip_switches, five_dir_buttons, setting, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21);
-setter setter1(clk, clk_game, en2, rst2, big_dip_switches, five_dir_buttons, speaker2, led_out2, tub_select12, tub_control12, tub_select22, tub_control22, setting);
+study studyer(clk, clk_game, en1, rst1, big_dip_switches, five_dir_buttons, setting, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21, display_data1);
+setter setter1(clk, clk_game, en2, rst2, big_dip_switches, five_dir_buttons, speaker2, led_out2, tub_select12, tub_control12, tub_select22, tub_control22, setting, display_data2);
 
 always @(posedge clk_game) begin
     if (rst == 1'b1) begin
@@ -77,6 +82,7 @@ always @(small_dip_switches[4]) begin
                 tub_ctrl1 = tub_control11;
                 tub_sel2 = tub_select21;
                 tub_ctrl2 = tub_control21;
+                display_data = display_data1;
             end
 
             1'b1: begin
@@ -86,6 +92,7 @@ always @(small_dip_switches[4]) begin
                 tub_ctrl1 = tub_control12;
                 tub_sel2 = tub_select22;
                 tub_ctrl2 = tub_control22;
+                display_data = display_data2;
             end
         endcase
     end

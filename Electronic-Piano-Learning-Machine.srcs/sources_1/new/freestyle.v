@@ -11,9 +11,10 @@ module freestyle(
     output [7:0] led_out,
     output [3:0] tub_select1,
     output [7:0] tub_control1,
-
     output [3:0] tub_select2,
-    output [7:0] tub_control2
+    output [7:0] tub_control2,
+
+    output [6:0] display_data
 );
 
 wire [3:0] note;
@@ -53,5 +54,7 @@ led led1(big_dip_switches, led_out);
 
 number_display display1(clk, 16'b1111111011011101, tub_select1, tub_control1);
 number_display display2(clk, key, tub_select2, tub_control2);
+
+assign display_data = big_dip_switches[7:1];
 
 endmodule
