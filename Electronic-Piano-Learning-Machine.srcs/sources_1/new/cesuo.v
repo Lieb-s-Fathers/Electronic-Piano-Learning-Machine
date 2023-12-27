@@ -1,6 +1,6 @@
 `include "2d-array.vh"
 
-module tiger(
+module cesuo(
     output wire [391:0] music_pack,
     output wire [15:0] music_number,
     output wire [15:0] music_length,
@@ -11,8 +11,8 @@ wire [7:0] music[0:48];
 
 `PACK_ARRAY(8, 49, music, music_pack)
 
-assign music_number = 16'b0000_0000_0000_0010;
-assign music_length = 40;
+assign music_number = 16'b0000_0000_0000_0011;
+assign music_length = 8;
 assign music_speed = 2;
 
 assign music[1] = 8'b00100000;

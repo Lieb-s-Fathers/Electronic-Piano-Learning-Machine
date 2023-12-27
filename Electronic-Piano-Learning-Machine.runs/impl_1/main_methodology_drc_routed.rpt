@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Dec 27 14:35:53 2023
+| Date         : Wed Dec 27 15:00:34 2023
 | Host         : Desktop-Tyke running 64-bit major release  (build 9200)
 | Command      : report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx
 | Design       : main
@@ -5040,7 +5040,7 @@ Related violations: <none>
 
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
-A primary clock nolabel_line152/clk_gen_i0/clk_core_i0/inst/clk_in1 is created on an inappropriate internal pin nolabel_line152/clk_gen_i0/clk_core_i0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+A primary clock nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_in1 is created on an inappropriate internal pin nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>
 
 TIMING-27#2 Critical Warning
@@ -5051,7 +5051,7 @@ Related violations: <none>
 CKLD-2#1 Warning
 Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
 Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk2/clk, clk_IBUF_inst/O, model1/clk, model2/clk, model3_user1/clk,
-model3_user2/clk, model3_user3/clk, nolabel_line152/clk
+model3_user2/clk, model3_user3/clk, nolabel_line153/clk
 vga_display_inst/clk
 Related violations: <none>
 
@@ -5077,12 +5077,12 @@ Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on rxd_pin relative to the rising and/or falling clock edge(s) of nolabel_line152/clk_gen_i0/clk_core_i0/inst/clk_in1.
+An input delay is missing on rxd_pin relative to the rising and/or falling clock edge(s) of nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_in1.
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on txd_pin relative to the rising and/or falling clock edge(s) of nolabel_line152/clk_gen_i0/clk_core_i0/inst/clk_in1.
+An output delay is missing on txd_pin relative to the rising and/or falling clock edge(s) of nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_in1.
 Related violations: <none>
 
 TIMING-20#1 Warning

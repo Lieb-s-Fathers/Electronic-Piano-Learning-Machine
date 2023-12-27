@@ -21,11 +21,11 @@ module main(
     input rxd_pin,                      // RS232 RXD pin
     output txd_pin,                     // RS232 RXD pin
     //BT
-    output bt_pw_on,                    
-    output bt_master_slave,             
-    output bt_sw_hw,                    
-    output bt_rst_n,                    
-    output bt_sw_hw                     
+    output bt_pw_on,
+    output bt_master_slave,
+    output bt_sw_hw,
+    output bt_rst_n,
+    output bt_sw
 );
 
 wire clk_game;
