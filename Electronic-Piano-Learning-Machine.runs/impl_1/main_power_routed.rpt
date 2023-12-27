@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Wed Dec 27 05:45:00 2023
+| Date             : Wed Dec 27 14:35:54 2023
 | Host             : Desktop-Tyke running 64-bit major release  (build 9200)
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.349        |
+| Total On-Chip Power (W)  | 0.354        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.276        |
+| Dynamic (W)              | 0.282        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 83.3         |
@@ -49,24 +49,25 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.008 |        9 |       --- |             --- |
-| Slice Logic    |     0.009 |     4375 |       --- |             --- |
-|   LUT as Logic |     0.007 |     2048 |     20800 |            9.85 |
-|   CARRY4       |     0.001 |      348 |      8150 |            4.27 |
-|   Register     |    <0.001 |     1378 |     41600 |            3.31 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |       29 |     32600 |            0.09 |
-|   Others       |     0.000 |      154 |       --- |             --- |
-| Signals        |     0.008 |     3219 |       --- |             --- |
-| Block RAM      |     0.001 |      1.5 |        50 |            3.00 |
-| MMCM           |     0.222 |        2 |         5 |           40.00 |
-| I/O            |     0.028 |       77 |       210 |           36.67 |
-| Static Power   |     0.072 |          |           |                 |
-| Total          |     0.349 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.010 |        9 |       --- |             --- |
+| Slice Logic              |     0.010 |     5324 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     2647 |     20800 |           12.73 |
+|   CARRY4                 |     0.001 |      372 |      8150 |            4.56 |
+|   Register               |    <0.001 |     1539 |     41600 |            3.70 |
+|   BUFG                   |    <0.001 |        8 |        32 |           25.00 |
+|   LUT as Distributed RAM |    <0.001 |       72 |      9600 |            0.75 |
+|   F7/F8 Muxes            |    <0.001 |       45 |     32600 |            0.14 |
+|   Others                 |     0.000 |      165 |       --- |             --- |
+| Signals                  |     0.009 |     4020 |       --- |             --- |
+| Block RAM                |     0.001 |      1.5 |        50 |            3.00 |
+| MMCM                     |     0.222 |        2 |         5 |           40.00 |
+| I/O                      |     0.030 |       77 |       210 |           36.67 |
+| Static Power             |     0.072 |          |           |                 |
+| Total                    |     0.354 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -75,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.037 |       0.027 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.041 |       0.031 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.009 |       0.008 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -136,7 +137,7 @@ Table of Contents
 | clk_out2_clk_core                                   | nolabel_line152/clk_gen_i0/clk_core_i0/inst/clk_out2_clk_core |            10.0 |
 | clkfbout_clk_core                                   | nolabel_line152/clk_gen_i0/clk_core_i0/inst/clkfbout_clk_core |            10.0 |
 | clkfbout_clk_gen                                    | vga_display_inst/clk_gen_inst/inst/clkfbout_clk_gen           |            10.0 |
-| nolabel_line152/clk_gen_i0/clk_core_i0/inst/clk_in1 | clk_IBUF_BUFG                                                 |            10.0 |
+| nolabel_line152/clk_gen_i0/clk_core_i0/inst/clk_in1 | clk_IBUF                                                      |            10.0 |
 +-----------------------------------------------------+---------------------------------------------------------------+-----------------+
 
 
@@ -149,23 +150,28 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| main               |     0.276 |
-|   model2           |     0.001 |
+| main               |     0.282 |
+|   model1           |     0.001 |
+|   model2           |     0.002 |
 |     player         |     0.001 |
-|   model3_user1     |     0.006 |
+|   model3_user1     |     0.007 |
+|     setter1        |     0.001 |
+|     studyer        |     0.005 |
+|       studyer      |     0.005 |
+|   model3_user2     |     0.006 |
+|     setter1        |     0.001 |
 |     studyer        |     0.005 |
 |       studyer      |     0.004 |
-|   model3_user2     |     0.005 |
-|     studyer        |     0.004 |
-|       studyer      |     0.004 |
-|   model3_user3     |     0.006 |
-|     studyer        |     0.004 |
-|       studyer      |     0.004 |
+|   model3_user3     |     0.007 |
+|     setter1        |     0.001 |
+|     studyer        |     0.005 |
+|       studyer      |     0.005 |
 |   nolabel_line152  |     0.113 |
 |     char_fifo_i0   |     0.003 |
 |       U0           |     0.003 |
 |     clk_gen_i0     |     0.107 |
 |       clk_core_i0  |     0.107 |
+|     cmd_parse_i0   |     0.001 |
 |   vga_display_inst |     0.117 |
 |     clk_gen_inst   |     0.116 |
 |       inst         |     0.116 |

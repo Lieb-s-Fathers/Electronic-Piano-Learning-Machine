@@ -126,7 +126,7 @@ assign buzzer_en = ~check_en;
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 number_display number_display1(clk, {12'b0000_0000_0000, note}, tub_select1, tub_control1);
-number_display number_display2(clk, {12'b0000_000, check_en, note_setted}, tub_select2, tub_control2);
+number_display number_display2(clk, {11'b0000_0000_000, check_en, note_setted}, tub_select2, tub_control2);
 encoder_8_3 encoder(big_dip_switches, note_user);
 decoder_3_8 decoder(note, note_code);
 led led1(big_dip_switches, led_out);

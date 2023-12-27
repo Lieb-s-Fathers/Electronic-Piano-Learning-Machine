@@ -5,6 +5,8 @@ module study_selecter(
     input wire en,
     input wire rst,
 
+    input [31:0] bt_data32,
+
     input [7:0] small_dip_switches,
     input [7:0] big_dip_switches,
     input [4:0] five_dir_buttons,
@@ -44,7 +46,7 @@ reg en2;
 reg rst1;
 reg rst2;
 
-study studyer(clk, clk_game, en1, rst1, big_dip_switches, five_dir_buttons, setting, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21, display_data1);
+study studyer(clk, clk_game, en1, rst1, bt_data32, big_dip_switches, five_dir_buttons, setting, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21, display_data1);
 setter setter1(clk, clk_game, en2, rst2, big_dip_switches, five_dir_buttons, speaker2, led_out2, tub_select12, tub_control12, tub_select22, tub_control22, setting, display_data2);
 
 always @(posedge clk_game) begin
