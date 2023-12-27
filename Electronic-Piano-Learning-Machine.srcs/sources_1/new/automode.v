@@ -1,23 +1,17 @@
 module automode(
-    input wire clk,
-    input wire clk_game,
-
-    input wire en,
-    input wire rst,
-
-    input [4:0] five_dir_buttons,
-
-    input [31:0] bt_data32,
-
-    output wire speaker,
-    output [7:0] led_out,
-
-    output [3:0] tub_select1,
-    output [7:0] tub_control1,
-    output [3:0] tub_select2,
-    output [7:0] tub_control2,
-
-    output [6:0] display_data
+    input wire clk, //系统时钟
+    input wire clk_game, //游戏时钟
+    input wire en, //激活信号
+    input wire rst, //重置信号
+    input [4:0] five_dir_buttons, //五向按钮
+    input [31:0] bt_data32, //
+    output wire speaker, //音频信号
+    output [7:0] led_out, //led输出信号
+    output [3:0] tub_select1, //七段数码管选择信号左
+    output [7:0] tub_control1, //七段数码管显示信号左
+    output [3:0] tub_select2, //七段数码管选择信号右
+    output [7:0] tub_control2, //七段数码管显示信号右
+    output [6:0] display_data //VGA显示编码信号
 );
 
 reg player_en;

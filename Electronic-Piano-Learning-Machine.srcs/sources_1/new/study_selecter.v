@@ -1,23 +1,23 @@
 module study_selecter(
-    input wire clk,
-    input wire clk_game,
+    input wire clk,                 //系统时钟
+    input wire clk_game,            //游戏时钟
 
-    input wire en,
-    input wire rst,
+    input wire en,                  //激活信号
+    input wire rst,                 //重置信号
 
-    input [7:0] small_dip_switches,
-    input [7:0] big_dip_switches,
-    input [4:0] five_dir_buttons,
+    input [7:0] small_dip_switches,//小八位拨码开关
+    input [7:0] big_dip_switches,//大八位拨码开关
+    input [4:0] five_dir_buttons,//五向按钮
 
-    output reg speaker,
-    output reg [7:0] led_out,
+    output reg speaker,//音频信号
+    output reg [7:0] led_out,//led输出信号
 
-    output reg [3:0] tub_sel1,
-    output reg [7:0] tub_ctrl1,
-    output reg [3:0] tub_sel2,
-    output reg [7:0] tub_ctrl2,
+    output reg [3:0] tub_sel1,//七段数码管选择信号左
+    output reg [7:0] tub_ctrl1,//七段数码管显示信号左
+    output reg [3:0] tub_sel2,//七段数码管选择信号右
+    output reg [7:0] tub_ctrl2,//七段数码管显示信号右
 
-    output reg [6:0] display_data
+    output reg [6:0] display_data//VGA显示编码信号
 );
 
 wire [7:0] led_out1;

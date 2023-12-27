@@ -1,7 +1,7 @@
 module beats(
-    input wire clk,
-    input wire [3:0] music_speed,
-    output wire beat
+    input wire clk, //系统时钟
+    input wire [3:0] music_speed, //歌曲速度
+    output wire beat //节拍生成
 );
 
 reg [31:0] counter;

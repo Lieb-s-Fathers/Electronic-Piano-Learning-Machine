@@ -1,18 +1,18 @@
 `include "2d-array.vh"
 
 module music_player(
-    input clk,
-    input [15:0] music_length,
-    input [391:0] music_pack,
-    input [3:0] music_speed_play,
-    input en,
-    input rst,
+    input clk,//系统时钟
+    input [15:0] music_length,//音乐长度输入
+    input [391:0] music_pack,//音乐信号输入
+    input [3:0] music_speed_play,//音乐速度输入
+    input en,//激活信号
+    input rst,//重置信号
 
-    output wire speaker,
-    output [7:0] led_out,
-    output reg music_over,
+    output wire speaker,//音频信号
+    output [7:0] led_out,//led输出信号
+    output reg music_over,//音乐结束信号
 
-    output [6:0] display_data
+    output [6:0] display_data//VGA显示编码信号
 );
 
 wire [7:0] music[0:48];

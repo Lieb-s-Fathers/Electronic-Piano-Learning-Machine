@@ -1,24 +1,18 @@
 module setter(
-    input wire clk,
-    input wire clk_game,
-
-    input wire en,
-    input wire rst,
-
-    input wire [7:0] big_dip_switches,
-    input wire [4:0] five_dir_buttons,
-
-    output wire speaker,
-    output [7:0] led_out,
-
-    output [3:0] tub_select1,
-    output [7:0] tub_control1,
-
-    output [3:0] tub_select2,
-    output [7:0] tub_control2,
-    output reg [31:0] setting,
-
-    output [6:0] display_data
+    input wire clk, //系统时钟
+    input wire clk_game, //游戏时钟
+    input wire en, //激活信号
+    input wire rst, //重置信号
+    input wire [7:0] big_dip_switches, //大八位拨码开关
+    input wire [4:0] five_dir_buttons, //五向按钮
+    output wire speaker, //音频信号
+    output [7:0] led_out, //led输出信号
+    output [3:0] tub_select1, //七段数码管选择信号左
+    output [7:0] tub_control1, //七段数码管显示信号左
+    output [3:0] tub_select2, //七段数码管选择信号右
+    output [7:0] tub_control2, //七段数码管显示信号右
+    output reg [31:0] setting, //
+    output [6:0] display_data //VGA显示编码信号
 );
 
 //todo: block out model 3 when using this mode
@@ -108,7 +102,7 @@ always @(posedge clk_game) begin
         check_en <= 1'b1;
     end
 
-    // note_setted ��ʾ�������2�ϣ���ǰ�򿪿��ر�ʾ�ĸ�����
+    // note_setted ��ʾ�������2�ϣ���ǰ�򿪿��ر�ʾ�ĸ�����
 //    case(note_user)
 //        1: note_setted <= setting[27-:4];
 //        2: note_setted <= setting[23-:4];

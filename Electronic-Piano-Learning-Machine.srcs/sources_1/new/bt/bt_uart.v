@@ -1,6 +1,6 @@
 module bt_uart (
-  input            clk_pin,      // Clock input (from pin)
-  input            rst_pin,        // Active HIGH reset (from pin)
+  input            clk_pin,      // Clock input
+  input            rst_pin,        // Active HIGH reset
 
   // RS232 signals
   input            rxd_pin,        // RS232 RXD pin

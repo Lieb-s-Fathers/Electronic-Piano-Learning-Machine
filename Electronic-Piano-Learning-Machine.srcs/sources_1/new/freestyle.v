@@ -1,20 +1,20 @@
 module freestyle(
-    input wire clk,
-    input wire clk_game,
+    input wire clk,                     //系统时钟
+    input wire clk_game,                //游戏时钟
 
-    input wire en,
-    input wire rst,
-    input [7:0] big_dip_switches,
-    input [4:0] five_dir_buttons,
+    input wire en,                      //激活信号
+    input wire rst,                     //重置信号
+    input [7:0] big_dip_switches,       //大八位拨码开关
+    input [4:0] five_dir_buttons,       //五向按钮
 
-    output wire speaker,
-    output [7:0] led_out,
-    output [3:0] tub_select1,
-    output [7:0] tub_control1,
-    output [3:0] tub_select2,
-    output [7:0] tub_control2,
+    output wire speaker,                //音频信号
+    output [7:0] led_out,               //led输出信号
+    output [3:0] tub_select1,           //七段数码管选择信号左
+    output [7:0] tub_control1,          //七段数码管显示信号左
+    output [3:0] tub_select2,           //七段数码管选择信号右
+    output [7:0] tub_control2,          //七段数码管显示信号右
 
-    output [6:0] display_data
+    output [6:0] display_data           //VGA显示编码信号
 );
 
 wire [3:0] note;

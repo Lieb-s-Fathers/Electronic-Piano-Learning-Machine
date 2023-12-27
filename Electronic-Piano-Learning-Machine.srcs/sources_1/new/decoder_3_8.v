@@ -1,6 +1,6 @@
 module decoder_3_8(
-input [3:0] in,
-output reg [7:0] out
+input [3:0] in, //音符信号输入
+output reg [7:0] out //按钮信号输出
 );
 
 always @(*) begin
