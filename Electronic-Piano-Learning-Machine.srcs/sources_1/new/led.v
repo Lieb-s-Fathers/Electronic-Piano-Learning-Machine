@@ -1,6 +1,6 @@
 module led(big_dip_switches_in, led_out);
-    input [7:0] big_dip_switches_in;
-    output [7:0] led_out;
+    input [7:0] big_dip_switches_in; //大八位拨码开关
+    output [7:0] led_out; //led输出信号
     assign led_out = big_dip_switches_in;
 endmodule
 

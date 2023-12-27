@@ -1,20 +1,19 @@
 `include "2d-array.vh"
 
 module music_studyer(
-    input clk,
+    input clk, //系统时钟
     input clk_game,
-    input [7:0] big_dip_switches,
-    input [15:0] music_length,
-    input [391:0] music_pack,
-    input [3:0] music_speed_play,
-    input [31:0] setting,
-    input en,
-    input rst,
-
-    output wire speaker,
-    output [7:0] led_out,
-    output reg music_over,
-    output wire [11:0] score
+    input [7:0] big_dip_switches, //大八位拨码开关
+    input [15:0] music_length, //音乐长度输入
+    input [391:0] music_pack, //音乐信号输入
+    input [3:0] music_speed_play, //音乐速度输入
+    input [31:0] setting, //
+    input en, //激活信号
+    input rst, //重置信号
+    output wire speaker, //音频信号
+    output [7:0] led_out, //led输出信号
+    output reg music_over, //音乐结束信号
+    output wire [11:0] score //分数信号
 );
 
 wire [7:0] music [0:48];

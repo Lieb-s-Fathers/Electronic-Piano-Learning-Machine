@@ -1,30 +1,31 @@
 module main(
-    input wire clk,
-    input wire sys_rst,
-    input [7:0] small_dip_switches,
-    input [7:0] big_dip_switches,
-    input [4:0] five_dir_buttons,
+    input wire clk,                     //系统时钟
+    input wire sys_rst,                 //系统重置
+    input [7:0] small_dip_switches,     //小八位拨码开关
+    input [7:0] big_dip_switches,       //大八位拨码开关
+    input [4:0] five_dir_buttons,       //五向按钮
 
-    output reg speaker,
-    output reg [7:0] led_out,
-    output wire audio,
+    output reg speaker,                 //音频信号
+    output reg [7:0] led_out,           //led输出信号
+    output wire audio,                  //音频低电平信号
 
-    output reg [3:0] tub_sel1,
-    output reg [7:0] tub_ctrl1,
-    output reg [3:0] tub_sel2,
-    output reg [7:0] tub_ctrl2,
+    output reg [3:0] tub_sel1,          //七段数码管选择信号左
+    output reg [7:0] tub_ctrl1,         //七段数码管显示信号左
+    output reg [3:0] tub_sel2,          //七段数码管选择信号右
+    output reg [7:0] tub_ctrl2,         //七段数码管显示信号右
 
-    output wire hsync,
-    output wire vsync,
-    output wire [11:0] rgb,
+    output wire hsync,                  //VGA输出行同步信号
+    output wire vsync,                  //VGA输出场同步信号
+    output wire [11:0] rgb,             //VGA输出像素信息
 
-    input rxd_pin,
-    output txd_pin,
-    output bt_pw_on,
-    output bt_master_slave,
-    output bt_sw_hw,
-    output bt_rst_n,
-    output bt_sw
+    input rxd_pin,                      // RS232 RXD pin
+    output txd_pin,                     // RS232 RXD pin
+    //BT
+    output bt_pw_on,                    
+    output bt_master_slave,             
+    output bt_sw_hw,                    
+    output bt_rst_n,                    
+    output bt_sw_hw                     
 );
 
 wire clk_game;

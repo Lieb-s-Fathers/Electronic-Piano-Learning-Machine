@@ -1,10 +1,10 @@
 `include "2d-array.vh"
 
 module tiger(
-    output wire [391:0] music_pack,
-    output wire [15:0] music_number,
-    output wire [15:0] music_length,
-    output wire [3:0] music_speed
+    output wire [391:0] music_pack,//音乐信号输出
+    output wire [15:0] music_number,//音乐代码信号输出
+    output wire [15:0] music_length,//音乐长度输出
+    output wire [3:0] music_speed//音乐速度输出
 );
 
 wire [7:0] music[0:48];

@@ -1,10 +1,10 @@
 module music_select(
-    input [15:0] music_number_in,
+    input [15:0] music_number_in, //音乐代码信号输入
     input [31:0] bt_data32,
-    output reg [391:0] music_pack_out,
-    output reg [15:0] music_number_out,
-    output reg [15:0] music_length_out,
-    output reg [3:0] music_speed_out
+    output reg [391:0] music_pack_out, //音乐信号输出
+    output reg [15:0] music_number_out, //音乐代码信号输出
+    output reg [15:0] music_length_out, //音乐长度输出
+    output reg [3:0] music_speed_out //音乐速度输出
 );
 
 wire [391:0] music_pack0;

@@ -1,17 +1,17 @@
 module mode_reseter(
-    input wire clk,
-    input wire clk_game,
-    input [4:0] mode_number,
-    output reg en1,
-    output reg en2,
-    output reg en3,
-    output reg en4,
-    output reg en5,
-    output reg rst1,
-    output reg rst2,
-    output reg rst3,
-    output reg rst4,
-    output reg rst5
+    input wire clk,//系统时钟
+    input wire clk_game,//游戏时钟
+    input [4:0] mode_number,//模式编号
+    output reg en1,//激活信号1
+    output reg en2,//激活信号2
+    output reg en3,//激活信号3
+    output reg en4,//激活信号4
+    output reg en5,//激活信号5
+    output reg rst1,//重置信号1
+    output reg rst2,//重置信号2
+    output reg rst3,//重置信号3
+    output reg rst4,//重置信号4
+    output reg rst5//重置信号5
 );
 
 reg [4:0] last_mode_number;
