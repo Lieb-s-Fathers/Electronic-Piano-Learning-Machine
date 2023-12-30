@@ -1,9 +1,9 @@
 `include "2d-array.vh"
 
-module music_player(
+module music_replayer(
     input clk,//ϵͳʱ��
     input [15:0] music_length,//���ֳ�������
-    input [391:0] music_pack,//�����ź�����
+    input [1023:0] music_pack,//�����ź�����
     input [3:0] music_speed_play,//�����ٶ�����
     input en,//�����ź�
     input rst,//�����ź�
@@ -20,7 +20,7 @@ wire [3:0] note;
 reg [7:0] note_code;
 reg [7:0] counter;
 
-`UNPACK_ARRAY(8, 49, music, music_pack)
+`UNPACK_ARRAY(8, 128, music, music_pack)
 
 always @(posedge beat) begin
     if (rst == 1'b1) begin

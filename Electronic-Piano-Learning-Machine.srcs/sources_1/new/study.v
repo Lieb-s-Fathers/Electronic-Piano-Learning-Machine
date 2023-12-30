@@ -1,31 +1,33 @@
 module study(
-    input wire clk, //ÏµÍ³Ê±ÖÓ
-    input wire clk_game, //ÓÎÏ·Ê±ÖÓ
-    input wire en, //¼¤»îĞÅºÅ
-    input wire rst, //ÖØÖÃĞÅºÅ
+    input wire clk, //ÏµÍ³Ê±ï¿½ï¿½
+    input wire clk_game, //ï¿½ï¿½Ï·Ê±ï¿½ï¿½
+    input wire en, //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    input wire rst, //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
     input [31:0] bt_data32,
 
-    input wire [7:0] big_dip_switches, //´ó°ËÎ»²¦Âë¿ª¹Ø
-    input wire [4:0] five_dir_buttons, //ÎåÏò°´Å¥
-    input [31:0] setting, //°´¼üÉèÖÃ
-    output wire speaker, //ÒôÆµĞÅºÅ
-    output [7:0] led_out, //ledÊä³öĞÅºÅ
-    output [3:0] tub_select1, //Æß¶ÎÊıÂë¹ÜÑ¡ÔñĞÅºÅ×ó
-    output [7:0] tub_control1, //Æß¶ÎÊıÂë¹ÜÏÔÊ¾ĞÅºÅ×ó
-    output [3:0] tub_select2, //Æß¶ÎÊıÂë¹ÜÑ¡ÔñĞÅºÅÓÒ
-    output [7:0] tub_control2, //Æß¶ÎÊıÂë¹ÜÏÔÊ¾ĞÅºÅÓÒ
-    output [6:0] display_data //VGAÏÔÊ¾±àÂëĞÅºÅ
+    input wire [7:0] big_dip_switches, //ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½
+    input wire [4:0] five_dir_buttons, //ï¿½ï¿½ï¿½ï¿½Å¥
+    input [31:0] setting, //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    output wire speaker, //ï¿½ï¿½Æµï¿½Åºï¿½
+    output [7:0] led_out, //ledï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output [3:0] tub_select1, //ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½
+    output [7:0] tub_control1, //ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Åºï¿½ï¿½ï¿½
+    output [3:0] tub_select2, //ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½
+    output [7:0] tub_control2, //ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Åºï¿½ï¿½ï¿½
+    output [6:0] display_data //VGAï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
 );
 
 reg studyer_en;
 reg studyer_rst;
-wire [391:0] music_pack;
+wire [1023:0] music_pack;
 reg [15:0] music_number;
 wire [15:0] music_number_out;
 wire [15:0] music_length;
 wire [3:0] music_speed;
 reg [3:0] music_speed_play;
 wire music_over;
+wire music_replay_over;
+
 
 wire [11:0] score;
 
@@ -43,6 +45,7 @@ always @(posedge clk_game) begin
     if (rst == 1'b1) begin
         music_number <= 1;
         music_speed_play <= 1;
+        replay_player_en <= 1'b0;
     end
 
     if (en == 1'b1) begin
@@ -86,6 +89,18 @@ always @(posedge clk_game) begin
             studyer_en <= 1'b0;
             studyer_rst <= 1'b1;
         end
+
+        if (small_dip_switches[3]) begin
+            replay_player_en <= 1'b1;
+            replay_player_rst <= 1'b0;
+            studyer_en <= 1'b0;
+            studyer_rst <= 1'b1;//////////
+        end
+
+        if(music_replay_over) begin
+            replay_player_en <= 1'b0;
+            replay_player_rst <= 1'b1;
+        end
     end
 end
 
@@ -93,6 +108,7 @@ button_control button1(five_dir_buttons, up_button, down_button, left_button, ri
 
 music_select music1(music_number, small_dip_switches[1], small_dip_switches[2], small_dip_switches[3], music_play_pack, music_play_length, bt_data32, music_pack, music_number_out, music_length, music_speed);
 music_studyer studyer(clk, clk_game, big_dip_switches, music_length, music_pack, music_speed_play, setting, studyer_en, studyer_rst, speaker, led_out, music_over, score, music_play_pack, music_play_length);
+music_replayer music_replayer(clk, music_play_length, music_pack, music_speed, replay_player_en, replay_player_rst, speaker, led_out, music_replay_over, display_data);
 
 number_display display1(clk, music_number_out, tub_select1, tub_control1);
 number_display display2(clk, score, tub_select2, tub_control2);
