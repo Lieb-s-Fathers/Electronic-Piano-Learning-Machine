@@ -13,7 +13,9 @@ module music_studyer(
     output wire speaker, //音频信号
     output [7:0] led_out, //led输出信号
     output reg music_over, //音乐结束信号
-    output wire [11:0] score //分数信号
+    output wire [11:0] score, //分数信号
+    output [1023:0] music_play_pack_out,
+    output [15:0] music_play_length
 );
 
 wire [7:0] music [0:48];
@@ -27,13 +29,16 @@ wire [3:0] note_code_b;
 wire [3:0] note_code_setted_b;
 wire [7:0] note_code_setted;
 
-reg [7:0] music_play [0:128];
+reg [7:0] music_play [0:127];
 reg [7:0] music_play_length;
+wire [1023:0] music_play_pack;
 
 reg replay_en;
 
 
 `UNPACK_ARRAY(8, 49, music, music_pack)
+`PACK_ARRAY(8, 128, music_play, music_play_pack)
+
 
 always @(posedge beat) begin
     if (rst == 1'b1) begin

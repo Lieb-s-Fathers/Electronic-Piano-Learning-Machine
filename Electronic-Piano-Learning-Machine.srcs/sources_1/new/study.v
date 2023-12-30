@@ -91,8 +91,8 @@ end
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 
-music_select music1(music_number, bt_data32, music_pack, music_number_out, music_length, music_speed);
-music_studyer studyer(clk, clk_game, big_dip_switches, music_length, music_pack, music_speed_play, setting, studyer_en, studyer_rst, speaker, led_out, music_over, score);
+music_select music1(music_number, small_dip_switches[1], small_dip_switches[2], small_dip_switches[3], music_play_pack, music_play_length, bt_data32, music_pack, music_number_out, music_length, music_speed);
+music_studyer studyer(clk, clk_game, big_dip_switches, music_length, music_pack, music_speed_play, setting, studyer_en, studyer_rst, speaker, led_out, music_over, score, music_play_pack, music_play_length);
 
 number_display display1(clk, music_number_out, tub_select1, tub_control1);
 number_display display2(clk, score, tub_select2, tub_control2);
