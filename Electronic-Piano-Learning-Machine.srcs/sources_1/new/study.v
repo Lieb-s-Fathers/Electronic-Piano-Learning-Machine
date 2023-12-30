@@ -6,6 +6,7 @@ module study(
     input [31:0] bt_data32,
 
     input wire [7:0] big_dip_switches, //���λ���뿪��
+    input wire [7:0] small_dip_switches,
     input wire [4:0] five_dir_buttons, //����ť
     input [31:0] setting, //��������
     output wire speaker, //��Ƶ�ź�

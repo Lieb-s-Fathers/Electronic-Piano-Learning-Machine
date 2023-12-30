@@ -1,25 +1,25 @@
 module study_selecter(
-    input wire clk,                 //ÏµÍ³Ê±ÖÓ
-    input wire clk_game,            //ÓÎÏ·Ê±ÖÓ
+    input wire clk,                 //ÏµÍ³Ê±ï¿½ï¿½
+    input wire clk_game,            //ï¿½ï¿½Ï·Ê±ï¿½ï¿½
 
-    input wire en,                  //¼¤»îĞÅºÅ
-    input wire rst,                 //ÖØÖÃĞÅºÅ
+    input wire en,                  //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    input wire rst,                 //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
 
     input [31:0] bt_data32,
 
-    input [7:0] small_dip_switches,//Ğ¡°ËÎ»²¦Âë¿ª¹Ø
-    input [7:0] big_dip_switches,//´ó°ËÎ»²¦Âë¿ª¹Ø
-    input [4:0] five_dir_buttons,//ÎåÏò°´Å¥
+    input [7:0] small_dip_switches,//Ğ¡ï¿½ï¿½Î»ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½
+    input [7:0] big_dip_switches,//ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½
+    input [4:0] five_dir_buttons,//ï¿½ï¿½ï¿½ï¿½Å¥
 
-    output reg speaker,//ÒôÆµĞÅºÅ
-    output reg [7:0] led_out,//ledÊä³öĞÅºÅ
+    output reg speaker,//ï¿½ï¿½Æµï¿½Åºï¿½
+    output reg [7:0] led_out,//ledï¿½ï¿½ï¿½ï¿½Åºï¿½
 
-    output reg [3:0] tub_sel1,//Æß¶ÎÊıÂë¹ÜÑ¡ÔñĞÅºÅ×ó
-    output reg [7:0] tub_ctrl1,//Æß¶ÎÊıÂë¹ÜÏÔÊ¾ĞÅºÅ×ó
-    output reg [3:0] tub_sel2,//Æß¶ÎÊıÂë¹ÜÑ¡ÔñĞÅºÅÓÒ
-    output reg [7:0] tub_ctrl2,//Æß¶ÎÊıÂë¹ÜÏÔÊ¾ĞÅºÅÓÒ
+    output reg [3:0] tub_sel1,//ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½
+    output reg [7:0] tub_ctrl1,//ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Åºï¿½ï¿½ï¿½
+    output reg [3:0] tub_sel2,//ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½
+    output reg [7:0] tub_ctrl2,//ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Åºï¿½ï¿½ï¿½
 
-    output reg [6:0] display_data//VGAÏÔÊ¾±àÂëĞÅºÅ
+    output reg [6:0] display_data//VGAï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
 );
 
 wire [7:0] led_out1;
@@ -46,7 +46,7 @@ reg en2;
 reg rst1;
 reg rst2;
 
-study studyer(clk, clk_game, en1, rst1, bt_data32, big_dip_switches, five_dir_buttons, setting, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21, display_data1);
+study studyer(clk, clk_game, en1, rst1, bt_data32, big_dip_switches, small_dip_switches, five_dir_buttons, setting, speaker1, led_out1, tub_select11, tub_control11, tub_select21, tub_control21, display_data1);
 setter setter1(clk, clk_game, en2, rst2, big_dip_switches, five_dir_buttons, speaker2, led_out2, tub_select12, tub_control12, tub_select22, tub_control22, setting, display_data2);
 
 always @(posedge clk_game) begin
