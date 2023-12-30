@@ -3,7 +3,7 @@
 module music_studyer(
     input clk, //ϵͳʱ��
     input clk_game,
-    input [7:0] big_dip_switches, //���λ���뿪��
+    input [7:0] big_dip_switches, //���λ����?��
     input [15:0] music_length, //���ֳ�������
     input [391:0] music_pack, //�����ź�����
     input [3:0] music_speed_play, //�����ٶ�����
@@ -11,10 +11,10 @@ module music_studyer(
     input en, //�����ź�
     input rst, //�����ź�
     output wire speaker, //��Ƶ�ź�
-    output [7:0] led_out, //led����ź�
+    output [7:0] led_out, //led����ź�?
     output reg music_over, //���ֽ����ź�
     output wire [11:0] score, //�����ź�
-    output [1023:0] music_play_pack_out,
+    output [1023:0] music_play_pack,
     output [15:0] music_play_length
 );
 
@@ -31,7 +31,6 @@ wire [7:0] note_code_setted;
 
 reg [7:0] music_play [0:127];
 reg [7:0] music_play_length;
-wire [1023:0] music_play_pack;
 
 reg replay_en;
 
