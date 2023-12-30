@@ -27,6 +27,8 @@ wire [3:0] music_speed;
 reg [3:0] music_speed_play;
 wire music_over;
 wire music_replay_over;
+reg replay_player_en;
+reg replay_player_rst;
 
 
 wire [11:0] score;
