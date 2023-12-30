@@ -3,7 +3,7 @@ module music_select(
     input write_en,
     input write_rst,
     input read_mode,//读取模式,0为原曲，1为用户演奏
-    input [1023:0] music_play_pack_in,
+    input [1023:0] music_pack_in,
     input [15:0] music_length_in,
     input [31:0] bt_data32,
     output reg [391:0] music_pack_out, //音乐信号输出
