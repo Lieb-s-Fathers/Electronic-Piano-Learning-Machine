@@ -62,11 +62,11 @@ always @(music_number_in) begin
     case (music_number_in)
       0: begin
         // todo: 123456
-        write_en =  write_en0;
-        write_rst = write_rst0;
-        read_mode = read_mode0;
-        music_pack_in = music_pack_in0;
-        music_length_in = music_length_in0;
+        write_en0 =  write_en;
+        write_rst0 = write_rst;
+        read_mode0 = read_mode;
+        music_pack_in0 = music_pack_in;
+        music_length_in0 = music_length_in;
 
         music_pack_out = music_pack0;
         music_number_out = music_number0;
@@ -74,11 +74,11 @@ always @(music_number_in) begin
         music_speed_out = music_speed0;
       end
       1: begin
-        write_en =  write_en1;
-        write_rst = write_rst1;
-        read_mode = read_mode1;
-        music_pack_in = music_pack_in1;
-        music_length_in = music_length_in1;
+        write_en1 =  write_en;
+        write_rst1 = write_rst;
+        read_mode1 = read_mode;
+        music_pack_in1 = music_pack_in;
+        music_length_in1 = music_length_in;
 
         music_pack_out = music_pack1;
         music_number_out = music_number1;
@@ -86,11 +86,11 @@ always @(music_number_in) begin
         music_speed_out = music_speed1;
       end
       2: begin
-        write_en =  write_en2;
-        write_rst = write_rst2;
-        read_mode = read_mode2;
-        music_pack_in = music_pack_in2;
-        music_length_in = music_length_in2;
+        write_en2 =  write_en;
+        write_rst2 = write_rst;
+        read_mode2 = read_mode;
+        music_pack_in2 = music_pack_in;
+        music_length_in2 = music_length_in;
 
         music_pack_out = music_pack2;
         music_number_out = music_number2;
@@ -99,11 +99,11 @@ always @(music_number_in) begin
       end
 
       3: begin
-        write_en =  write_en3;
-        write_rst = write_rst3;
-        read_mode = read_mode3;
-        music_pack_in = music_pack_in3;
-        music_length_in = music_length_in3;
+        write_en3 =  write_en;
+        write_rst3 = write_rst;
+        read_mode3 = read_mode;
+        music_pack_in3 = music_pack_in;
+        music_length_in3 = music_length_in;
 
         music_pack_out = music_pack3;
         music_number_out = music_number3;
@@ -112,11 +112,11 @@ always @(music_number_in) begin
       end
 
       default: begin
-        write_en =  write_en1;
-        write_rst = write_rst1;
-        read_mode = read_mode1;
-        music_pack_in = music_pack_in1;
-        music_length_in = music_length_in1;
+        write_en1 =  write_en;
+        write_rst1 = write_rst;
+        read_mode1 = read_mode;
+        music_pack_in1 = music_pack_in;
+        music_length_in1 = music_length_in;
 
         music_pack_out = music_pack1;
         music_number_out = music_number1;

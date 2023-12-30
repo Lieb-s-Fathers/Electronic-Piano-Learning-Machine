@@ -1,19 +1,19 @@
 `include "2d-array.vh"
 
 module music_studyer(
-    input clk, //ÏµÍ³Ê±ÖÓ
+    input clk, //ÏµÍ³Ê±ï¿½ï¿½
     input clk_game,
-    input [7:0] big_dip_switches, //´ó°ËÎ»²¦Âë¿ª¹Ø
-    input [15:0] music_length, //ÒôÀÖ³¤¶ÈÊäÈë
-    input [391:0] music_pack, //ÒôÀÖĞÅºÅÊäÈë
-    input [3:0] music_speed_play, //ÒôÀÖËÙ¶ÈÊäÈë
+    input [7:0] big_dip_switches, //ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½
+    input [15:0] music_length, //ï¿½ï¿½ï¿½Ö³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    input [391:0] music_pack, //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½
+    input [3:0] music_speed_play, //ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½
     input [31:0] setting, //
-    input en, //¼¤»îĞÅºÅ
-    input rst, //ÖØÖÃĞÅºÅ
-    output wire speaker, //ÒôÆµĞÅºÅ
-    output [7:0] led_out, //ledÊä³öĞÅºÅ
-    output reg music_over, //ÒôÀÖ½áÊøĞÅºÅ
-    output wire [11:0] score, //·ÖÊıĞÅºÅ
+    input en, //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    input rst, //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire speaker, //ï¿½ï¿½Æµï¿½Åºï¿½
+    output [7:0] led_out, //ledï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output reg music_over, //ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire [11:0] score, //ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
     output [1023:0] music_play_pack_out,
     output [15:0] music_play_length
 );
@@ -57,15 +57,12 @@ always @(posedge beat) begin
                 counter <= counter + 1'b1;
                 note_code <= music[counter];
             end
-
             music_play[counter_time] <= note_code;
-
         end
         else begin
             note_code <= 8'b00000000;
-
-            counter_time <= 0;
             music_play_length <= counter_time;
+            counter_time <= 0;
             replay_en <= 1'b1;
         end
         note_play <= note_play1;
