@@ -1,6 +1,7 @@
 `include "2d-array.vh"
 
 module star(
+    input wire clk_game, //系统时锟斤拷
     input write_en, //写入信号
     input write_rst, //写入重置信号
     input read_mode,//读取模式,0为原曲，1为用户演奏
@@ -13,14 +14,16 @@ module star(
 );
 
 wire [7:0] music[0:48];
+
 reg [1023:0] music_play_pack;
+reg  [15:0] music_play_length;
+
 wire [391:0] music_pack;
 wire [15:0] music_length;
-reg [15:0] music_play_length;
 
 `PACK_ARRAY(8, 49, music, music_pack)
 
-always @* begin
+always @(clk_game) begin
     if (write_rst == 1'b1) begin
             music_play_pack <= 0;
             music_play_length <= 0;
@@ -32,6 +35,9 @@ always @* begin
         end
     end
 end
+
+//assign music_play_pack = music_pack;
+//assign music_play_length = music_length;
 
 always @(read_mode) begin
     case (read_mode)

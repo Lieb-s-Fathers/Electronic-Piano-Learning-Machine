@@ -82,8 +82,8 @@ end
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 
-music_select music1(music_number, 1'b0, 1'b1, 1'b0, 0, 0, bt_data32, music_pack, music_number_out, music_length, music_speed);
-music_player player(clk, music_length, music_pack, music_speed_play, player_en, player_rst, speaker, led_out, music_over, display_data);
+music_select music1(clk_game, music_number, 1'b0, 1'b1, 1'b0, 0, 0, bt_data32, music_pack, music_number_out, music_length, music_speed);
+music_replayer player(clk, music_length, music_pack, music_speed_play, player_en, player_rst, speaker, led_out, music_over, display_data);
 
 number_display display1(clk, music_number_out, tub_select1, tub_control1);
 number_display display2(clk, music_speed_play, tub_select2, tub_control2);

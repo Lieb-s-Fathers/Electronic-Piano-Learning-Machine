@@ -9,7 +9,7 @@ module music_replayer(
     input rst,//�����ź�
 
     output wire speaker,//��Ƶ�ź�
-    output [7:0] led_out,//led����ź�
+    output [7:0] led_out,//led����ź�?
     output reg music_over,//���ֽ����ź�
 
     output [6:0] display_data//VGA��ʾ�����ź�

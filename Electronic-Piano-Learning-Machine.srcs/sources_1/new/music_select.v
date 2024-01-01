@@ -1,4 +1,5 @@
 module music_select(
+    input clk_game, //系统时锟斤拷
     input [15:0] music_number_in, //音乐代码信号输入
     input write_en,
     input write_rst,
@@ -54,7 +55,7 @@ wire [3:0] music_speed3;
 
 
 //bt_music music0(write_en0, write_rst0, read_mode0, music_pack_in0, music_length_in0, bt_data32, music_pack0, music_number0, music_length0, music_speed0);
-star music1(write_en1, write_rst1, read_mode1, music_pack_in1, music_length_in1, music_pack1, music_number1, music_length1, music_speed1);
+star music1(clk_game, write_en1, write_rst1, read_mode1, music_pack_in1, music_length_in1, music_pack1, music_number1, music_length1, music_speed1);
 //tiger music2(write_en2, write_rst2, read_mode2, music_pack_in2, music_length_in2, music_pack2, music_number2, music_length2, music_speed2);
 //cesuo music3(write_en3, write_rst3, read_mode3, music_pack_in3, music_length_in3, music_pack3, music_number3, music_length3, music_speed3);
 
