@@ -56,7 +56,7 @@ always @(posedge beat) begin
                 counter <= counter + 1'b1;
                 note_code <= music[counter];
             end
-            music_play[counter_time] <= note_code;
+            music_play[counter_time] <= big_dip_switches;
         end
         else begin
             note_code <= 8'b00000000;
