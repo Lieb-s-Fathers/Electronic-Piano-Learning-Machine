@@ -15,7 +15,7 @@ module music_replayer(
     output [6:0] display_data//VGA��ʾ�����ź�
 );
 
-wire [7:0] music[0:48];
+wire [7:0] music[0:127];
 wire [3:0] note;
 reg [7:0] note_code;
 reg [7:0] counter;

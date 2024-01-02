@@ -150,7 +150,7 @@ clk_game clk2(clk, clk_game);
 mode_reseter mode_sel(clk, clk_game, small_dip_switches[7-:4], en1, en2, en3, en4, en5, rst1, rst2, rst3, rst4, rst5);
 vga_display vga_display_inst(clk, sys_rst, display_data, hsync, vsync, rgb);
 
-bt_uart(clk, 1'b0, rxd_pin, txd_pin, 1'b0, bt_pw_on, bt_master_slave, bt_sw_hw, bt_rst_n, bt_sw, small_dip_switches[1], bt_data16, bt_data32);
+bt_uart(clk, 1'b0, rxd_pin, txd_pin, 1'b0, bt_pw_on, bt_master_slave, bt_sw_hw, bt_rst_n, bt_sw, big_dip_switches[0], bt_data16, bt_data32);
 
 endmodule
 

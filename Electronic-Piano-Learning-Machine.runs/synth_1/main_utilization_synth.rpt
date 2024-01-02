@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Jan  2 02:19:17 2024
+| Date         : Wed Jan  3 00:04:14 2024
 | Host         : Desktop-Tyke running 64-bit major release  (build 9200)
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
@@ -28,18 +28,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 4292 |     0 |          0 |     20800 | 20.63 |
-|   LUT as Logic          | 4292 |     0 |          0 |     20800 | 20.63 |
-|   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         | 4936 |     0 |          0 |     41600 | 11.87 |
-|   Register as Flip Flop | 3212 |     0 |          0 |     41600 |  7.72 |
-|   Register as Latch     | 1724 |     0 |          0 |     41600 |  4.14 |
-| F7 Muxes                |  693 |     0 |          0 |     16300 |  4.25 |
-| F8 Muxes                |  320 |     0 |          0 |      8150 |  3.93 |
-+-------------------------+------+-------+------------+-----------+-------+
++-------------------------+-------+-------+------------+-----------+-------+
+|        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
++-------------------------+-------+-------+------------+-----------+-------+
+| Slice LUTs*             | 10553 |     0 |          0 |     20800 | 50.74 |
+|   LUT as Logic          | 10553 |     0 |          0 |     20800 | 50.74 |
+|   LUT as Memory         |     0 |     0 |          0 |      9600 |  0.00 |
+| Slice Registers         | 15836 |     0 |          0 |     41600 | 38.07 |
+|   Register as Flip Flop |  3284 |     0 |          0 |     41600 |  7.89 |
+|   Register as Latch     | 12552 |     0 |          0 |     41600 | 30.17 |
+| F7 Muxes                |   558 |     0 |          0 |     16300 |  3.42 |
+| F8 Muxes                |   250 |     0 |          0 |      8150 |  3.07 |
++-------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 
@@ -57,9 +57,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 4     |          Yes |           - |          Set |
-| 1750  |          Yes |           - |        Reset |
+| 12578 |          Yes |           - |        Reset |
 | 21    |          Yes |         Set |            - |
-| 3161  |          Yes |       Reset |            - |
+| 3233  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -115,7 +115,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |   10 |     0 |          0 |        32 | 31.25 |
+| BUFGCTRL   |   11 |     0 |          0 |        32 | 34.38 |
 | BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
@@ -146,29 +146,29 @@ Warning! LUT value is adjusted to account for LUT combining.
 7. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| FDRE     | 3161 |        Flop & Latch |
-| LUT6     | 2194 |                 LUT |
-| LDCE     | 1724 |        Flop & Latch |
-| LUT3     |  980 |                 LUT |
-| MUXF7    |  693 |               MuxFx |
-| LUT5     |  579 |                 LUT |
-| CARRY4   |  522 |          CarryLogic |
-| LUT2     |  422 |                 LUT |
-| LUT4     |  348 |                 LUT |
-| MUXF8    |  320 |               MuxFx |
-| LUT1     |  157 |                 LUT |
-| OBUF     |   54 |                  IO |
-| FDCE     |   26 |        Flop & Latch |
-| IBUF     |   24 |                  IO |
-| FDSE     |   21 |        Flop & Latch |
-| BUFG     |   10 |               Clock |
-| FDPE     |    4 |        Flop & Latch |
-| DSP48E1  |    2 |    Block Arithmetic |
-| BUFHCE   |    1 |               Clock |
-+----------+------+---------------------+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| LDCE     | 12552 |        Flop & Latch |
+| LUT5     |  4668 |                 LUT |
+| FDRE     |  3233 |        Flop & Latch |
+| LUT6     |  2426 |                 LUT |
+| LUT4     |  2365 |                 LUT |
+| LUT3     |  1003 |                 LUT |
+| MUXF7    |   558 |               MuxFx |
+| CARRY4   |   527 |          CarryLogic |
+| LUT2     |   376 |                 LUT |
+| MUXF8    |   250 |               MuxFx |
+| LUT1     |   167 |                 LUT |
+| OBUF     |    54 |                  IO |
+| FDCE     |    26 |        Flop & Latch |
+| IBUF     |    24 |                  IO |
+| FDSE     |    21 |        Flop & Latch |
+| BUFG     |    11 |               Clock |
+| FDPE     |     4 |        Flop & Latch |
+| DSP48E1  |     2 |    Block Arithmetic |
+| BUFHCE   |     1 |               Clock |
++----------+-------+---------------------+
 
 
 8. Black Boxes

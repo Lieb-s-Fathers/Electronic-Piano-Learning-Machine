@@ -66,7 +66,6 @@ always @(posedge clk_game) begin
         music_speed_play <= 1;
         replay_player_en <= 1'b0;
         record_en <= 1'b0;
-        
 //        user_times <= 0;
 //        user_score <= 0;
     end
@@ -157,7 +156,7 @@ b_to_d dut1(user_score, user_score_display);
 b_to_d dut2(score, score_display);
 
 number_display display1(clk, {user_score_display, music_number_out[3:0]}, tub_select1, tub_control1);
-number_display display2(clk, {music_over,score_display}, tub_select2, tub_control2);
+number_display display2(clk, {music_over, score_display}, tub_select2, tub_control2);
 
 assign display_data1 = big_dip_switches[7:1];
 

@@ -16,7 +16,7 @@ module automode(
 
 reg player_en;
 reg player_rst;
-wire [391:0] music_pack;
+wire [1023:0] music_pack;
 reg [15:0] music_number;
 wire [15:0] music_number_out;
 wire [15:0] music_length;
@@ -51,6 +51,8 @@ always @(posedge clk_game) begin
             if (music_number > 0) begin
                 music_number <= music_number - 1'b1;
                 music_speed_play <= music_speed;
+                player_en <= 1'b0;
+                player_rst <= 1'b1;
             end
         end
 
@@ -58,6 +60,8 @@ always @(posedge clk_game) begin
             if (music_number < max_music_number) begin
                 music_number <= music_number + 1'b1;
                 music_speed_play <= music_speed;
+                player_en <= 1'b0;
+                player_rst <= 1'b1;
             end
         end
 
