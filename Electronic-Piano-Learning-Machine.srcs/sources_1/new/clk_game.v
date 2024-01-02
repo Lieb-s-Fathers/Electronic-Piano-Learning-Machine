@@ -1,6 +1,6 @@
 module clk_game(
-    input wire clk,
-    output wire clk_game
+    input wire clk,//系统时钟
+    output wire clk_game//游戏时钟
 );
 
 reg [31:0] counter;

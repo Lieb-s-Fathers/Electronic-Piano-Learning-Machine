@@ -1,0 +1,1 @@
+`define music_pack_length 1024

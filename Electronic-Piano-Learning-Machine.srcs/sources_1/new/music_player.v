@@ -1,18 +1,18 @@
 `include "2d-array.vh"
 
 module music_player(
-    input clk,
-    input [15:0] music_length,
-    input [391:0] music_pack,
-    input [3:0] music_speed_play,
-    input en,
-    input rst,
+    input clk,//系统时锟斤拷
+    input [15:0] music_length,//锟斤拷锟街筹拷锟斤拷锟斤拷锟斤拷
+    input [391:0] music_pack,//锟斤拷锟斤拷锟脚猴拷锟斤拷锟斤拷
+    input [3:0] music_speed_play,//锟斤拷锟斤拷锟劫讹拷锟斤拷锟斤拷
+    input en,//锟斤拷锟斤拷锟脚猴拷
+    input rst,//锟斤拷锟斤拷锟脚猴拷
 
-    output wire speaker,
-    output [7:0] led_out,
-    output reg music_over,
+    output wire speaker,//锟斤拷频锟脚猴拷
+    output [7:0] led_out,//led锟斤拷锟斤拷藕锟�
+    output reg music_over,//锟斤拷锟街斤拷锟斤拷锟脚猴拷
 
-    output [6:0] display_data
+    output [6:0] display_data//VGA锟斤拷示锟斤拷锟斤拷锟脚猴拷
 );
 
 wire [7:0] music[0:48];

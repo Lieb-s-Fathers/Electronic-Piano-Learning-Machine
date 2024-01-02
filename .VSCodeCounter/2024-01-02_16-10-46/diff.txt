@@ -1,0 +1,104 @@
+Date : 2024-01-02 16:10:46
+Directory : d:\Electronic-Piano-Learning-Machine
+Total : 70 files,  1087 codes, 65 comments, 154 blanks, all 1306 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| XML      |         56 |        608 |          0 |        108 |        716 |
+| Verilog  |         12 |        380 |         65 |         52 |        497 |
+| Log      |          2 |         99 |          0 |         -6 |         93 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                   |         70 |      1,087 |         65 |        154 |      1,306 |
+| Electronic-Piano-Learning-Machine.runs                                                                              |         60 |        949 |         32 |        125 |      1,106 |
+| Electronic-Piano-Learning-Machine.runs\.jobs                                                                        |         54 |        586 |          0 |        108 |        694 |
+| Electronic-Piano-Learning-Machine.runs\clk_core_synth_1                                                             |          2 |        242 |         32 |         23 |        297 |
+| Electronic-Piano-Learning-Machine.runs\impl_1                                                                       |          2 |          4 |          0 |         -6 |         -2 |
+| Electronic-Piano-Learning-Machine.runs\synth_1                                                                      |          2 |        117 |          0 |          0 |        117 |
+| Electronic-Piano-Learning-Machine.srcs                                                                              |         10 |        138 |         33 |         29 |        200 |
+| Electronic-Piano-Learning-Machine.srcs\sources_1                                                                    |         10 |        138 |         33 |         29 |        200 |
+| Electronic-Piano-Learning-Machine.srcs\sources_1\new                                                                |         10 |        138 |         33 |         29 |        200 |
++---------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                            | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_112.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_113.xml                | XML      |         15 |          0 |          2 |         17 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_114.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_115.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_116.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_117.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_118.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_119.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_120.xml                | XML      |          8 |          0 |          2 |         10 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_121.xml                | XML      |          8 |          0 |          2 |         10 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_122.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_123.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_124.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_125.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_126.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_127.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_128.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_129.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_130.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_131.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_132.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_133.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_134.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_135.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_136.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_137.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_138.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_139.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_140.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_141.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_142.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_143.xml                | XML      |          8 |          0 |          2 |         10 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_144.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_145.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_146.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_147.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_148.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_149.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_150.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_151.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_152.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_153.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_154.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_155.xml                | XML      |          8 |          0 |          2 |         10 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_156.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_157.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_158.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_159.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_160.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_161.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_162.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_163.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_164.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\.jobs\vrs_config_165.xml                | XML      |         11 |          0 |          2 |         13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\clk_core_synth_1\clk_core_sim_netlist.v | Verilog  |        234 |         15 |         21 |        270 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\clk_core_synth_1\clk_core_stub.v        | Verilog  |          8 |         17 |          2 |         27 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\impl_1\gen_run.xml                      | XML      |         11 |          0 |          0 |         11 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\impl_1\runme.log                        | Log      |         -7 |          0 |         -6 |        -13 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\synth_1\gen_run.xml                     | XML      |         11 |          0 |          0 |         11 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.runs\synth_1\runme.log                       | Log      |        106 |          0 |          0 |        106 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\cesuo.v                   | Verilog  |         34 |          2 |          5 |         41 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\main.v                    | Verilog  |         -9 |          9 |          0 |          0 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\mode_reseter.v            | Verilog  |        -13 |         13 |          0 |          0 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\music_replayer.v          | Verilog  |         40 |          0 |         12 |         52 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\music_select.v            | Verilog  |         -2 |          3 |          0 |          1 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\music_studyer.v           | Verilog  |          1 |          0 |         -2 |         -1 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\score_cal.v               | Verilog  |         -1 |          0 |         -1 |         -2 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\star.v                    | Verilog  |          1 |          2 |          3 |          6 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\study.v                   | Verilog  |         53 |          2 |          7 |         62 |
+| d:\Electronic-Piano-Learning-Machine\Electronic-Piano-Learning-Machine.srcs\sources_1\new\tiger.v                   | Verilog  |         34 |          2 |          5 |         41 |
+| Total                                                                                                               |          |      1,087 |         65 |        154 |      1,306 |
++---------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

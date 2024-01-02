@@ -1,24 +1,18 @@
 module setter(
-    input wire clk,
-    input wire clk_game,
-
-    input wire en,
-    input wire rst,
-
-    input wire [7:0] big_dip_switches,
-    input wire [4:0] five_dir_buttons,
-
-    output wire speaker,
-    output [7:0] led_out,
-
-    output [3:0] tub_select1,
-    output [7:0] tub_control1,
-
-    output [3:0] tub_select2,
-    output [7:0] tub_control2,
-    output reg [31:0] setting,
-
-    output [6:0] display_data
+    input wire clk, //系统时钟
+    input wire clk_game, //游戏时钟
+    input wire en, //�?活信�?
+    input wire rst, //重置信号
+    input wire [7:0] big_dip_switches, //大八位拨码开�?
+    input wire [4:0] five_dir_buttons, //五向按钮
+    output wire speaker, //音频信号
+    output [7:0] led_out, //led输出信号
+    output [3:0] tub_select1, //七段数码管�?�择信号�?
+    output [7:0] tub_control1, //七段数码管显示信号左
+    output [3:0] tub_select2, //七段数码管�?�择信号�?
+    output [7:0] tub_control2, //七段数码管显示信号右
+    output reg [31:0] setting, //
+    output [6:0] display_data //VGA显示编码信号
 );
 
 //todo: block out model 3 when using this mode
@@ -108,7 +102,7 @@ always @(posedge clk_game) begin
         check_en <= 1'b1;
     end
 
-    // note_setted ��ʾ�������2�ϣ���ǰ�򿪿��ر�ʾ�ĸ�����
+    // note_setted ��ʾ�������?2�ϣ���ǰ�򿪿��ر�ʾ�ĸ�����
 //    case(note_user)
 //        1: note_setted <= setting[27-:4];
 //        2: note_setted <= setting[23-:4];
@@ -126,7 +120,7 @@ assign buzzer_en = ~check_en;
 
 button_control button1(five_dir_buttons, up_button, down_button, left_button, right_button, center_button);
 number_display number_display1(clk, {12'b0000_0000_0000, note}, tub_select1, tub_control1);
-number_display number_display2(clk, {12'b0000_000, check_en, note_setted}, tub_select2, tub_control2);
+number_display number_display2(clk, {11'b0000_0000_000, check_en, note_setted}, tub_select2, tub_control2);
 encoder_8_3 encoder(big_dip_switches, note_user);
 decoder_3_8 decoder(note, note_code);
 led led1(big_dip_switches, led_out);

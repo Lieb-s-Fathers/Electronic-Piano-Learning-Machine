@@ -1,8 +1,8 @@
 module note_setter(
-input clk,
-input [3:0] note_play,
-input [31:0] setting,
-output reg [3:0] note_setted
+input clk, //系统时钟
+input [3:0] note_play, //按钮信号输入
+input [31:0] setting, //按钮配置数据输入
+output reg [3:0] note_setted //音符信号输出
 );
 wire [3:0] setter[7:0];
 
