@@ -1,11 +1,12 @@
 `include "2d-array.vh"
+`include "port_length.vh"
 
 module star(
     input wire clk_game, //系统时锟斤拷
     input write_en, //写入信号
     input write_rst, //写入重置信号
     input read_mode,//读取模式,0为原曲，1为用户演奏
-    input [1023:0] music_play_pack_in,
+    input [`music_pack_length -1:0] music_play_pack_in,
     input [15:0] music_length_in,
     output reg [1023:0] music_pack_out,//音乐信号输出
     output wire [15:0] music_number,//音乐代码信号输出

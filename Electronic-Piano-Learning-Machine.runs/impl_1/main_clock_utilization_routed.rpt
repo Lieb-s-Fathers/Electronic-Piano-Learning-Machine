@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Jan  3 00:06:32 2024
+| Date         : Wed Jan  3 00:45:23 2024
 | Host         : Desktop-Tyke running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file main_clock_utilization_routed.rpt
 | Design       : main
@@ -66,19 +66,19 @@ Table of Contents
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock             | Driver Pin                                                | Net                                                               |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------+-----------------------------------------------------------+-------------------------------------------------------------------+
 | g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |        1093 |               0 |              |                   | score_reg[11]_i_3/O                                       | studyer/studyer/beat                                              |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 4 |        1093 |               0 |              |                   | score_reg[11]_i_3__0/O                                    | studyer/studyer/beat_0                                            |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |        1093 |               0 |              |                   | score_reg[11]_i_3__0/O                                    | studyer/studyer/beat_0                                            |
 | g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 4 |        1047 |               0 |              |                   | write_rst2_reg_i_1__0/O                                   | write_rst2_reg_i_1__0_n_0                                         |
-| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 3 |        1047 |               0 |              |                   | write_rst2_reg_i_1/O                                      | write_rst2_reg_i_1_n_0                                            |
-| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 3 |        1035 |               0 |              |                   | write_rst1_reg_i_1__0/O                                   | write_rst1_reg_i_1__0_n_0                                         |
+| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 2 |        1047 |               0 |              |                   | write_rst2_reg_i_1/O                                      | write_rst2_reg_i_1_n_0                                            |
+| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 2 |        1035 |               0 |              |                   | write_rst1_reg_i_1__0/O                                   | write_rst1_reg_i_1__0_n_0                                         |
 | g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 4 |        1035 |               0 |              |                   | write_rst1_reg_i_1/O                                      | write_rst1_reg_i_1_n_0                                            |
-| g6        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y7  | n/a          |                 3 |        1035 |               0 |              |                   | write_rst3_reg_i_1__0/O                                   | write_rst3_reg_i_1__0_n_0                                         |
+| g6        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y7  | n/a          |                 2 |        1035 |               0 |              |                   | write_rst3_reg_i_1__0/O                                   | write_rst3_reg_i_1__0_n_0                                         |
 | g7        | src7      | BUFG/O          | None       | BUFGCTRL_X0Y6  | n/a          |                 4 |        1035 |               0 |              |                   | write_rst3_reg_i_1/O                                      | write_rst3_reg_i_1_n_0                                            |
 | g8        | src8      | BUFG/O          | None       | BUFGCTRL_X0Y10 | n/a          |                 4 |        1033 |               0 |              |                   | music_play_pack_reg[1023]_i_1__1/O                        | studyer/music1/write_en1                                          |
 | g9        | src9      | BUFG/O          | None       | BUFGCTRL_X0Y9  | n/a          |                 4 |        1033 |               0 |              |                   | music_play_pack_reg[1023]_i_1__0/O                        | studyer/music1/write_en2                                          |
 | g10       | src10     | BUFG/O          | None       | BUFGCTRL_X0Y8  | n/a          |                 4 |        1033 |               0 |              |                   | music_play_pack_reg[1023]_i_1/O                           | studyer/music1/write_en3                                          |
-| g11       | src11     | BUFG/O          | None       | BUFGCTRL_X0Y11 | n/a          |                 2 |         213 |               0 |       10.000 | clk_out1_clk_core | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clkout1_buf/O | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1              |
+| g11       | src11     | BUFG/O          | None       | BUFGCTRL_X0Y11 | n/a          |                 3 |         213 |               0 |       10.000 | clk_out1_clk_core | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clkout1_buf/O | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1              |
 | g12       | src12     | BUFG/O          | None       | BUFGCTRL_X0Y12 | n/a          |                 1 |         136 |               0 |       10.000 | clk_out2_clk_core | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clkout2_buf/O | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out2              |
-| g13       | src13     | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |          26 |               0 |       40.000 | c0_clk_gen        | vga_display_inst/clk_gen_inst/inst/clkout1_buf/O          | vga_display_inst/clk_gen_inst/inst/c0                             |
+| g13       | src13     | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |          26 |               0 |       40.000 | c0_clk_gen        | vga_display_inst/clk_gen_inst/inst/clkout1_buf/O          | vga_display_inst/clk_gen_inst/inst/c0                             |
 | g14       | src14     | BUFG/O          | None       | BUFGCTRL_X0Y13 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_clk_core | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clkf_buf/O    | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clkfbout_buf_clk_core |
 | g15       | src15     | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_clk_gen  | vga_display_inst/clk_gen_inst/inst/clkf_buf/O             | vga_display_inst/clk_gen_inst/inst/clkfbout_buf_clk_gen           |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------+-----------------------------------------------------------+-------------------------------------------------------------------+
@@ -92,17 +92,17 @@ Table of Contents
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+-------------------+--------------------------------------------------------------------+---------------------------------------------------------------+
 | Source Id | Global Id | Driver Type/Pin     | Constraint | Site            | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock      | Driver Pin                                                         | Net                                                           |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+-------------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-| src0      | g0        | FDRE/Q              | None       | SLICE_X43Y80    | X1Y1         |           1 |               1 |                     |                   | model3_user1/studyer/studyer/beat1/pwm_reg/Q                       | model3_user1/studyer/studyer/beat1/pwm_reg_0                  |
-| src1      | g1        | FDRE/Q              | None       | SLICE_X30Y98    | X0Y1         |           1 |               1 |                     |                   | model3_user2/studyer/studyer/beat1/pwm_reg/Q                       | model3_user2/studyer/studyer/beat1/pwm_reg_0                  |
-| src2      | g2        | LUT3/O              | None       | SLICE_X36Y46    | X1Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_rst2_reg_i_2/O                   | model3_user1/studyer/music1/music_number_reg[0]_0             |
-| src3      | g3        | LUT3/O              | None       | SLICE_X36Y46    | X1Y0         |           1 |               0 |                     |                   | model3_user2/studyer/music1/write_rst2_reg_i_2/O                   | model3_user2/studyer/music1/music_number_reg[0]_0             |
-| src4      | g4        | LUT3/O              | None       | SLICE_X35Y46    | X0Y0         |           1 |               0 |                     |                   | model3_user2/studyer/music1/write_rst1_reg_i_2/O                   | model3_user2/studyer/music1/music_number_reg[1]               |
+| src0      | g0        | FDRE/Q              | None       | SLICE_X40Y54    | X1Y1         |           1 |               1 |                     |                   | model3_user1/studyer/studyer/beat1/pwm_reg/Q                       | model3_user1/studyer/studyer/beat1/pwm_reg_0                  |
+| src1      | g1        | FDRE/Q              | None       | SLICE_X40Y54    | X1Y1         |           1 |               1 |                     |                   | model3_user2/studyer/studyer/beat1/pwm_reg/Q                       | model3_user2/studyer/studyer/beat1/pwm_reg_0                  |
+| src2      | g2        | LUT3/O              | None       | SLICE_X35Y46    | X0Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_rst2_reg_i_2/O                   | model3_user1/studyer/music1/music_number_reg[0]_0             |
+| src3      | g3        | LUT3/O              | None       | SLICE_X36Y47    | X1Y0         |           1 |               0 |                     |                   | model3_user2/studyer/music1/write_rst2_reg_i_2/O                   | model3_user2/studyer/music1/music_number_reg[0]_0             |
+| src4      | g4        | LUT3/O              | None       | SLICE_X36Y47    | X1Y0         |           1 |               0 |                     |                   | model3_user2/studyer/music1/write_rst1_reg_i_2/O                   | model3_user2/studyer/music1/music_number_reg[1]               |
 | src5      | g5        | LUT3/O              | None       | SLICE_X36Y46    | X1Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_rst1_reg_i_2/O                   | model3_user1/studyer/music1/music_number_reg[1]_0             |
-| src6      | g6        | LUT3/O              | None       | SLICE_X36Y46    | X1Y0         |           1 |               0 |                     |                   | model3_user2/studyer/music1/write_rst3_reg_i_2/O                   | model3_user2/studyer/music1/music_number_reg[1]_0             |
-| src7      | g7        | LUT3/O              | None       | SLICE_X36Y46    | X1Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_rst3_reg_i_2/O                   | model3_user1/studyer/music1/music_number_reg[1]_1             |
-| src8      | g8        | LDCE/Q              | None       | SLICE_X39Y45    | X1Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_en1_reg/Q                        | model3_user1/studyer/music1/record_en_reg                     |
-| src9      | g9        | LDCE/Q              | None       | SLICE_X36Y46    | X1Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_en2_reg/Q                        | model3_user1/studyer/music1/record_en_reg_0                   |
-| src10     | g10       | LDCE/Q              | None       | SLICE_X36Y46    | X1Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_en3_reg/Q                        | model3_user1/studyer/music1/music_number_reg[1]               |
+| src6      | g6        | LUT3/O              | None       | SLICE_X36Y47    | X1Y0         |           1 |               0 |                     |                   | model3_user2/studyer/music1/write_rst3_reg_i_2/O                   | model3_user2/studyer/music1/music_number_reg[1]_0             |
+| src7      | g7        | LUT3/O              | None       | SLICE_X35Y46    | X0Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_rst3_reg_i_2/O                   | model3_user1/studyer/music1/music_number_reg[1]_1             |
+| src8      | g8        | LDCE/Q              | None       | SLICE_X33Y46    | X0Y0         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_en1_reg/Q                        | model3_user1/studyer/music1/record_en_reg                     |
+| src9      | g9        | LDCE/Q              | None       | SLICE_X37Y50    | X1Y1         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_en2_reg/Q                        | model3_user1/studyer/music1/record_en_reg_0                   |
+| src10     | g10       | LDCE/Q              | None       | SLICE_X37Y50    | X1Y1         |           1 |               0 |                     |                   | model3_user1/studyer/music1/write_en3_reg/Q                        | model3_user1/studyer/music1/music_number_reg[1]               |
 | src11     | g11       | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              10.000 | clk_out1_clk_core | nolabel_line153/clk_gen_i0/clk_core_i0/inst/mmcm_adv_inst/CLKOUT0  | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1_clk_core |
 | src12     | g12       | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              10.000 | clk_out2_clk_core | nolabel_line153/clk_gen_i0/clk_core_i0/inst/mmcm_adv_inst/CLKOUT1  | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out2_clk_core |
 | src13     | g13       | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y1 | X0Y1         |           1 |               0 |              40.000 | c0_clk_gen        | vga_display_inst/clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0           | vga_display_inst/clk_gen_inst/inst/c0_clk_gen                 |
@@ -119,15 +119,15 @@ Table of Contents
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------------------+------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                          | Net                                            |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------------------+------------------------------------------------+
-| 0        | LDCE/Q          | None       | SLICE_X32Y96/AFF  | X0Y1         |        1033 |               0 |              |       | model3_user2/studyer/music1/write_en1_reg/Q         | model3_user2/studyer/music1/write_en1          |
-| 1        | LDCE/Q          | None       | SLICE_X32Y94/AFF  | X0Y1         |        1033 |               0 |              |       | model3_user2/studyer/music1/write_en2_reg/Q         | model3_user2/studyer/music1/write_en2          |
-| 2        | LDCE/Q          | None       | SLICE_X32Y94/BFF  | X0Y1         |        1033 |               0 |              |       | model3_user2/studyer/music1/write_en3_reg/Q         | model3_user2/studyer/music1/write_en3          |
-| 3        | FDRE/Q          | None       | SLICE_X50Y101/AFF | X1Y2         |         252 |               1 |              |       | clk2/pwm_reg/Q                                      | clk2/CLK                                       |
-| 4        | FDRE/Q          | None       | SLICE_X42Y94/AFF  | X1Y1         |          38 |               1 |              |       | mode_sel/en3_reg/Q                                  | mode_sel/E[0]                                  |
-| 5        | FDRE/Q          | None       | SLICE_X42Y94/A5FF | X1Y1         |          38 |               1 |              |       | mode_sel/en4_reg/Q                                  | mode_sel/en4_reg_0[0]                          |
-| 6        | FDRE/Q          | None       | SLICE_X43Y80/AFF  | X1Y1         |          17 |               1 |              |       | model3_user1/studyer/music_replayer/beat1/pwm_reg/Q | model3_user1/studyer/music_replayer/beat1/beat |
-| 7        | FDRE/Q          | None       | SLICE_X28Y109/AFF | X0Y2         |          17 |               1 |              |       | model3_user2/studyer/music_replayer/beat1/pwm_reg/Q | model3_user2/studyer/music_replayer/beat1/beat |
-| 8        | FDRE/Q          | None       | SLICE_X37Y91/AFF  | X1Y1         |          16 |               1 |              |       | model2/player/beat1/pwm_reg/Q                       | model2/player/beat1/beat                       |
+| 0        | LDCE/Q          | None       | SLICE_X41Y109/AFF | X1Y2         |        1033 |               0 |              |       | model3_user2/studyer/music1/write_en1_reg/Q         | model3_user2/studyer/music1/write_en1          |
+| 1        | LDCE/Q          | None       | SLICE_X36Y105/AFF | X1Y2         |        1033 |               0 |              |       | model3_user2/studyer/music1/write_en2_reg/Q         | model3_user2/studyer/music1/write_en2          |
+| 2        | LDCE/Q          | None       | SLICE_X36Y105/BFF | X1Y2         |        1033 |               0 |              |       | model3_user2/studyer/music1/write_en3_reg/Q         | model3_user2/studyer/music1/write_en3          |
+| 3        | FDRE/Q          | None       | SLICE_X45Y71/A5FF | X1Y1         |         252 |               1 |              |       | clk2/pwm_reg/Q                                      | clk2/CLK                                       |
+| 4        | FDRE/Q          | None       | SLICE_X39Y98/AFF  | X1Y1         |          38 |               1 |              |       | mode_sel/en3_reg/Q                                  | mode_sel/E[0]                                  |
+| 5        | FDRE/Q          | None       | SLICE_X39Y98/A5FF | X1Y1         |          38 |               1 |              |       | mode_sel/en4_reg/Q                                  | mode_sel/en4_reg_0[0]                          |
+| 6        | FDRE/Q          | None       | SLICE_X45Y71/AFF  | X1Y1         |          17 |               1 |              |       | model3_user1/studyer/music_replayer/beat1/pwm_reg/Q | model3_user1/studyer/music_replayer/beat1/beat |
+| 7        | FDRE/Q          | None       | SLICE_X24Y116/AFF | X0Y2         |          17 |               1 |              |       | model3_user2/studyer/music_replayer/beat1/pwm_reg/Q | model3_user2/studyer/music_replayer/beat1/beat |
+| 8        | FDRE/Q          | None       | SLICE_X29Y103/AFF | X0Y2         |          16 |               1 |              |       | model2/player/beat1/pwm_reg/Q                       | model2/player/beat1/beat                       |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------------------+------------------------------------------------+
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -142,12 +142,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  112 |  1200 |  356 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    9 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  564 |  1500 |  622 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
-| X0Y1              |   12 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  395 |  1200 | 1017 |   400 |    0 |    20 |    0 |    10 |    1 |    20 |
-| X1Y1              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  744 |  1500 |  950 |   450 |    0 |    40 |    0 |    20 |    1 |    20 |
-| X0Y2              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  798 |  1800 | 1195 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  246 |   950 |  410 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
+| X0Y0              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   66 |  1200 |  183 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    9 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  557 |  1500 |  700 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y1              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  264 |  1200 |  592 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  708 |  1500 | 1203 |   450 |    0 |    40 |    0 |    20 |    1 |    20 |
+| X0Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  837 |  1800 | 1176 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  427 |   950 |  804 |   300 |    0 |    10 |    0 |     5 |    1 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -183,8 +183,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |  275 |  429 |                     0 |
-| Y0 |  112 |  277 |                     0 |
+| Y1 |  205 |  552 |                     0 |
+| Y0 |   66 |  270 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -205,8 +205,8 @@ All Modules
 +----+------+------+-----------------------+
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
-| Y2 |  759 |  243 |                     0 |
-| Y1 |   86 |    5 |                     0 |
+| Y2 |  759 |  334 |                     0 |
+| Y1 |    0 |    0 |                     - |
 | Y0 |    0 |    0 |                     - |
 +----+------+------+-----------------------+
 
@@ -229,8 +229,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |  293 |  366 |                     0 |
-| Y0 |  144 |  244 |                     0 |
+| Y1 |  243 |  473 |                     0 |
+| Y0 |   90 |  241 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -251,8 +251,8 @@ All Modules
 +----+------+------+-----------------------+
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
-| Y2 |  730 |  231 |                     0 |
-| Y1 |   86 |    0 |                     0 |
+| Y2 |  713 |  334 |                     0 |
+| Y1 |    0 |    0 |                     - |
 | Y0 |    0 |    0 |                     - |
 +----+------+------+-----------------------+
 
@@ -274,8 +274,8 @@ All Modules
 +----+------+------+-----------------------+
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
-| Y2 |  711 |  237 |                     0 |
-| Y1 |   87 |    0 |                     0 |
+| Y2 |  700 |  335 |                     0 |
+| Y1 |    0 |    0 |                     - |
 | Y0 |    0 |    0 |                     - |
 +----+------+------+-----------------------+
 
@@ -298,8 +298,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |  308 |  383 |                     0 |
-| Y0 |  125 |  219 |                     0 |
+| Y1 |  232 |  478 |                     0 |
+| Y0 |   82 |  243 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -320,8 +320,8 @@ All Modules
 +----+------+------+-----------------------+
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
-| Y2 |  732 |  228 |                     0 |
-| Y1 |   75 |    0 |                     0 |
+| Y2 |  701 |  334 |                     0 |
+| Y1 |    0 |    0 |                     - |
 | Y0 |    0 |    0 |                     - |
 +----+------+------+-----------------------+
 
@@ -344,8 +344,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |  326 |  389 |                     0 |
-| Y0 |  120 |  200 |                     0 |
+| Y1 |  235 |  477 |                     0 |
+| Y0 |   92 |  231 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -367,8 +367,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |  313 |  379 |                     0 |
-| Y0 |  128 |  213 |                     0 |
+| Y1 |  226 |  471 |                     0 |
+| Y0 |   89 |  247 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -390,8 +390,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |  202 |  224 |                     0 |
-| Y0 |  230 |  377 |                     0 |
+| Y1 |  243 |  461 |                     0 |
+| Y0 |   92 |  237 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -413,8 +413,8 @@ All Modules
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
 | Y2 |    0 |    0 |                     - |
-| Y1 |  319 |  387 |                     0 |
-| Y0 |  125 |  202 |                     0 |
+| Y1 |  243 |  455 |                     0 |
+| Y0 |   96 |  239 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -432,13 +432,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+------+-----------------------+
-|    | X0 | X1   | HORIZONTAL PROG DELAY |
-+----+----+------+-----------------------+
-| Y2 |  0 |    0 |                     - |
-| Y1 |  0 |   60 |                     0 |
-| Y0 |  0 |  153 |                     0 |
-+----+----+------+-----------------------+
++----+-----+------+-----------------------+
+|    | X0  | X1   | HORIZONTAL PROG DELAY |
++----+-----+------+-----------------------+
+| Y2 |  23 |    0 |                     0 |
+| Y1 |  37 |    0 |                     0 |
+| Y0 |   0 |  153 |                     0 |
++----+-----+------+-----------------------+
 
 
 19. Device Cell Placement Summary for Global Clock g12
@@ -478,13 +478,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+-----+-----------------------+
-|    | X0 | X1  | HORIZONTAL PROG DELAY |
-+----+----+-----+-----------------------+
-| Y2 |  0 |   0 |                     - |
-| Y1 |  0 |  26 |                     0 |
-| Y0 |  0 |   0 |                     - |
-+----+----+-----+-----------------------+
++----+-----+-----+-----------------------+
+|    | X0  | X1  | HORIZONTAL PROG DELAY |
++----+-----+-----+-----------------------+
+| Y2 |   0 |   0 |                     - |
+| Y1 |  14 |  12 |                     0 |
+| Y0 |   0 |   0 |                     - |
++----+-----+-----+-----------------------+
 
 
 21. Device Cell Placement Summary for Global Clock g14
@@ -536,18 +536,18 @@ All Modules
 23. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                               |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         112 |               0 | 112 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                                              |
-| g2        | n/a   | BUFG/O          | None       |         144 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0                                         |
-| g5        | n/a   | BUFG/O          | None       |         125 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                                            |
-| g7        | n/a   | BUFG/O          | None       |         120 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                                            |
-| g8        | n/a   | BUFG/O          | None       |         128 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1                                          |
-| g9        | n/a   | BUFG/O          | None       |         230 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2                                          |
-| g10       | n/a   | BUFG/O          | None       |         125 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3                                          |
-| g14       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clkfbout_buf_clk_core |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          66 |               0 | 66 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                                              |
+| g2        | n/a   | BUFG/O          | None       |          90 |               0 |  0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0                                         |
+| g5        | n/a   | BUFG/O          | None       |          82 |               0 |  0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                                            |
+| g7        | n/a   | BUFG/O          | None       |          92 |               0 |  0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                                            |
+| g8        | n/a   | BUFG/O          | None       |          89 |               0 |  0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1                                          |
+| g9        | n/a   | BUFG/O          | None       |          92 |               0 |  0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2                                          |
+| g10       | n/a   | BUFG/O          | None       |          96 |               0 |  0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3                                          |
+| g14       | n/a   | BUFG/O          | None       |           1 |               0 |  0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clkfbout_buf_clk_core |
++-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -559,13 +559,13 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         277 |               0 | 277 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                                 |
-| g2        | n/a   | BUFG/O          | None       |         244 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0                            |
-| g5        | n/a   | BUFG/O          | None       |         219 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                               |
-| g7        | n/a   | BUFG/O          | None       |         200 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                               |
-| g8        | n/a   | BUFG/O          | None       |         213 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1                             |
-| g9        | n/a   | BUFG/O          | None       |         377 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2                             |
-| g10       | n/a   | BUFG/O          | None       |         202 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3                             |
+| g0        | n/a   | BUFG/O          | None       |         270 |               0 | 270 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                                 |
+| g2        | n/a   | BUFG/O          | None       |         241 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0                            |
+| g5        | n/a   | BUFG/O          | None       |         243 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                               |
+| g7        | n/a   | BUFG/O          | None       |         231 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                               |
+| g8        | n/a   | BUFG/O          | None       |         247 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1                             |
+| g9        | n/a   | BUFG/O          | None       |         237 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2                             |
+| g10       | n/a   | BUFG/O          | None       |         239 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3                             |
 | g11       | n/a   | BUFG/O          | None       |         153 |               0 | 152 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1 |
 | g12       | n/a   | BUFG/O          | None       |         136 |               0 | 135 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out2 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
@@ -580,17 +580,15 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         275 |               0 | 275 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                                    |
-| g1        | n/a   | BUFG/O          | None       |          86 |               0 |  86 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat_0                                  |
-| g2        | n/a   | BUFG/O          | None       |         293 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0                               |
-| g3        | n/a   | BUFG/O          | None       |          86 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1_n_0                                  |
-| g4        | n/a   | BUFG/O          | None       |          87 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1__0_n_0                               |
-| g5        | n/a   | BUFG/O          | None       |         308 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                                  |
-| g6        | n/a   | BUFG/O          | None       |          75 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1__0_n_0                               |
-| g7        | n/a   | BUFG/O          | None       |         326 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                                  |
-| g8        | n/a   | BUFG/O          | None       |         313 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1                                |
-| g9        | n/a   | BUFG/O          | None       |         202 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2                                |
-| g10       | n/a   | BUFG/O          | None       |         319 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3                                |
+| g0        | n/a   | BUFG/O          | None       |         205 |               0 | 205 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                                    |
+| g2        | n/a   | BUFG/O          | None       |         243 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0                               |
+| g5        | n/a   | BUFG/O          | None       |         232 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                                  |
+| g7        | n/a   | BUFG/O          | None       |         235 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                                  |
+| g8        | n/a   | BUFG/O          | None       |         226 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1                                |
+| g9        | n/a   | BUFG/O          | None       |         243 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2                                |
+| g10       | n/a   | BUFG/O          | None       |         243 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3                                |
+| g11       | n/a   | BUFG/O          | None       |          37 |               0 |  37 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1    |
+| g13       | n/a   | BUFG/O          | None       |          14 |               0 |  14 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | vga_display_inst/clk_gen_inst/inst/c0                   |
 | g15       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | vga_display_inst/clk_gen_inst/inst/clkfbout_buf_clk_gen |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -601,20 +599,18 @@ All Modules
 26. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                  |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         429 |               0 | 429 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                                 |
-| g1        | n/a   | BUFG/O          | None       |           5 |               0 |   5 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat_0                               |
-| g2        | n/a   | BUFG/O          | None       |         366 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0                            |
-| g5        | n/a   | BUFG/O          | None       |         383 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                               |
-| g7        | n/a   | BUFG/O          | None       |         389 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                               |
-| g8        | n/a   | BUFG/O          | None       |         379 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1                             |
-| g9        | n/a   | BUFG/O          | None       |         224 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2                             |
-| g10       | n/a   | BUFG/O          | None       |         387 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3                             |
-| g11       | n/a   | BUFG/O          | None       |          60 |               0 |  60 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1 |
-| g13       | n/a   | BUFG/O          | None       |          26 |               0 |  26 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | vga_display_inst/clk_gen_inst/inst/c0                |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         552 |               0 | 552 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat                  |
+| g2        | n/a   | BUFG/O          | None       |         473 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1__0_n_0             |
+| g5        | n/a   | BUFG/O          | None       |         478 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1_n_0                |
+| g7        | n/a   | BUFG/O          | None       |         477 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1_n_0                |
+| g8        | n/a   | BUFG/O          | None       |         471 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en1              |
+| g9        | n/a   | BUFG/O          | None       |         461 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en2              |
+| g10       | n/a   | BUFG/O          | None       |         455 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/music1/write_en3              |
+| g13       | n/a   | BUFG/O          | None       |          12 |               0 |  12 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | vga_display_inst/clk_gen_inst/inst/c0 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -623,14 +619,15 @@ All Modules
 27. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------+
-| g1        | n/a   | BUFG/O          | None       |         759 |               0 | 759 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat_0    |
-| g3        | n/a   | BUFG/O          | None       |         730 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1_n_0    |
-| g4        | n/a   | BUFG/O          | None       |         711 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1__0_n_0 |
-| g6        | n/a   | BUFG/O          | None       |         732 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1__0_n_0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                  |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
+| g1        | n/a   | BUFG/O          | None       |         759 |               0 | 759 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat_0                               |
+| g3        | n/a   | BUFG/O          | None       |         713 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1_n_0                               |
+| g4        | n/a   | BUFG/O          | None       |         700 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1__0_n_0                            |
+| g6        | n/a   | BUFG/O          | None       |         701 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1__0_n_0                            |
+| g11       | n/a   | BUFG/O          | None       |          23 |               0 |  23 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -642,10 +639,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------+
-| g1        | n/a   | BUFG/O          | None       |         243 |               0 | 243 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat_0    |
-| g3        | n/a   | BUFG/O          | None       |         231 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1_n_0    |
-| g4        | n/a   | BUFG/O          | None       |         237 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1__0_n_0 |
-| g6        | n/a   | BUFG/O          | None       |         228 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1__0_n_0 |
+| g1        | n/a   | BUFG/O          | None       |         334 |               0 | 334 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | studyer/studyer/beat_0    |
+| g3        | n/a   | BUFG/O          | None       |         334 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst2_reg_i_1_n_0    |
+| g4        | n/a   | BUFG/O          | None       |         335 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst1_reg_i_1__0_n_0 |
+| g6        | n/a   | BUFG/O          | None       |         334 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | write_rst3_reg_i_1__0_n_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+---------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -687,14 +684,14 @@ resize_pblock [get_pblocks {CLKAG_write_rst3_reg_i_1_n_0}] -add {CLOCKREGION_X0Y
 #startgroup
 create_pblock {CLKAG_write_rst3_reg_i_1__0_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_write_rst3_reg_i_1__0_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -leaf -filter {DIRECTION==IN} -of_objects [get_nets {write_rst3_reg_i_1__0_n_0}]]]
-resize_pblock [get_pblocks {CLKAG_write_rst3_reg_i_1__0_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_write_rst3_reg_i_1__0_n_0}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "write_rst2_reg_i_1_n_0" driven by instance "write_rst2_reg_i_1" located at site "BUFGCTRL_X0Y2"
 #startgroup
 create_pblock {CLKAG_write_rst2_reg_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_write_rst2_reg_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -leaf -filter {DIRECTION==IN} -of_objects [get_nets {write_rst2_reg_i_1_n_0}]]]
-resize_pblock [get_pblocks {CLKAG_write_rst2_reg_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_write_rst2_reg_i_1_n_0}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "write_rst2_reg_i_1__0_n_0" driven by instance "write_rst2_reg_i_1__0" located at site "BUFGCTRL_X0Y3"
@@ -715,21 +712,21 @@ resize_pblock [get_pblocks {CLKAG_write_rst1_reg_i_1_n_0}] -add {CLOCKREGION_X0Y
 #startgroup
 create_pblock {CLKAG_write_rst1_reg_i_1__0_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_write_rst1_reg_i_1__0_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -leaf -filter {DIRECTION==IN} -of_objects [get_nets {write_rst1_reg_i_1__0_n_0}]]]
-resize_pblock [get_pblocks {CLKAG_write_rst1_reg_i_1__0_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_write_rst1_reg_i_1__0_n_0}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "vga_display_inst/clk_gen_inst/inst/c0" driven by instance "vga_display_inst/clk_gen_inst/inst/clkout1_buf" located at site "BUFGCTRL_X0Y16"
 #startgroup
 create_pblock {CLKAG_vga_display_inst/clk_gen_inst/inst/c0}
 add_cells_to_pblock [get_pblocks  {CLKAG_vga_display_inst/clk_gen_inst/inst/c0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -leaf -filter {DIRECTION==IN} -of_objects [get_nets {vga_display_inst/clk_gen_inst/inst/c0}]]]
-resize_pblock [get_pblocks {CLKAG_vga_display_inst/clk_gen_inst/inst/c0}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_vga_display_inst/clk_gen_inst/inst/c0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "studyer/studyer/beat_0" driven by instance "score_reg[11]_i_3__0" located at site "BUFGCTRL_X0Y1"
 #startgroup
 create_pblock {CLKAG_studyer/studyer/beat_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_studyer/studyer/beat_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -leaf -filter {DIRECTION==IN} -of_objects [get_nets {studyer/studyer/beat_0}]]]
-resize_pblock [get_pblocks {CLKAG_studyer/studyer/beat_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_studyer/studyer/beat_0}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "studyer/studyer/beat" driven by instance "score_reg[11]_i_3" located at site "BUFGCTRL_X0Y0"
@@ -771,5 +768,5 @@ resize_pblock [get_pblocks {CLKAG_nolabel_line153/clk_gen_i0/clk_core_i0/inst/cl
 #startgroup
 create_pblock {CLKAG_nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1}
 add_cells_to_pblock [get_pblocks  {CLKAG_nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -leaf -filter {DIRECTION==IN} -of_objects [get_nets {nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1}]]]
-resize_pblock [get_pblocks {CLKAG_nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_nolabel_line153/clk_gen_i0/clk_core_i0/inst/clk_out1}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
