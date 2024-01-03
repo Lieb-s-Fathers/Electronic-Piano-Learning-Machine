@@ -58,7 +58,7 @@ wire center_button;
 
 wire [15:0] max_music_number;
 
-assign max_music_number = 2;
+assign max_music_number = 3;
 
 always @(posedge clk_game) begin
     if (rst == 1'b1) begin

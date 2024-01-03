@@ -45,7 +45,7 @@ always @(posedge clk_game) begin
             en2 <= 1'b0;
             en3 <= 1'b0;
             en4 <= 1'b0;
-            en5 <= 1'b0;
+//            en5 <= 1'b0;
         end
         4'b0100: begin
             en1 <= 1'b0;
